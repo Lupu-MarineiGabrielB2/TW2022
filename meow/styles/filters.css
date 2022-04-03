@@ -1,39 +1,118 @@
-.container {
-    overflow: hidden;
-  }
-  
-  .filterDiv {
-    float: left;
-    background-color: #2196F3;
-    color: #ffffff;
-    width: 100px;
-    line-height: 100px;
-    text-align: center;
-    margin: 2px;
-    display: none; /* Hidden by default */
-  }
-  
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
-  }
-  
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-  }
-  
-  /* Add a light grey background on mouse-over */
-  .btn:hover {
-    background-color: #ddd;
-  }
-  
-  /* Add a dark background to the active button */
-  .btn.active {
-    background-color: #666;
-    color: white;
-  }
+form{
+  box-sizing: border-box;
+  margin: 2%;
+  padding: 2px;
+  max-width: fit-content;
+  border: 2px solid rgb(231, 231, 231);
+  border-radius: 10px;
+  background-color: rgb(193, 243, 234);
+
+}
+
+.accordion .accordion *{
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.label input{
+  display: none;
+}
+
+.accordion .label label {
+  /* (C1) DIMENSIONS */
+  position: relative; /* required for (f2) position:absolute */
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+ 
+  /* (C2) COSMETICS */
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.accordion fieldset {
+  background: #ccdef9;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+
+.accordion fieldset label { padding: 10px; }
+
+.accordion .label input:checked ~ .accordion fieldset { max-height: 100vh; }
+
+/* (F) EXTRA - ADD ARROW INDICATOR */
+.accordion .label label::after {
+  /* (F1) RIGHT ARROW */
+  display: block;  
+  content: "\25b6";
+ 
+  /* (F2) PLACE AT RIGHT SIDE */
+  position: absolute;
+  right: 10px; top: 10px;
+ 
+  /* (F3) ANIMATED ARROW */
+  transition: all 0.4s;
+}
+ 
+/* (F4) ROTATE ARROW ON CHECKED */
+.accordion .label input:checked ~ .label label::after { transform: rotate(90deg); }
+
+/* (A) TABS CONTAINER */
+.tab, .tab * {
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+.tab { max-width: 600px; }
+
+/* (B) HIDE CHECKBOX */
+.tab .legend-input { display: none; }
+
+
+/* (C) TAB LABEL */
+.tab label {
+  /* (C1) DIMENSIONS */
+  position: relative; /* required for (f2) position:absolute */
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+ 
+  /* (C2) COSMETICS */
+  font-weight: 700;
+  color: #fff;
+  background: #2d5faf;
+  cursor: pointer;
+}
+
+/* (D) TAB CONTENT - HIDDEN BY DEFAULT */
+/* css animation will not work with auto height */
+/* this is why we use max-height instead */
+.tab .content {
+  background: #ccdef9;
+  overflow: hidden;
+  transition: max-height 0.3s;
+  max-height: 0;
+}
+.tab .content p { padding: 10px; }
+
+/* (E) OPEN TAB ON CHECKED */
+.tab input:checked ~ .content { max-height: 100vh; }
+
+/* (F) EXTRA - ADD ARROW INDICATOR */
+.tab label::after {
+  /* (F1) RIGHT ARROW */
+  display: block;  
+  content: "\25b6";
+ 
+  /* (F2) PLACE AT RIGHT SIDE */
+  position: absolute;
+  right: 10px; top: 10px;
+ 
+  /* (F3) ANIMATED ARROW */
+  transition: all 0.4s;
+}
+ 
+/* (F4) ROTATE ARROW ON CHECKED */
+.tab input:checked ~ label::after { transform: rotate(90deg); }
