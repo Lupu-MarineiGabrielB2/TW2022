@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="description" content="The list of animals">
+    <title> Animals </title>
+
+    <link rel="stylesheet" href="styles/filters.css" />
+    <link rel="stylesheet" href="styles/layout.css"/>
+    <script src="scripts/filter.js"></script>
+
+</head>
+
+
+<body>
+    
+    <div class="upper-bar">
+        <div class="upper-bar-text">Test Zoo</div>
+    </div>
+
+    <!-- Sets the "Animals" title and its background image-->
+    <div class="title-and-img">
+        <div class="title-img" style="background-image: url('https://images.pexels.com/photos/386147/pexels-photo-386147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"></div>
+        <div class="title">Animals</div>
+    </div>
+
+
+    <!-- Control buttons -->
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+    <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+    <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+    <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+  </div>
+  
+  <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+  <div class="container">
+    <div class="filterDiv cars">BMW</div>
+    <div class="filterDiv colors fruits">Orange</div>
+    <div class="filterDiv cars">Volvo</div>
+    <div class="filterDiv colors">Red</div>
+    <div class="filterDiv cars animals">Mustang</div>
+    <div class="filterDiv colors">Blue</div>
+    <div class="filterDiv animals">Cat</div>
+    <div class="filterDiv animals">Dog</div>
+    <div class="filterDiv fruits">Melon</div>
+    <div class="filterDiv fruits animals">Kiwi</div>
+    <div class="filterDiv fruits">Banana</div>
+    <div class="filterDiv fruits">Lemon</div>
+    <div class="filterDiv animals">Cow</div>
+  </div>
+
+</body>
+</html>
