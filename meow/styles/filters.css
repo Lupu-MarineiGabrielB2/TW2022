@@ -1,17 +1,19 @@
 /* sets apperarance for the whole selector list*/
 form{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
   -webkit-appearance: none;
-  margin: 2%;
-  padding: 2px;
+  margin: 4%;
+  padding: 10px;
   max-width: fit-content;
   border: 2px solid rgb(231, 231, 231);
   border-radius: 10px;
-  background-color: rgb(193, 243, 234);
+  background-color: rgb(51, 53, 53);
 }
 
 /* for the options inside each accordeon */
 .accordion fieldset {   
-  padding: 0; 
+  padding: 2px; 
   outline: 0;
   margin-bottom: 5px;
   border:none;
@@ -19,7 +21,7 @@ form{
 
  /* each accordeon label is a checkbox (so it will "react" when you click on it") - this hides the actual "box" */
  
- #legend *{
+ #legend1, #legend2, #legend3{
   display: none;
 }
 
@@ -38,17 +40,22 @@ form{
 
 /* hides the list of options for each accordeon */
 .accordion  input ~ fieldset {
-  background: #ccdef9;
+  padding: 2px;
+  size: 5px;
+  background-color: rgb(87, 86, 88);
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s;
  
 }
 
-.accordion fieldset label { padding: 10px; }
+.accordion fieldset label {
+padding: 10px;
+margin-bottom: 20px; 
+}
 
 /* shows the list of options when the accordeon label is clicked */
-input:checked ~ fieldset { max-height: 100px; }
+input:checked ~ fieldset { max-height: 500px; }
 
 /* (F) EXTRA - ADD ARROW INDICATOR */
 .accordion label::after {
