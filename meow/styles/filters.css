@@ -18,10 +18,10 @@ form{
  }
 
  /* each accordeon label is a checkbox (so it will "react" when you click on it") - this hides the actual "box" */
- /*
- #legend{
+ 
+ #legend *{
   display: none;
-}*/
+}
 
 /* for the accordeon label*/
 #criterion{
