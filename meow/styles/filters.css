@@ -1,3 +1,4 @@
+/* sets apperarance for the whole selector list*/
 form{
   -webkit-appearance: none;
   margin: 2%;
@@ -8,6 +9,7 @@ form{
   background-color: rgb(193, 243, 234);
 }
 
+/* for the options inside each accordeon */
 .accordion fieldset {   
   padding: 0; 
   outline: 0;
@@ -15,10 +17,13 @@ form{
   border:none;
  }
 
+ /* each accordeon label is a checkbox (so it will "react" when you click on it") - this hides the actual "box" */
+ /*
  #legend{
   display: none;
-}
+}*/
 
+/* for the accordeon label*/
 #criterion{
   /* (C1) DIMENSIONS */
   position: relative; /* required for (f2) position:absolute */
@@ -31,7 +36,8 @@ form{
   cursor: pointer;
 }
 
-.accordion fieldset {
+/* hides the list of options for each accordeon */
+.accordion  input ~ fieldset {
   background: #ccdef9;
   overflow: hidden;
   max-height: 0;
@@ -41,6 +47,7 @@ form{
 
 .accordion fieldset label { padding: 10px; }
 
+/* shows the list of options when the accordeon label is clicked */
 input:checked ~ fieldset { max-height: 100px; }
 
 /* (F) EXTRA - ADD ARROW INDICATOR */
@@ -51,7 +58,7 @@ input:checked ~ fieldset { max-height: 100px; }
  
   /* (F2) PLACE AT RIGHT SIDE */
   position: absolute;
-  right: 10px; top: 10px;
+  right: 15px; top: 10px;
  
   /* (F3) ANIMATED ARROW */
   transition: all 0.4s;
