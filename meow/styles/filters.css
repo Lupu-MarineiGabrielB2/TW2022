@@ -6,7 +6,7 @@ form{
   margin: 4%;
   padding: 10px;
   max-width: fit-content;
-  border: 2px solid rgb(231, 231, 231);
+  border: 5px solid rgb(231, 231, 231);
   border-radius: 10px;
   background-color: rgb(51, 53, 53);
 }
@@ -21,7 +21,7 @@ form{
 
  /* each accordeon label is a checkbox (so it will "react" when you click on it") - this hides the actual "box" */
  
- #legend1, #legend2, #legend3{
+ #legend1, #legend2, #legend3, #legend4{
   display: none;
 }
 

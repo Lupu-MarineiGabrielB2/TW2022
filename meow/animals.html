@@ -21,16 +21,18 @@
     </div>
 
     <!-- Sets the "Animals" title and its background image-->
+    <!-- Probably should download an image-->
     <div class="title-and-img">
         <div class="title-img" style="background-image: url('https://images.pexels.com/photos/386147/pexels-photo-386147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"></div>
         <div class="title">Animals</div>
     </div>
 
+    <!-- this form represents the whole filter section; if you add a new "accordeon", you must add the id of the label to the filters.css, alongside with #legend1, #legend2...-->
     <form>
       <div class="accordion">
-              <input type="checkbox" id="legend1" name="source" value="legend1" >
+              <input type="checkbox" id="legend1" name="source" value="legend1" >       <!-- "legend" and its label-->
               <label id="criterion" for="legend1">Species</label>
-          <fieldset>
+          <fieldset>                                                                     <!--the list of checkboxes-->
             <div class="selector">
                 <input type="checkbox" id="mammal" name="source" value="mammal">
                 <label for="mammal">Mammal</label>
@@ -101,6 +103,48 @@
         </fieldset>
       </div>
 
+      <div class="accordion">
+        <input type="checkbox" id="legend4" name="source" value="legend4" >
+        <label id="criterion" for="legend4">Biome</label>
+        <fieldset>
+          <div class="selector">
+              <input type="checkbox" id="temp_forest" name="source" value="temp_forest">
+              <label for="temp_forest">Temperate deciduous forest</label>
+          </div>
+          <div class="selector">
+              <input type="checkbox" id="coniferous_forest" name="source" value="coniferous_forest">
+              <label for="coniferous_forest">Coniferous forest</label>
+          </div>
+          <div class="selector">
+            <input type="checkbox" id="woodland" name="source" value="woodland">
+            <label for="woodland">Woodland</label>
+          </div>
+          <div class="selector">
+            <input type="checkbox" id="chaparral" name="source" value="chaparral">
+            <label for="chaparral">Chaparral</label>
+          </div>
+          <div class="selector">
+            <input type="checkbox" id="tundra" name="source" value="tundra">
+            <label for="tundra">Tundra</label>
+          </div>
+          <div class="selector">
+            <input type="checkbox" id="grassland" name="source" value="grassland">
+            <label for="grassland">Grassland</label>
+          </div>
+          <div class="selector">
+            <input type="checkbox" id="desert" name="source" value="desert">
+            <label for="desert">Desert</label>
+          </div>
+          <div class="selector">
+            <input type="checkbox" id="tropical_savannah" name="source" value="tropical_savannah">
+            <label for="tropical_savannah">Tropical Savanna</label>
+          </div>
+          <div class="selector">
+            <input type="checkbox" id="tropical_forest" name="source" value="tropical_forest">
+            <label for="tropical_forest">Tropical Forest</label>
+          </div>
+        </fieldset>
+      </div>
     </form>
   
 
