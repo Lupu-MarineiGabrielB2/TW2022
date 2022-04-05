@@ -8,8 +8,7 @@
 
     <link rel="stylesheet" href="styles/filters.css" />
     <link rel="stylesheet" href="styles/layout.css"/>
-    <script src="scripts/filter.js"></script>
-
+    <script src="scripts/clear_filters.js"></script>
 </head>
 
 
@@ -27,15 +26,21 @@
         <div class="title">Animals</div>
     </div>
 
+
+    <div class="clear_filters_div">
+      <input type="checkbox" id="clear_filters" name="sourc" value="clear_filters">
+      <label id="clear_filters" for ="clear_filters">Clear filters</label>
+    </div>
     <!-- this form represents the whole filter section; if you add a new "accordeon", you must add the id of the label to the filters.css, alongside with #legend1, #legend2...-->
     <form>
       <div class="accordion">
               <input type="checkbox" id="legend1" name="source" value="legend1" >       <!-- "legend" and its label-->
               <label id="criterion" for="legend1">Species</label>
+
           <fieldset>                                                                     <!--the list of checkboxes-->
             <div class="selector">
-                <input type="checkbox" id="mammal" name="source" value="mammal">
-                <label for="mammal">Mammal</label>
+                <input type="checkbox" id="mammal" name="source" value="mammal" >
+                <label for="mammal" >Mammal</label>
             </div>
             <div class="selector">
                 <input type="checkbox" id="bird" name="source" value="bird">

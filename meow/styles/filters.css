@@ -1,10 +1,14 @@
+/* ------------------------------------------------ filters ------------------------------------------------ */
 /* sets apperarance for the whole selector list*/
+
 form{
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   -webkit-appearance: none;
   margin: 4%;
   padding: 10px;
+  padding-top: 0px;
+  margin-top: 5px;
   max-width: fit-content;
   border: 5px solid rgb(231, 231, 231);
   border-radius: 10px;
@@ -55,7 +59,13 @@ margin-bottom: 20px;
 }
 
 /* shows the list of options when the accordeon label is clicked */
-input:checked ~ fieldset { max-height: 500px; }
+.accordion input:checked ~ fieldset { max-height: 500px; }
+
+
+fieldset input:checked ~ #clear_filters{ 
+  color: rebeccapurple;
+  max-height: 500px; }
+
 
 /* (F) EXTRA - ADD ARROW INDICATOR */
 .accordion label::after {
@@ -74,4 +84,28 @@ input:checked ~ fieldset { max-height: 500px; }
 /* (F4) ROTATE ARROW ON CHECKED */
 .accordion  input:checked ~ label::after { transform: rotate(90deg); }
 
+
+/* ------------------------------------------------ applied filters section ------------------------------------------------ */
+
+
+.clear_filters_div{
+  margin-top: 2%;
+  margin-left: 6%;
+  margin-right: 4%;
+  color: transparent;
+}
+
+
+#clear_filters{
+  display: none;
+}
+
+.clear_filters_div input:checked ~ label{
+  color: blue;
+}
+
+.clear_filters_div label{
+  min-height: 100px;
+  color: red;
+}
 
