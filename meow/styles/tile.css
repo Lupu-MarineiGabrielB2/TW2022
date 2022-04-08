@@ -1,0 +1,41 @@
+.tile{
+    margin: 10px;
+    padding: 10px;
+    padding-top: 0px;
+    margin-top: 5px;
+    min-width: fit-content;
+    background-color:beige;
+    border: 3px solid rgb(209, 201, 201);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.tile_set{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 1.5em;
+}
+
+#animal_name, #expand{
+    text-align: center;
+    color:black;
+}
+
+#expand{
+    text-decoration: underline;
+}
+
+.animal_img{
+    align-self: center;
+    margin: 0%;
+    padding: 0px;
+    background-position: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    
+    min-width: 200px;
+    max-width: 200px;
+    position:relative;
+}

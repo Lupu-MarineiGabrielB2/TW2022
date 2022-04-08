@@ -52,10 +52,16 @@ html, body, div, .upper-bar, .upper-bar-text
 footer{
     background-color: rgb(58, 56, 53);
     padding-top: 5px;
-    min-height: 50px;
-}
-
-.copyright{
+    min-height: 5em;
     color:rgb(185, 163, 136);
     text-align: center;
+}
+
+#link_in_footer{
+    color:brown;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
 }

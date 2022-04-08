@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="styles/filters.css" />
     <link rel="stylesheet" href="styles/layout.css"/>
+    <link rel="stylesheet" href="styles/tile.css"/>
     <script src="scripts/clear_filters.js"></script>
 </head>
 
@@ -31,131 +32,214 @@
       <input type="checkbox" id="clear_filters" name="sourc" value="clear_filters">
       <label id="clear_filters" for ="clear_filters">Clear filters</label>
     </div>
-    <!-- this form represents the whole filter section; if you add a new "accordeon", you must add the id of the label to the filters.css, alongside with #legend1, #legend2...-->
-    <form>
-      <div class="accordion">
-              <input type="checkbox" id="legend1" name="source" value="legend1" >       <!-- "legend" and its label-->
-              <label id="criterion" for="legend1">Species</label>
 
-          <fieldset>                                                                     <!--the list of checkboxes-->
+    <div class="content">
+    <!-- this form represents the whole filter section; if you add a new "accordeon", you must add the id of the label to the filters.css, alongside with #legend1, #legend2...-->
+    
+    <div class="filters">     <!-- without this, the flex(applied to .content) would expand the form(and its colourful background). Now, this div is the one that gets expanded-->
+      <form>
+        <div class="accordion">
+                <input type="checkbox" id="legend1" name="source" value="legend1" >       <!-- "legend" and its label-->
+                <label id="criterion" for="legend1">Species</label>
+
+            <fieldset>                                                                     <!--the list of checkboxes-->
+              <div class="selector">
+                  <input type="checkbox" id="mammal" name="source" value="mammal" >
+                  <label for="mammal" >Mammal</label>
+              </div>
+              <div class="selector">
+                  <input type="checkbox" id="bird" name="source" value="bird">
+                  <label for="bird">Bird</label>
+              </div>
+              <div class="selector">
+                <input type="checkbox" id="reptile" name="source" value="reptile">
+                <label for="reptile">Reptile</label>
+              </div>
+            </fieldset>
+        </div>
+
+
+        <div class="accordion">
+          <input type="checkbox" id="legend2" name="source" value="legend2">
+          <label id="criterion" for="legend2">Continent of origin</label>
+          <fieldset>
             <div class="selector">
-                <input type="checkbox" id="mammal" name="source" value="mammal" >
-                <label for="mammal" >Mammal</label>
+                <input type="checkbox" id="Africa" name="source" value="Africa">
+                <label for="Africa">Africa</label>
             </div>
             <div class="selector">
-                <input type="checkbox" id="bird" name="source" value="bird">
-                <label for="bird">Bird</label>
+              <input type="checkbox" id="Antarctica" name="source" value="Antarctica">
+              <label for="Antarctica">Antarctica</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="reptile" name="source" value="reptile">
-              <label for="reptile">Reptile</label>
+              <input type="checkbox" id="Australia" name="source" value="Australia">
+              <label for="Australia">Australia</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="Asia" name="source" value="Asia">
+              <label for="Asia">Asia</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="Europe" name="source" value="Europe">
+              <label for="Europe">Europe</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="North America" name="source" value="North America">
+              <label for="North America">North America</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="South America" name="source" value="South America">
+              <label for="South America">South America</label>
             </div>
           </fieldset>
-      </div>
+        </div>
 
+        <div class="accordion">
+          <input type="checkbox" id="legend3" name="source" value="legend3" >
+          <label id="criterion" for="legend3">Order</label>
+          <fieldset>
+            <div class="selector">
+                <input type="checkbox" id="carnivora" name="source" value="carnivora">
+                <label for="carnivora">Carnivora</label>
+            </div>
+            <div class="selector">
+                <input type="checkbox" id="herbivora" name="source" value="herbivora">
+                <label for="herbivora">Herbivora</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="omnivora" name="source" value="omnivora">
+              <label for="omnivora">Omnivora</label>
+            </div>
+          </fieldset>
+        </div>
 
-      <div class="accordion">
-        <input type="checkbox" id="legend2" name="source" value="legend2">
-        <label id="criterion" for="legend2">Continent of origin</label>
-        <fieldset>
-          <div class="selector">
-              <input type="checkbox" id="Africa" name="source" value="Africa">
-              <label for="Africa">Africa</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="Antarctica" name="source" value="Antarctica">
-            <label for="Antarctica">Antarctica</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="Australia" name="source" value="Australia">
-            <label for="Australia">Australia</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="Asia" name="source" value="Asia">
-            <label for="Asia">Asia</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="Europe" name="source" value="Europe">
-            <label for="Europe">Europe</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="North America" name="source" value="North America">
-            <label for="North America">North America</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="South America" name="source" value="South America">
-            <label for="South America">South America</label>
-          </div>
-        </fieldset>
-      </div>
+        <div class="accordion">
+          <input type="checkbox" id="legend4" name="source" value="legend4" >
+          <label id="criterion" for="legend4">Biome</label>
+          <fieldset>
+            <div class="selector">
+                <input type="checkbox" id="temp_forest" name="source" value="temp_forest">
+                <label for="temp_forest">Temperate Deciduous Forest</label>   <!-- former Temperate Deciduous Forest; renamed to decrease filters section size-->
+            </div>
+            <div class="selector">
+                <input type="checkbox" id="coniferous_forest" name="source" value="coniferous_forest">
+                <label for="coniferous_forest">Coniferous Forest</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="woodland" name="source" value="woodland">
+              <label for="woodland">Woodland</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="chaparral" name="source" value="chaparral">
+              <label for="chaparral">Chaparral</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="tundra" name="source" value="tundra">
+              <label for="tundra">Tundra</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="grassland" name="source" value="grassland">
+              <label for="grassland">Grassland</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="desert" name="source" value="desert">
+              <label for="desert">Desert</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="tropical_savannah" name="source" value="tropical_savannah">
+              <label for="tropical_savannah">Tropical Savanna</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="tropical_forest" name="source" value="tropical_forest">
+              <label for="tropical_forest">Tropical Forest</label>
+            </div>
+          </fieldset>
+        </div>
 
-      <div class="accordion">
-        <input type="checkbox" id="legend3" name="source" value="legend3" >
-        <label id="criterion" for="legend3">Order</label>
-        <fieldset>
-          <div class="selector">
-              <input type="checkbox" id="carnivora" name="source" value="carnivora">
-              <label for="carnivora">Carnivora</label>
-          </div>
-          <div class="selector">
-              <input type="checkbox" id="herbivora" name="source" value="herbivora">
-              <label for="herbivora">Herbivora</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="omnivora" name="source" value="omnivora">
-            <label for="omnivora">Omnivora</label>
-          </div>
-        </fieldset>
-      </div>
-
-      <div class="accordion">
-        <input type="checkbox" id="legend4" name="source" value="legend4" >
-        <label id="criterion" for="legend4">Biome</label>
-        <fieldset>
-          <div class="selector">
-              <input type="checkbox" id="temp_forest" name="source" value="temp_forest">
-              <label for="temp_forest">Temperate deciduous forest</label>
-          </div>
-          <div class="selector">
-              <input type="checkbox" id="coniferous_forest" name="source" value="coniferous_forest">
-              <label for="coniferous_forest">Coniferous forest</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="woodland" name="source" value="woodland">
-            <label for="woodland">Woodland</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="chaparral" name="source" value="chaparral">
-            <label for="chaparral">Chaparral</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="tundra" name="source" value="tundra">
-            <label for="tundra">Tundra</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="grassland" name="source" value="grassland">
-            <label for="grassland">Grassland</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="desert" name="source" value="desert">
-            <label for="desert">Desert</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="tropical_savannah" name="source" value="tropical_savannah">
-            <label for="tropical_savannah">Tropical Savanna</label>
-          </div>
-          <div class="selector">
-            <input type="checkbox" id="tropical_forest" name="source" value="tropical_forest">
-            <label for="tropical_forest">Tropical Forest</label>
-          </div>
-        </fieldset>
-      </div>
-    </form>
+        <div class="accordion">
+          <input type="checkbox" id="legend5" name="source" value="legend5" >
+          <label id="criterion" for="legend5">Conservation Status</label>
+          <fieldset>
+            <div class="selector">
+                <input type="checkbox" id="least_concern" name="source" value="least_concern">
+                <label for="least_concern">Least Concern</label>
+            </div>
+            <div class="selector">
+                <input type="checkbox" id="near_threatened" name="source" value="near_threatened">
+                <label for="near_threatened">Near Threatened</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="vulnerable" name="source" value="vulnerable">
+              <label for="vulnerable">Vulnerable</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="endangered" name="source" value="endangered">
+              <label for="endangered">Endangered</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="critically_endangered" name="source" value="critically_endangered">
+              <label for="critically_endangered">Critically Endangered</label>
+            </div>
+            <div class="selector">
+              <input type="checkbox" id="extinct_in_the_wild" name="source" value="extinct_in_the_wild">
+              <label for="extinct_in_the_wild">Extinct In The Wild</label>
+            </div>
+          </fieldset>
+        </div>
+      </form>
   
+    </div>
 
-    <footer>
-      <p class="copyright"> Test zoo © 2022 </p>
-    </footer>
+<!-- template tile for: 1.animal picture and name; 2.basic info about said animal -->
+<div class="tile_set">
+  <div class="tile">
+    <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+    <p id="animal_name"> Raccoon </p>
+    <p id="expand">Expand</p>
+  </div>  
+  <div class="tile">
+    <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+    <p id="animal_name"> Raccoon </p>
+    <p id="expand">Expand</p>
+  </div>  
+
+  <div class="tile">
+    <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+    <p id="animal_name"> Raccoon </p>
+    <p id="expand">Expand</p>
+  </div>  
+
+  <div class="tile">
+    <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+    <p id="animal_name"> Raccoon </p>
+    <p id="expand">Expand</p>
+  </div>  
+
+  <div class="tile">
+    <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+    <p id="animal_name"> Raccoon </p>
+    <p id="expand">Expand</p>
+  </div>  
+
+  <div class="tile">
+    <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+    <p id="animal_name"> Raccoon </p>
+    <p id="expand">Expand</p>
+  </div>  
+
+  <div class="tile">
+    <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+    <p id="animal_name"> Raccoon </p>
+    <p id="expand">Expand</p>
+  </div>  
+</div>
+
+</div>    <!-- end of "content"-->
+
+<footer>
+  <p> Test zoo 2022 </p>
+  <p>All photos are copyright-free were obtained from <a id="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
+</footer>
 
 </body>
 </html>
