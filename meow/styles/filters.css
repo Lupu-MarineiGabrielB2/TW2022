@@ -84,7 +84,6 @@ fieldset input:checked ~ #clear_filters{
 /* (F4) ROTATE ARROW ON CHECKED */
 .accordion  input:checked ~ label::after { transform: rotate(90deg); }
 
-
 /* ------------------------------------------------ applied filters section ------------------------------------------------ */
 
 
