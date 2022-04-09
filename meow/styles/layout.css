@@ -43,7 +43,7 @@ html, body, div, .upper-bar, .upper-bar-text
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     position: absolute;
-    top: 30%;
+    top: 250px;
     left: 50%;
     transform: translate(-50%, -50%);
   }

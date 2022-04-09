@@ -1,12 +1,15 @@
 .tile{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 10px;
     padding-top: 0px;
     margin-top: 5px;
+    max-height: 300px;
     min-width: fit-conten;
+    max-width: 200px;
     background-color:beige;
     border: 5px solid rgb(231, 231, 231);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 }
 
 .tile_set{
@@ -19,14 +22,51 @@
     gap: 1.5em;
 }
 
-#animal_name, #expand{
-    margin: 5px;
+#animal_name, #expand_label{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0px;
     text-align: center;
     color:black;
 }
 
+#expand_label{
+    font-size: smaller;
+    position: relative;
+    margin-left: 100px;
+    cursor: pointer;
+}
+
+#expand_label::after{
+    display:inline;  
+    content: "\00BB";
+}
+
+#expand_label:hover{
+    opacity: 0.7;
+}
+
+/*
 #expand{
-    text-decoration: underline;
+    display: none;
+}
+*/
+
+.animal_extra_info{
+    float: left;
+    color: transparent;
+}
+
+.tile input ~ .animal_extra_info{
+    overflow: hidden;
+    max-width: 0px;
+    max-height: 0px;    
+}
+
+.tile input:checked ~ .tile .animal_extra_info{
+    max-width: fit-content;
+    max-height: fit-content;
+    color: black;
+    overflow: visible;
 }
 
 .animal_img{
