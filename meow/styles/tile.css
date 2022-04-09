@@ -1,16 +1,17 @@
 .tile{
     margin: 10px;
-    padding: 10px;
     padding-top: 0px;
     margin-top: 5px;
-    min-width: fit-content;
+    min-width: fit-conten;
     background-color:beige;
-    border: 3px solid rgb(209, 201, 201);
+    border: 5px solid rgb(231, 231, 231);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
 .tile_set{
+    padding-top: 5px;
+    margin-bottom: 2em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,6 +20,7 @@
 }
 
 #animal_name, #expand{
+    margin: 5px;
     text-align: center;
     color:black;
 }
@@ -34,7 +36,6 @@
     background-position: 100%;
     min-height: 200px;
     max-height: 200px;
-    
     min-width: 200px;
     max-width: 200px;
     position:relative;
