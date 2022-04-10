@@ -1,0 +1,86 @@
+.content{
+    margin-top: 160px;
+}
+
+
+.side_div{
+    max-height: fit-content;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-appearance: none;
+    margin: 5em;
+    margin-left: 7em;
+    margin-top: 10px;
+    width:17em;
+    max-height: fit-content;
+  }
+
+.side_collumn{
+    padding: 10px;
+    padding-top: 0px;
+    background-color: forestgreen;
+    color: white;
+    border: 5px solid rgb(64, 57, 57);
+    border-radius: 10px;
+}
+
+#side_title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:large;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+
+#side_information{
+    padding-top: 0px;
+}
+
+#conservation_status{
+    font-size: x-large;    
+}
+
+.center_div{
+    max-width: 36em;
+    margin-bottom: 5em;
+    background-color: antiquewhite;
+}
+
+.side_img{
+    width: 100px;
+    background-color: beige;
+}
+
+.side_img_div{
+    margin-left: 5em;
+}
+
+.animal_side_img{
+    width: 17em;
+    margin-right: 7em;
+    height: fit-content;
+    margin: 0%;
+    padding: 0px;
+    background-position: 100%;
+    position:relative;
+}
+
+.related_animals_div{
+    width:auto;
+    background-color: beige;
+    margin-bottom: 10em;
+}
+
+.related_animals_div h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.animal_img{
+    width: 10px;
+    height: 10px;
+}
+
+.related_animals_tiles{
+    display: flex;
+    flex-direction: column;
+}
