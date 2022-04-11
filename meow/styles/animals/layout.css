@@ -36,11 +36,11 @@ html, body, div, .upper-bar, .upper-bar-text
 
 .title{
     width: max-content;
-    border-top: 5px solid forestgreen;
-    border-bottom: 5px solid forestgreen;
+    border-top: 5px solid rgb(241, 191, 53);
+    border-bottom: 5px solid rgb(241, 191, 53);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 80px;
-    color:forestgreen;
+    color:rgb(65, 164, 65);;
     letter-spacing: 2px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
