@@ -1,14 +1,17 @@
 /* ------------------------------------------------ filters ------------------------------------------------ */
 /* sets apperarance for the whole selector list*/
-
-.filters{
-  max-height: fit-content;
+form, .filters, .search_bar{
   margin: 4%;
-  margin-left: 2%;
   padding: 10px;
   padding-top: 0px;
   margin-top: 5px;
   min-width: 270px;
+}
+
+
+.filters, .search_bar{
+  max-height: fit-content;
+  margin-left: 2%;
   max-width: fit-content;
   max-height: fit-content;
 }
@@ -17,11 +20,6 @@ form{
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   -webkit-appearance: none;
-  margin: 4%;
-  padding: 10px;
-  padding-top: 0px;
-  margin-top: 5px;
-  min-width: 270px;
   max-width: fit-content;
   max-height: fit-content;
   border: 5px solid rgb(231, 231, 231);
@@ -95,27 +93,28 @@ fieldset input:checked ~ #clear_filters{
   transform: rotate(90deg); 
 }
 
-/* ------------------------------------------------ applied filters section ------------------------------------------------ */
-
-
-.clear_filters_div{
-  margin-top: 2%;
-  margin-left: 6%;
-  margin-right: 4%;
-  color: transparent;
+/* for the search bar */
+.search_bar {
+  width: 100%;
+  position: relative;
+  display: flex;
 }
 
-
-#clear_filters{
-  display: none;
+.search_term {
+  width: 250px;
+  border: 3px solid  rgb(58, 56, 53);
+  border-radius: 5px 0 0 5px;
+  font-size: 17px;
+  padding: 5px;
 }
 
-.clear_filters_div input:checked ~ label{
-  color: blue;
+.search_button {
+  width: 40px;
+  border: 1px solid  rgb(58, 56, 53);
+  border-radius: 0 5px 5px 0;
+  background:  rgb(58, 56, 53);
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
-
-.clear_filters_div label{
-  min-height: 100px;
-  color: red;
-}
-

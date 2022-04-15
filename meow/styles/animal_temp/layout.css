@@ -23,19 +23,43 @@
     border-radius: 10px;
 }
 
+.side_title_and_icon{
+    display: flex;
+}
+
+.side_icon{
+    background-color: inherit;
+    border: none;
+    margin-right: 5px;
+    top: 100%;
+    transform: translate(0%, 20%);
+    color: inherit;
+    font-size: larger;
+}
+
 #side_title{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size:large;
+    font-size:medium;
     text-decoration: underline;
     margin-bottom: 0px;
 }
 
 #side_information{
     padding-top: 0px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
-#conservation_status{
-    font-size: x-large;    
+/* for the conservation status */
+.conservation{
+    display: flex;
+    font-size: larger;
+}
+
+.conservation_icon{
+    background-color: transparent;
+    border: none;
+    font-size:x-large;
 }
 
 

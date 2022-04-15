@@ -8,6 +8,7 @@
     <title> Common Raccoon </title>
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animal_temp/layout.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -21,17 +22,39 @@
 
     <div class="content">
         <div class="side_div">
+            <!--
             <ul class="conservation">
                 <li id="conservation_status" style="list-style-image: url('pictures/template/exclamation-triangle-svgrepo-com.svg'); "> Least Concern</li>
-            </ul>
+            </ul> -->
+
+            <div class="conservation">
+                <button class="conservation_icon"><i class="fa fa-exclamation-triangle"></i></button>
+                <h3 id="conservation_status">Least Concern</h3>
+            </div>
+
             <div class="side_collumn">
-                <h2 id="side_title">Distribution:</h2>
+                <div class="side_title_and_icon">
+                    <button class="side_icon"><i class="fa fa-map-marker"></i></button>
+                    <h2 id="side_title">Distribution:</h2>
+                </div>
                 <p id="side_information">North America, Central Europe, Japan</p>
-                <h2 id="side_title">Habitat:</h2>
+
+                <div class="side_title_and_icon">
+                    <button class="side_icon"><i class="fa fa-tree"></i></button>
+                    <h2 id="side_title">Habitat:</h2>
+                </div>
                 <p id="side_information">Lowland forests and marshes</p>
-                <h2 id="side_title">Diet:</h2>
+
+                <div class="side_title_and_icon">
+                    <button class="side_icon"><i class="fa fa-cutlery"></i></button>
+                    <h2 id="side_title">Diet:</h2>
+                </div>
                 <p id="side_information">Plants, invertebrates and small vertebrates</p>
-                <h2 id="side_title">Lifespan:</h2>
+
+                <div class="side_title_and_icon">
+                    <button class="side_icon"><i class="fa fa-hourglass"></i></button>
+                    <h2 id="side_title">Lifespan:</h2>
+                </div>
                 <p id="side_information">5 years(wild); 20 years(captivity)</p>
             </div>
         </div>
