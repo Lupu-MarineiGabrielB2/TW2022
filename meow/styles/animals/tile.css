@@ -20,6 +20,11 @@
     border: 5px solid rgb(231, 231, 231);
     position: relative;
     display: inline-block; /* Make the width of box same as image */
+    transition: border 0.5s 0.3s;
+}
+
+.tile:hover{
+    border: 5px solid rgb(241, 191, 53);
 }
 
 #animal_name, #scientific_name{

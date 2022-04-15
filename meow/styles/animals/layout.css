@@ -8,7 +8,7 @@ html, body, div, .upper-bar, .upper-bar-text
 .upper-bar{
     padding: 0;
     margin: 0;
-    background-color: rgb(40, 39, 37);
+    background-color: rgb(58, 56, 53);
     position: sticky;
     top: 0em;
     min-height: 60px;
