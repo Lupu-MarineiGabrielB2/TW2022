@@ -68,3 +68,8 @@ footer{
     display: flex;
     flex-direction: row;
 }
+
+#nav-button{
+    color: inherit;
+    text-decoration: none;
+}
