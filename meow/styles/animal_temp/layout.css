@@ -2,13 +2,18 @@
     margin-top: 160px;
 }
 
+.title{
+    font-size: 50px;
+    margin-top: 35px;
+}
+
 /* for the facts side (left) */
 .side_div{
     max-height: fit-content;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-appearance: none;
     margin: 5em;
-    margin-left: 7em;
+    margin-left: 30px;
     margin-top: 10px;
     width:17em;
     max-height: fit-content;
@@ -88,7 +93,6 @@
 /* the image on the right side */
 .animal_side_img{
     width: 17em;
-    margin-right: 7em;
     height: fit-content;
     margin: 0%;
     padding: 0px;
@@ -172,3 +176,66 @@ display: table-cell;
     background-color: rgba(101, 101, 101, 0.8) ;
 }
 
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    .side_div{
+        margin-left: 20%;
+        width: 500px;
+        margin-bottom: 50px;
+    }
+    .related_animals_tiles{
+        flex-direction: column;
+        align-items: center;
+    }
+    .title{
+        font-size:xx-large;
+    }
+    .content{
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+    .center_div{
+        margin-right: 20px;
+    }
+    .side_img_div{
+        margin-right: 30%;
+    }
+
+    #related_animals{
+        font-size: x-large;
+    }
+
+    .animal_tile .related_animal_name{
+        color: white;
+        background-color: rgba(101, 101, 101, 0.8);
+    }
+
+    .related_animals_div{
+        margin-bottom: 100px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1{ width: 0%;}
+    .col-2{ width: 0%;}
+    .col-3 {width: 70%;}
+    .col-4{ width: 0%;}
+    .col-5 {width: 150%;}
+    .col-6{ width: 0%;}
+    .col-7 {width: 90%;}
+    .col-8{ width: 0%;}
+    .col-9 {width: 100%;}
+    .col-10{ width: 0%;}
+    .col-11{ width: 100%;}
+    .col-12 {width: 110%;}
+    .content {flex-wrap: row;
+        margin-left: 5%;
+       width: 95%;
+    }
+  }
