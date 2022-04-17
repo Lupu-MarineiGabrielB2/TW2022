@@ -38,6 +38,7 @@ html, body, div, .upper-bar, .upper-bar-text
     position: relative;
 }
 
+
 .title{
     max-width: fit-content;
     border-top: 5px solid rgb(241, 191, 53);
@@ -51,8 +52,8 @@ html, body, div, .upper-bar, .upper-bar-text
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    margin-top: 53px;
-  }
+    margin-top: 54px;
+}
 
 
 footer{
@@ -84,7 +85,6 @@ footer{
 /* For mobile phones: */
 [class*="col-"] {
     width: 100%;
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -101,6 +101,9 @@ footer{
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-    .content {flex-wrap: nowrap;}
+    .content {flex-wrap: nowrap;
+        margin-right: 0%;
+    }
   }
+
   
