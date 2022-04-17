@@ -4,6 +4,7 @@
 
 <head>
     <meta name="description" content="The list of animals">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="pictures/favicon-16x16.ico"/>
     <title> Animals </title>
 
@@ -17,21 +18,21 @@
 <body>
     
     <!--upper banner-->
-    <div class="upper-bar">
+    <div class="upper-bar col-12">
         <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
     </div>
 
     <!-- Sets the "Animals" title and its background image-->
     <!-- Probably should download an image-->
-        <div class="title-img" style="background-image: url('https://images.pexels.com/photos/386147/pexels-photo-386147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"></div>
+        <div class="title-img col-12" style="background-image: url('https://images.pexels.com/photos/386147/pexels-photo-386147.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')"></div>
 
-    <div class="title">Animals</div>
+    <div class="title col-12">Animals</div>
 
 
-    <div class="content">
+    <div class="content col-12">
     <!-- this form represents the whole filter section; if you add a new "accordeon", you must add the id of the label to the filters.css, alongside with #legend1, #legend2...-->
     
-    <div class="filters">     <!-- without this, the flex(applied to .content) would expand the form(and its colourful background). Now, this div is the one that gets expanded-->
+    <div class="filters col-3">     <!-- without this, the flex(applied to .content) would expand the form(and its colourful background). Now, this div is the one that gets expanded-->
       <div class="search_bar">
            <input type="text" class="search_term" placeholder="Search by name...">
            <button type="submit" class="search_button">
@@ -194,7 +195,7 @@
     </div>
 
 <!-- template tile for: 1.animal picture and name; 2.basic info about said animal -->
-<div class="tile_set">
+<div class="tile_set col-9">
   <a id="link_to_template_page" href="animal_template.html">
     <div class="tile">
       <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
@@ -246,7 +247,7 @@
 
 </div>    <!-- end of "content"-->
 
-<footer>
+<footer class="col-12">
   <p> Test zoo 2022 </p>
   <p>All photos are copyright-free and were obtained from <a id="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
 </footer>
