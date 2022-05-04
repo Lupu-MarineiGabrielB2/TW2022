@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+<!-- position:12, grade:5 -->
+
 <html lang="en">
 
 <head>
@@ -45,7 +47,7 @@
       <form>
         <div class="accordion">
                 <input type="checkbox" id="legend1" name="source" value="legend1" >       <!-- "legend" and its label-->
-                <label id="criterion" for="legend1">Species</label>
+                <label class="criterion" for="legend1">Species</label>
 
             <fieldset>                                                                     <!--the list of checkboxes-->
               <div class="selector">
@@ -66,7 +68,7 @@
 
         <div class="accordion">
           <input type="checkbox" id="legend2" name="source" value="legend2">
-          <label id="criterion" for="legend2">Continent of origin</label>
+          <label class="criterion" for="legend2">Continent of origin</label>
           <fieldset>
             <div class="selector">
                 <input type="checkbox" id="Africa" name="source" value="Africa">
@@ -89,19 +91,19 @@
               <label for="Europe">Europe</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="North America" name="source" value="North America">
-              <label for="North America">North America</label>
+              <input type="checkbox" id="North_America" name="source" value="North America">
+              <label for="North_America">North America</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="South America" name="source" value="South America">
-              <label for="South America">South America</label>
+              <input type="checkbox" id="South_America" name="source" value="South America">
+              <label for="South_America">South America</label>
             </div>
           </fieldset>
         </div>
 
         <div class="accordion">
           <input type="checkbox" id="legend3" name="source" value="legend3" >
-          <label id="criterion" for="legend3">Order</label>
+          <label class="criterion" for="legend3">Order</label>
           <fieldset>
             <div class="selector">
                 <input type="checkbox" id="carnivora" name="source" value="carnivora">
@@ -120,7 +122,7 @@
 
         <div class="accordion">
           <input type="checkbox" id="legend4" name="source" value="legend4" >
-          <label id="criterion" for="legend4">Biome</label>
+          <label class="criterion" for="legend4">Biome</label>
           <fieldset>
             <div class="selector">
                 <input type="checkbox" id="temp_forest" name="source" value="temp_forest">
@@ -163,7 +165,7 @@
 
         <div class="accordion">
           <input type="checkbox" id="legend5" name="source" value="legend5" >
-          <label id="criterion" for="legend5">Conservation Status</label>
+          <label class="criterion" for="legend5">Conservation Status</label>
           <fieldset>
             <div class="selector">
                 <input type="checkbox" id="least_concern" name="source" value="least_concern">
@@ -197,53 +199,61 @@
 
 <!-- template tile for: 1.animal picture and name; 2.basic info about said animal -->
 <div class="tile_set col-9">
-  <a id="link_to_template_page" href="animal_template.html">
+  <a class="link_to_template_page" href="animal_template.html">
     <div class="tile">
       <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p id="animal_name">Common Raccoon </p> 
-      <p id="scientific_name"> (Procyon lotor) </p>
+      <p class="animal_name">Common Raccoon </p> 
+      <p class="scientific_name"> (Procyon lotor) </p>
       <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
       </div>
     </div>  
   </a> 
-  
-  <a id="link_to_template_page" href="animal_template.html">
+  <a class="link_to_template_page" href="animal_template.html">
     <div class="tile">
       <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p id="animal_name">Common Raccoon </p> 
-      <p id="scientific_name"> (Procyon lotor) </p>
+      <p class="animal_name">Common Raccoon </p> 
+      <p class="scientific_name"> (Procyon lotor) </p>
       <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
       </div>
     </div>  
-  </a>
-  <a id="link_to_template_page" href="animal_template.html">
+  </a> 
+  <a class="link_to_template_page" href="animal_template.html">
     <div class="tile">
       <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p id="animal_name">Common Raccoon </p> 
-      <p id="scientific_name"> (Procyon lotor) </p>
+      <p class="animal_name">Common Raccoon </p> 
+      <p class="scientific_name"> (Procyon lotor) </p>
       <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
       </div>
     </div>  
-  </a>
+  </a> 
+  <a class="link_to_template_page" href="animal_template.html">
+    <div class="tile">
+      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+      <p class="animal_name">Common Raccoon </p> 
+      <p class="scientific_name"> (Procyon lotor) </p>
+      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
+      </div>
+    </div>  
+  </a> 
+  <a class="link_to_template_page" href="animal_template.html">
+    <div class="tile">
+      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+      <p class="animal_name">Common Raccoon </p> 
+      <p class="scientific_name"> (Procyon lotor) </p>
+      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
+      </div>
+    </div>  
+  </a> 
+  <a class="link_to_template_page" href="animal_template.html">
+    <div class="tile">
+      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
+      <p class="animal_name">Common Raccoon </p> 
+      <p class="scientific_name"> (Procyon lotor) </p>
+      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
+      </div>
+    </div>  
+  </a> 
 
-  <a id="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p id="animal_name">Common Raccoon </p> 
-      <p id="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a>
-  <a id="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p id="animal_name">Common Raccoon </p> 
-      <p id="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a>
 </div>
 
 </div>    <!-- end of "content"-->

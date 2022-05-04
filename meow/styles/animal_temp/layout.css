@@ -11,7 +11,6 @@
 .side_div{
     max-height: fit-content;
     font-family: Arial, Helvetica, sans-serif;
-    -webkit-appearance: none;
     margin: 5em;
     margin-left: 30px;
     margin-top: 10px;
@@ -42,14 +41,14 @@
     font-size: larger;
 }
 
-#side_title{
+.side_title{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size:medium;
     text-decoration: underline;
     margin-bottom: 0px;
 }
 
-#side_information{
+.side_information{
     padding-top: 0px;
     margin-top: 5px;
     margin-bottom: 10px;
@@ -74,9 +73,7 @@
 }
 
 .center_div h2{
-    -webkit-text-decoration: rgb(65, 164, 65) solid underline;
-    text-decoration: rgb(65, 164, 65) solid underline;
-    -webkit-text-decoration-skip: ink;
+    text-decoration: rgb(65, 164, 65) solid underline;;
     text-decoration-skip: ink;
 }
 
@@ -234,8 +231,8 @@ display: table-cell;
     .col-10{ width: 0%;}
     .col-11{ width: 100%;}
     .col-12 {width: 110%;}
-    .content {flex-wrap: row;
+    .content {
         margin-left: 5%;
-       width: 95%;
+        width: 95%;
     }
   }

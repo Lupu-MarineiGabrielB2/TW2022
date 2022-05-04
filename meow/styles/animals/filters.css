@@ -19,7 +19,6 @@ form, .filters, .search_bar{
 form{
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  -webkit-appearance: none;
   max-width: fit-content;
   max-height: fit-content;
   border: 5px solid rgb(231, 231, 231);
@@ -44,7 +43,7 @@ form{
 }
 
 /* for the accordeon label*/
-#criterion{
+.criterion{
   position: relative; 
   display: block;
   width: 100%;
@@ -57,7 +56,6 @@ form{
 /* hides the list of options for each accordeon */
 .accordion  input ~ fieldset {
   padding: 2px;
-  size: 5px;
   background-color: rgb(87, 86, 88);
   overflow: hidden;
   max-height: 0;
@@ -110,7 +108,7 @@ fieldset input:checked ~ #clear_filters{
 
 .search_button {
   width: 40px;
-  border: 1px solid  rgb(58, 56, 53);
+  border: 1px ;
   border-radius: 0 5px 5px 0;
   background:  rgb(58, 56, 53);
   text-align: center;
