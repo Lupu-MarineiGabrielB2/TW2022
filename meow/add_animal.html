@@ -15,6 +15,7 @@
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
+
     <header>
         <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
     </header>
@@ -24,90 +25,224 @@
     </div>
     
     <div class="content" >
-        <form class="outer-form">
-            <form class="short-text-form">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="scietific-name" class="short-text-input"><br>
-            </form>
-            <form class="short-text-form"></form>
-                <label for="scietific-name">Scietific Name:</label><br>
-                <input type="text" id="scietific-name" name="scietific-name" class="short-text-input">
-            </form>
-            <form class="short-text-form"></form>
-                <label for="distribution">Distribution:</label><br>
-                <input type="text" id="distribution" name="distribution" class="short-text-input">
-            </form>
-            <form class="short-text-form"></form>
-                <label for="habitat">Habitat:</label><br>
-                <input type="text" id="habitat" name="habitat" class="short-text-input">
-            </form>
-            <form class="short-text-form"></form>
-                <label for="diet">Diet:</label><br>
-                <input type="text" id="diet" name="diet" class="short-text-input">
-            </form>
-            <form class="short-text-form"></form>
-                <label for="lifespan">Lifespan:</label><br>
-                <input type="text" id="lifespan" name="lifespan" class="short-text-input">
-            </form>
-
-            
+        <form class="short-text-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" class="short-text-input"><br>
+        </form>
+        <form class="short-text-form">
+            <label for="scietific-name">Scietific Name:</label><br>
+            <input type="text" id="scietific-name" name="scietific-name" class="short-text-input">
+        </form>
+        <form class="short-text-form">
+            <label for="distribution">Distribution:</label><br>
+            <input type="text" id="distribution" name="distribution" class="short-text-input">
+        </form>
+        <form class="short-text-form">
+            <label for="habitat">Habitat:</label><br>
+            <input type="text" id="habitat" name="habitat" class="short-text-input">
+        </form>
+        <form class="short-text-form">
+            <label for="diet">Diet:</label><br>
+            <input type="text" id="diet" name="diet" class="short-text-input">
+        </form>
+        <form class="short-text-form">
+            <label for="lifespan">Lifespan:</label><br>
+            <input type="text" id="lifespan" name="lifespan" class="short-text-input">
         </form>
     </div>
 
     <div class="content" >
-        <form class="outer-form">
-            <form class="radio-form">
-                <p> Conservation Status:</p>
-                <input type="radio" id="least-concern" name="cons" value="LeastConcern">
-                <label for="least-concern">Least Concern</label><br>
+        <form class="radio-form">
+            <p> Species:</p>
+            <input type="radio" id="mammal" name="species" value="Mammal">
+            <label for="mammal">Mammal</label><br>
 
-                <input type="radio" id="near-threatened" name="cons" value="NearThreatened">
-                <label for="near-threatened">Near Threatened</label><br>
+            <input type="radio" id="bird" name="species" value="Bird">
+            <label for="bird">Bird</label><br>
 
-                <input type="radio" id="vulnerable" name="cons" value="Vulnerable">
-                <label for="vulnerable">Vulnerable</label><br>
-
-                <input type="radio" id="endangered" name="cons" value="Endangered">
-                <label for="endangered">Endangered</label><br>
-
-                <input type="radio" id="critically-endangered" name="cons" value="CriticallyEndangered">
-                <label for="critically-endangered">Critically Endangered</label><br>
-
-                <input type="radio" id="extinct-in-the-wild" name="cons" value="ExtinctInTheWild">
-                <label for="extinct-in-the-wild">Extinct In The Wild</label><br>
-            </form>
+            <input type="radio" id="reptile" name="species" value="Reptile">
+            <label for="reptile">Reptile</label><br>
         </form>
     </div>
 
     <div class="content" >
-        <form class="outer-form">
-            <form class="radio-form">
-                <p> Species:</p>
-                <input type="radio" id="mammal" name="species" value="Mammal">
-                <label for="mammal">Mammal</label><br>
+        <form class="radio-form">
+            <p> Continent of Origin:</p>
+            <input type="radio" id="africa" name="continent" value="Africa">
+            <label for="africa">Africa</label><br>
 
-                <input type="radio" id="bird" name="species" value="Bird">
-                <label for="bird">Bird</label><br>
+            <input type="radio" id="antarctica" name="continent" value="Antarctica">
+            <label for="antarctica">Antarctica</label><br>
 
-                <input type="radio" id="reptile" name="species" value="Reptile">
-                <label for="reptile">Reptile</label><br>
-            </form>
+            <input type="radio" id="australia" name="continent" value="Australia">
+            <label for="australia">Australia</label><br>
+
+            <input type="radio" id="asia" name="continent" value="Asia">
+            <label for="asia">Asia</label><br>
+
+            <input type="radio" id="europe" name="continent" value="Europe">
+            <label for="europe">Europe</label><br>
+
+            <input type="radio" id="north-america" name="continent" value="NorthAmerica">
+            <label for="north-america">North America</label><br>
+
+            <input type="radio" id="south-america" name="continent" value="SouthAmerica">
+            <label for="south-america">South America</label><br>
         </form>
     </div>
 
     <div class="content" >
-        <form class="outer-form">
-            <form class="radio-form">
-                <p> Continent of Origin:</p>
-                <input type="radio" id="africa" name="continent" value="Africa">
-                <label for="africa">Africa</label><br>
+        <form class="radio-form">
+            <p>Order</p>
+            <input type="radio" id="carnivora" name="order" value="Carnivora">
+            <label for="carnivora">Carnivora</label><br>
 
-                <input type="radio" id="antarctica" name="continent" value="Antarctica">
-                <label for="antarctica">Antarctica</label><br>
-            </form>
+            <input type="radio" id="herbivora" name="order" value="Herbivora">
+            <label for="herbivora">Herbivora</label><br>
+
+            <input type="radio" id="omnivora" name="order" value="Omnivora">
+            <label for="omnivora">Omnivora</label><br>
         </form>
     </div>
 
+    <div class="content" >
+        <form class="radio-form">
+            <p>Biome</p>
+            <input type="radio" id="temperate-deciduous-forest" name="biome" value="TemperateDeciduousForest">
+            <label for="temperate-deciduous-forest">Temperate Deciduous Forest</label><br>
+
+            <input type="radio" id="coniferous-forest" name="biome" value="ConiferousForest">
+            <label for="coniferous-forest">Coniferous Forest</label><br>
+
+            <input type="radio" id="woodland" name="biome" value="Woodland">
+            <label for="woodland">Woodland</label><br>
+
+            <input type="radio" id="chaparral" name="biome" value="Chaparral">
+            <label for="chaparral">Chaparral</label><br>
+
+            <input type="radio" id="tundra" name="biome" value="Tundra">
+            <label for="tundra">Tundra</label><br>
+
+            <input type="radio" id="grassland" name="biome" value="Grassland">
+            <label for="grassland">Grassland</label><br>
+
+            <input type="radio" id="desert" name="biome" value="Desert">
+            <label for="desert">Desert</label><br>
+
+            <input type="radio" id="tropical-savanna" name="biome" value="TropicalSavanna">
+            <label for="tropical-savanna">Tropical Savanna</label><br>
+
+            <input type="radio" id="tropical-forest" name="biome" value="TropicalForest">
+            <label for="tropical-forest">Tropical Forest</label><br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="radio-form">
+            <p> Conservation Status:</p>
+            <input type="radio" id="least-concern" name="cons" value="LeastConcern">
+            <label for="least-concern">Least Concern</label><br>
+
+            <input type="radio" id="near-threatened" name="cons" value="NearThreatened">
+            <label for="near-threatened">Near Threatened</label><br>
+
+            <input type="radio" id="vulnerable" name="cons" value="Vulnerable">
+            <label for="vulnerable">Vulnerable</label><br>
+
+            <input type="radio" id="endangered" name="cons" value="Endangered">
+            <label for="endangered">Endangered</label><br>
+
+            <input type="radio" id="critically-endangered" name="cons" value="CriticallyEndangered">
+            <label for="critically-endangered">Critically Endangered</label><br>
+
+            <input type="radio" id="extinct-in-the-wild" name="cons" value="ExtinctInTheWild">
+            <label for="extinct-in-the-wild">Extinct In The Wild</label><br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="text-area-form">
+            <p><label>Description:</label></p>
+            <div class="textarea-element" contenteditable></div>
+            <br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="text-area-form">
+            <p><label>Reproduction:</label></p>
+            <div class="textarea-element" contenteditable></div>
+            <!-- <textarea  id="reproduction" name="reproduction" ></textarea> -->
+            <br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="text-area-form">
+            <p><label>Conservation Status:</label></p>
+            <div class="textarea-element" contenteditable></div>
+            <br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="text-area-form">
+            <p><label>Fun Facts (each on a new line):</label></p>
+            <div class="textarea-element" contenteditable></div>
+            <br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="text-area-form">
+            <p><label>Natural Enemies (each on a new line):</label></p>
+            <div class="textarea-element" contenteditable></div>
+            <br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="short-text-form">
+            <label for="related-animal-1">First Related Animal:</label><br>
+            <input type="text" id="related-animal-1" name="related-animal-1" class="short-text-input"><br>
+        </form>
+        <form class="short-text-form">
+            <label for="related-animal-2">Second Related Animal:</label><br>
+            <input type="text" id="related-animal-2" name="related-animal-2" class="short-text-input">
+        </form>
+        <form class="short-text-form">
+            <label for="related-animal-3">Third Related Animal:</label><br>
+            <input type="text" id="related-animal-3" name="related-animal-2" class="short-text-input">
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="short-text-form">
+            <label for="title-image">Title Image (path):</label><br>
+            <input type="text" id="title-image" name="title-image" class="short-text-input"><br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="short-text-form">
+            <label for="tile-image">Tile Image (path):</label><br>
+            <input type="text" id="tile-image" name="tile-image" class="short-text-input"><br>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="short-text-form">
+            <p>Gallery Images (path)</p>
+            <label for="gallery-1">Image 1:</label><br>
+            <input type="text" id="gallery-1" name="gallery-1" class="short-text-input"><br>
+
+            <label for="gallery-2">Image 2:</label><br>
+            <input type="text" id="gallery-2" name="gallery-2" class="short-text-input"><br>
+
+            <label for="gallery-3">Image 3:</label><br>
+            <input type="text" id="gallery-3" name="gallery-3" class="short-text-input"><br>
+        </form>
+    </div>
 
     <footer class="col-12">
     <p> Test zoo 2022 </p>

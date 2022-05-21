@@ -25,10 +25,18 @@
 
 /* the actual input text box*/
 .short-text-input{      
-    border: 3px solid  rgb(58, 56, 53);
+    border: 1px solid  rgb(58, 56, 53);
     width: 300px;
-    padding: 2px;
+    padding: 5px;
 }
 
-/* for radio form: */
-
+.textarea-element {
+    width: 800px;
+    padding: 10px;
+    margin-left: 20px;
+    min-height: 20px;
+    border: 1px solid rgb(58, 56, 53);
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
