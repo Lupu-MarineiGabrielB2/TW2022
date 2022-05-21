@@ -18,7 +18,7 @@
 }
 
 /* label + short-text-input */
-.short-text-form{
+.short-text-div{
     border-top: 10px gray;
     padding: 10px;
 }
@@ -40,3 +40,32 @@
     overflow-x: hidden;
     overflow-y: auto;
   }
+
+#buttons-div{
+    display: flex;
+}
+
+button{
+    font-size: medium;
+    height: 30px;
+    width: 100px;
+    margin: 10px;
+}
+
+#reset-button{
+    border: 3px solid rgba(215, 0, 0, 0.847);
+    margin-right: 200px;
+    margin-left: 230px;
+}
+
+#reset-button:hover{
+    border: 3px solid rgba(255, 27, 27, 0.847);
+}
+
+#submit-button{
+    border: 3px solid rgb(65, 164, 65);
+}
+
+#submit-button:hover{
+    border: 3px solid rgb(108, 182, 108);
+}
