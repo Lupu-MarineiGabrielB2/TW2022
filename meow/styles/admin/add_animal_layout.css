@@ -1,0 +1,34 @@
+#title{
+    align-self: center;
+    font-size:xx-large;
+    padding: 20px;
+    transform: translate(35%, 0%);
+    text-decoration: rgb(241, 191, 53) solid underline;
+}
+
+.content{
+    border: 5px solid rgb(241, 191, 53);
+    margin-top: 50px;
+    width: 900px;  
+    overflow: hidden;  
+    margin: auto;  
+    padding: 20px;  
+    background: #f4f4f4;  
+    border-radius: 15px ; 
+}
+
+/* label + short-text-input */
+.short-text-form{
+    border-top: 10px gray;
+    padding: 10px;
+}
+
+/* the actual input text box*/
+.short-text-input{      
+    border: 3px solid  rgb(58, 56, 53);
+    width: 300px;
+    padding: 2px;
+}
+
+/* for radio form: */
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="description" content="The list of animals">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures/favicon-16x16.ico"/>
+    <title> New Animal </title>
+
+    <link rel="stylesheet" href="styles/general_layout.css"/>
+    <link rel="stylesheet" href="styles/admin/add_animal_layout.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="background-image: url('pictures/login-sign-up-background.jpeg')">
+    <header>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
+    </header>
+
+    <div class="content" >
+        <div id="title"> Add a new animal </div>
+    </div>
+    
+    <div class="content" >
+        <form class="outer-form">
+            <form class="short-text-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="scietific-name" class="short-text-input"><br>
+            </form>
+            <form class="short-text-form"></form>
+                <label for="scietific-name">Scietific Name:</label><br>
+                <input type="text" id="scietific-name" name="scietific-name" class="short-text-input">
+            </form>
+            <form class="short-text-form"></form>
+                <label for="distribution">Distribution:</label><br>
+                <input type="text" id="distribution" name="distribution" class="short-text-input">
+            </form>
+            <form class="short-text-form"></form>
+                <label for="habitat">Habitat:</label><br>
+                <input type="text" id="habitat" name="habitat" class="short-text-input">
+            </form>
+            <form class="short-text-form"></form>
+                <label for="diet">Diet:</label><br>
+                <input type="text" id="diet" name="diet" class="short-text-input">
+            </form>
+            <form class="short-text-form"></form>
+                <label for="lifespan">Lifespan:</label><br>
+                <input type="text" id="lifespan" name="lifespan" class="short-text-input">
+            </form>
+
+            
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="outer-form">
+            <form class="radio-form">
+                <p> Conservation Status:</p>
+                <input type="radio" id="least-concern" name="cons" value="LeastConcern">
+                <label for="least-concern">Least Concern</label><br>
+
+                <input type="radio" id="near-threatened" name="cons" value="NearThreatened">
+                <label for="near-threatened">Near Threatened</label><br>
+
+                <input type="radio" id="vulnerable" name="cons" value="Vulnerable">
+                <label for="vulnerable">Vulnerable</label><br>
+
+                <input type="radio" id="endangered" name="cons" value="Endangered">
+                <label for="endangered">Endangered</label><br>
+
+                <input type="radio" id="critically-endangered" name="cons" value="CriticallyEndangered">
+                <label for="critically-endangered">Critically Endangered</label><br>
+
+                <input type="radio" id="extinct-in-the-wild" name="cons" value="ExtinctInTheWild">
+                <label for="extinct-in-the-wild">Extinct In The Wild</label><br>
+            </form>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="outer-form">
+            <form class="radio-form">
+                <p> Species:</p>
+                <input type="radio" id="mammal" name="species" value="Mammal">
+                <label for="mammal">Mammal</label><br>
+
+                <input type="radio" id="bird" name="species" value="Bird">
+                <label for="bird">Bird</label><br>
+
+                <input type="radio" id="reptile" name="species" value="Reptile">
+                <label for="reptile">Reptile</label><br>
+            </form>
+        </form>
+    </div>
+
+    <div class="content" >
+        <form class="outer-form">
+            <form class="radio-form">
+                <p> Continent of Origin:</p>
+                <input type="radio" id="africa" name="continent" value="Africa">
+                <label for="africa">Africa</label><br>
+
+                <input type="radio" id="antarctica" name="continent" value="Antarctica">
+                <label for="antarctica">Antarctica</label><br>
+            </form>
+        </form>
+    </div>
+
+
+    <footer class="col-12">
+    <p> Test zoo 2022 </p>
+    <p>All photos are copyright-free and were obtained from <a id="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
+    </footer>
+
+</body>
+</html>
