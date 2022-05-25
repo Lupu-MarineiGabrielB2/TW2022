@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/general_layout.css"/>
     <link rel="stylesheet" href="styles/admin/add_animal_layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="scripts/add_animal.js"></script>
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
@@ -23,8 +25,15 @@
     <div class="content" >
         <div id="title"> Add a new animal </div>
     </div>
+
+    <div class="content">
+        <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+            <p>Drag one or more files to this Drop Zone ...</p>
+          </div>
+          <button type="button" onclick="getTheFile();">Insert </button>
+    </div>
     
-    <form>>
+    <form action="php/add_animal.php" method="post">
         <div class="content" >
             <div class="short-text-div">
                 <label for="name">Name:</label><br>
@@ -32,7 +41,7 @@
             </div>
             <div class="short-text-div">
                 <label for="scietific-name">Scietific Name:</label><br>
-                <input type="text" id="scietific-name" name="scietific-name" class="short-text-input">
+                <input type="text" id="scietific-name" name="scientificName" class="short-text-input">
             </div>
             <div class="short-text-div">
                 <label for="distribution">Distribution:</label><br>
@@ -57,10 +66,10 @@
                 <p> Species:</p>
                 <input type="radio" id="mammal" name="species" value="Mammal">
                 <label for="mammal">Mammal</label><br>
-
+        
                 <input type="radio" id="bird" name="species" value="Bird">
                 <label for="bird">Bird</label><br>
-
+        
                 <input type="radio" id="reptile" name="species" value="Reptile">
                 <label for="reptile">Reptile</label><br>
             </div>
@@ -112,7 +121,7 @@
                 <input type="radio" id="temperate-deciduous-forest" name="biome" value="TemperateDeciduousForest">
                 <label for="temperate-deciduous-forest">Temperate Deciduous Forest</label><br>
 
-                <input type="radio" id="coniferous-forest" name="biome" value="ConiferousForest">
+                <input type="radio" id="coniferous-forest" name="biome" value="Coniferous Forest">
                 <label for="coniferous-forest">Coniferous Forest</label><br>
 
                 <input type="radio" id="woodland" name="biome" value="Woodland">
@@ -163,57 +172,56 @@
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label>Description:</label></p>
-                <div class="textarea-element" contenteditable></div>
+                <p><label for="description">Description:</label></p>
+                <textarea rows="8" cols="107" name="description" id="description"></textarea>
                 <br>
             </div>
         </div>
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label>Reproduction:</label></p>
-                <div class="textarea-element" contenteditable></div>
-                <!-- <textarea  id="reproduction" name="reproduction" ></textarea> -->
+                <p><label for="reproduction">Reproduction:</label></p>
+                <textarea rows="8" cols="107" name="reproduction" id="reproduction"></textarea>
                 <br>
             </div>
         </div>
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label>Conservation Status:</label></p>
-                <div class="textarea-element" contenteditable></div>
+                <p><label for="conservation-status-para">Conservation Status:</label></p>
+                <textarea rows="8" cols="107" id="conservation-status-para" name="consercationStatusPara"></textarea>
                 <br>
             </div>
         </div>
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label>Fun Facts (each on a new line):</label></p>
-                <div class="textarea-element" contenteditable></div>
+                <p><label for="fun-facts">Fun Facts (each on a new line):</label></p>
+                <textarea rows="8" cols="107" id="fun-facts" name="funFacts"></textarea>
                 <br>
             </div>
         </div>
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label>Natural Enemies (each on a new line):</label></p>
-                <div class="textarea-element" contenteditable></div>
+                <p><label for="natural-enemies">Natural Enemies (each on a new line):</label></p>
+                <textarea rows="8" cols="107" id="natural-enemies" name="naturalEnemies"></textarea>
                 <br>
             </div>
         </div>
 
         <div class="content" >
             <div class="short-text-div">
-                <label for="related-animal-1">First Related Animal:</label><br>
-                <input type="text" id="related-animal-1" name="related-animal-1" class="short-text-input"><br>
+                <label for="related-animal-1">First Related Animal (name):</label><br>
+                <input type="text" id="related-animal-1" name="relatedAnimal1" class="short-text-input"><br>
             </div>
             <div class="short-text-div">
                 <label for="related-animal-2">Second Related Animal:</label><br>
-                <input type="text" id="related-animal-2" name="related-animal-2" class="short-text-input">
+                <input type="text" id="related-animal-2" name="relatedAnimal2" class="short-text-input">
             </div>
             <div class="short-text-div">
                 <label for="related-animal-3">Third Related Animal:</label><br>
-                <input type="text" id="related-animal-3" name="related-animal-2" class="short-text-input">
+                <input type="text" id="related-animal-3" name="relatedAnimal3" class="short-text-input">
             </div>
         </div>
 
@@ -244,7 +252,6 @@
                 <input type="text" id="gallery-3" name="gallery-3" class="short-text-input"><br>
             </div>
         </div>
-
         <div class="content" id="buttons-div">
             <button id="reset-button" type = "reset" value = "Reset"> Reset </button>
             <button id="submit-button" type = "submit" value = "Submit"> Submit </button>
@@ -258,3 +265,5 @@
 
 </body>
 </html>
+
+

@@ -18,9 +18,13 @@
 }
 
 /* label + short-text-input */
-.short-text-div{
+.short-text-div, .radio-div{
     border-top: 10px gray;
     padding: 10px;
+}
+
+.text-area-div p{
+    padding-left: 10px;
 }
 
 /* the actual input text box*/
@@ -30,16 +34,6 @@
     padding: 5px;
 }
 
-.textarea-element {
-    width: 800px;
-    padding: 10px;
-    margin-left: 20px;
-    min-height: 20px;
-    border: 1px solid rgb(58, 56, 53);
-    max-height: 200px;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
 
 #buttons-div{
     display: flex;
@@ -68,4 +62,14 @@ button{
 
 #submit-button:hover{
     border: 3px solid rgb(108, 182, 108);
+}
+
+#drop_zone {
+    border: 5px solid blue;
+    width:  200px;
+    height: 100px;
+  }
+
+.text-area-div textarea{
+    margin-left: 20px;
 }
