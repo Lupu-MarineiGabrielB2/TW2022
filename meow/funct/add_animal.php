@@ -40,12 +40,26 @@
             $jsonName=$formInput["name"];
             $jsonName=strtolower(trim($jsonName));
             $jsonName=str_replace(" ","_",$jsonName);
+            $warpedName=$jsonName;
             $jsonName="data/" . $jsonName . ".json";
             $jsonFile = fopen($jsonName, "w");
 
             //places data in json
             file_put_contents($jsonName, json_encode($formInput));
-        ?>
 
+            //creates the folder for each animal's pictures
+            $picturesFolder="data/pictures/". $warpedName;
+            @mkdir($picturesFolder, 0777);
+
+            //fetches all files from upload and sends them to data/pictures/$warpedName
+            echo $_SERVER['DOCUMENT_ROOT'];
+            $uploadPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/upload";
+            $arrFiles = scandir($uploadPath, 1);
+            foreach ($arrFiles as $img) {
+                $sourcePath=$uploadPath."/".$img;
+                $targetPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/data/pictures/".$warpedName."/".$img;
+                rename($sourcePath, $targetPath);
+            }
+        ?>
     </body>
 </html>

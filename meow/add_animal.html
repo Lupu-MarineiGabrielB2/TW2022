@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="styles/admin/add_animal_layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="scripts/add_animal.js"></script>
-    <script src="php/upload.js"></script>
+    <script src="funct/add_animal.js"></script>
+    <script src="funct/pictureHandlers.js"></script>
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
@@ -26,7 +26,7 @@
     <div class="content" >
         <div id="title"> Add a new animal </div>
     </div>
-
+<!--
     <div class="content">
         <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
             <p>Drag one or more files to this Drop Zone ...</p>
@@ -34,17 +34,22 @@
           <button type="button" onclick="getTheFile();">Insert </button>
     </div>
 
+
     <div class="content">
-        <input type="file" name="file" id="file">
+        <input type="file" name="file" id="file" oninput="uploadFile('file');" >
         <input type="button" id="btn_uploadfile" 
-           value="Upload" 
+           value="Clear selection" 
            onclick="uploadFile();" >
       </div>
+
       <div class="content">
-        <input type="file" name="file" id="file2">
+        <input type="file" name="file" id="file" oninput="uploadFile('file');" >
       </div>
+-->
     
-    <form action="php/add_animal.php" method="post">
+
+
+    <form action="funct/add_animal.php" method="post">
         <div class="content" >
             <div class="short-text-div">
                 <label for="name">Name:</label><br>
@@ -238,34 +243,34 @@
 
         <div class="content" >
             <div class="short-text-div">
-                <label for="title-image">Title Image (path):</label><br>
-                <input type="text" id="title-image" name="title-image" class="short-text-input"><br>
+                <label for="title-image">Title Image (banner on the animal's page):</label><br><br>
+                <input type="file" name="file" id="title-img"  oninput="uploadFile('title-img');">
             </div>
         </div>
 
         <div class="content" >
             <div class="short-text-div">
-                <label for="tile-image">Tile Image (path):</label><br>
-                <input type="text" id="tile-image" name="tile-image" class="short-text-input"><br>
+                <label for="tile-image">Tile Image (for the animal's "card"):</label><br><br>
+                <input type="file" name="file" id="tile-img" oninput="uploadFile('tile-img');" >
             </div>
         </div>
 
         <div class="content" >
             <div class="short-text-div">
-                <p>Gallery Images (path)</p>
+                <p>Gallery Images </p>
                 <label for="gallery-1">Image 1:</label><br>
-                <input type="text" id="gallery-1" name="gallery-1" class="short-text-input"><br>
+                <input type="file" name="file" id="gallery-img1" oninput="uploadFile('gallery-img1');" ><br><br>
 
                 <label for="gallery-2">Image 2:</label><br>
-                <input type="text" id="gallery-2" name="gallery-2" class="short-text-input"><br>
+                <input type="file" name="file" id="gallery-img2" oninput="uploadFile('gallery-img2');" ><br><br>
 
                 <label for="gallery-3">Image 3:</label><br>
-                <input type="text" id="gallery-3" name="gallery-3" class="short-text-input"><br>
+                <input type="file" name="file" id="gallery-img3" oninput="uploadFile('gallery-img3');" ><br><br>
             </div>
         </div>
         <div class="content" id="buttons-div">
             <button id="reset-button" type = "reset" value = "Reset"> Reset </button>
-            <button id="submit-button" type = "submit" value = "Submit" onclick="uploadFile();"> Submit </button>
+            <button id="submit-button" type = "submit" value = "Submit" > Submit </button>
         </div>
     </form>
 

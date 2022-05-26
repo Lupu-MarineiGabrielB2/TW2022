@@ -21,8 +21,6 @@ if(isset($_FILES['file']['name'])){
          $response = 1;
       } 
    }
-
-   echo $response;
    exit;
 }
 
