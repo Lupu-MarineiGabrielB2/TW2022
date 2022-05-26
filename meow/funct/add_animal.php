@@ -43,6 +43,7 @@
             $jsonName="data/" . $jsonName . ".json";
             $jsonFile = fopen($jsonName, "w");
 
+            //places data in json
             file_put_contents($jsonName, json_encode($formInput));
         ?>
 

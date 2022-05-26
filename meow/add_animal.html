@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="scripts/add_animal.js"></script>
+    <script src="php/upload.js"></script>
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
@@ -32,6 +33,16 @@
           </div>
           <button type="button" onclick="getTheFile();">Insert </button>
     </div>
+
+    <div class="content">
+        <input type="file" name="file" id="file">
+        <input type="button" id="btn_uploadfile" 
+           value="Upload" 
+           onclick="uploadFile();" >
+      </div>
+      <div class="content">
+        <input type="file" name="file" id="file2">
+      </div>
     
     <form action="php/add_animal.php" method="post">
         <div class="content" >
@@ -254,7 +265,7 @@
         </div>
         <div class="content" id="buttons-div">
             <button id="reset-button" type = "reset" value = "Reset"> Reset </button>
-            <button id="submit-button" type = "submit" value = "Submit"> Submit </button>
+            <button id="submit-button" type = "submit" value = "Submit" onclick="uploadFile();"> Submit </button>
         </div>
     </form>
 
