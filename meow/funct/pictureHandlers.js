@@ -21,10 +21,18 @@ function uploadFile(id){
       var xhttp = new XMLHttpRequest();
 
       // Set POST method and ajax file path
-      xhttp.open("POST", "funct/picture.php", true);
+      xhttp.open("POST", "funct/picture.php?q=" + 0, true);
 
       // Send request with data
       xhttp.send(formData);
    }
+}
+
+
+//deletes the pictures that the form put inside the upload folder
+function resetForm(){
+   var xmlhttp = new XMLHttpRequest();   
+   xmlhttp.open("GET", "funct/picture.php?q=" + 1, true);
+   xmlhttp.send();
 }
 
