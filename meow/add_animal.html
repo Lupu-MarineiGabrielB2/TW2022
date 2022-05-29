@@ -56,8 +56,8 @@
                 <input type="text" id="name" name="name" class="short-text-input"><br>
             </div>
             <div class="short-text-div">
-                <label for="scietific-name">Scietific Name:</label><br>
-                <input type="text" id="scietific-name" name="scientificName" class="short-text-input">
+                <label for="scientific-name">Scietific Name:</label><br>
+                <input type="text" id="scientific-name" name="scientificName" class="short-text-input">
             </div>
             <div class="short-text-div">
                 <label for="distribution">Distribution:</label><br>
@@ -93,32 +93,6 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p> Continent of Origin:</p>
-                <input type="radio" id="africa" name="continent" value="Africa">
-                <label for="africa">Africa</label><br>
-
-                <input type="radio" id="antarctica" name="continent" value="Antarctica">
-                <label for="antarctica">Antarctica</label><br>
-
-                <input type="radio" id="australia" name="continent" value="Australia">
-                <label for="australia">Australia</label><br>
-
-                <input type="radio" id="asia" name="continent" value="Asia">
-                <label for="asia">Asia</label><br>
-
-                <input type="radio" id="europe" name="continent" value="Europe">
-                <label for="europe">Europe</label><br>
-
-                <input type="radio" id="north-america" name="continent" value="NorthAmerica">
-                <label for="north-america">North America</label><br>
-
-                <input type="radio" id="south-america" name="continent" value="SouthAmerica">
-                <label for="south-america">South America</label><br>
-            </div>
-        </div>
-
-        <div class="content" >
-            <div class="radio-div">
                 <p>Order</p>
                 <input type="radio" id="carnivora" name="order" value="Carnivora">
                 <label for="carnivora">Carnivora</label><br>
@@ -128,38 +102,6 @@
 
                 <input type="radio" id="omnivora" name="order" value="Omnivora">
                 <label for="omnivora">Omnivora</label><br>
-            </div>
-        </div>
-
-        <div class="content" >
-            <div class="radio-div">
-                <p>Biome</p>
-                <input type="radio" id="temperate-deciduous-forest" name="biome" value="TemperateDeciduousForest">
-                <label for="temperate-deciduous-forest">Temperate Deciduous Forest</label><br>
-
-                <input type="radio" id="coniferous-forest" name="biome" value="Coniferous Forest">
-                <label for="coniferous-forest">Coniferous Forest</label><br>
-
-                <input type="radio" id="woodland" name="biome" value="Woodland">
-                <label for="woodland">Woodland</label><br>
-
-                <input type="radio" id="chaparral" name="biome" value="Chaparral">
-                <label for="chaparral">Chaparral</label><br>
-
-                <input type="radio" id="tundra" name="biome" value="Tundra">
-                <label for="tundra">Tundra</label><br>
-
-                <input type="radio" id="grassland" name="biome" value="Grassland">
-                <label for="grassland">Grassland</label><br>
-
-                <input type="radio" id="desert" name="biome" value="Desert">
-                <label for="desert">Desert</label><br>
-
-                <input type="radio" id="tropical-savanna" name="biome" value="TropicalSavanna">
-                <label for="tropical-savanna">Tropical Savanna</label><br>
-
-                <input type="radio" id="tropical-forest" name="biome" value="TropicalForest">
-                <label for="tropical-forest">Tropical Forest</label><br>
             </div>
         </div>
 
@@ -183,6 +125,64 @@
 
                 <input type="radio" id="extinct-in-the-wild" name="cons" value="ExtinctInTheWild">
                 <label for="extinct-in-the-wild">Extinct In The Wild</label><br>
+            </div>
+        </div>
+
+        <div class="content" >
+            <div class="radio-div">
+                <p> Continent of Origin:</p>
+                <input type="checkbox" id="africa" name="continent[]" value="Africa">
+                <label for="africa">Africa</label><br>
+
+                <input type="checkbox" id="antarctica" name="continent[]" value="Antarctica">
+                <label for="antarctica">Antarctica</label><br>
+
+                <input type="checkbox" id="australia" name="continent[]" value="Australia">
+                <label for="australia">Australia</label><br>
+
+                <input type="checkbox" id="asia" name="continent[]" value="Asia">
+                <label for="asia">Asia</label><br>
+
+                <input type="checkbox" id="europe" name="continent[]" value="Europe">
+                <label for="europe">Europe</label><br>
+
+                <input type="checkbox" id="north-america" name="continent[]" value="NorthAmerica">
+                <label for="north-america">North America</label><br>
+
+                <input type="checkbox" id="south-america" name="continent[]" value="SouthAmerica">
+                <label for="south-america">South America</label><br>
+            </div>
+        </div>
+
+        <div class="content" >
+            <div class="radio-div">
+                <p>Biome</p>
+                <input type="checkbox" id="temperate-deciduous-forest" name="biome[]" value="TemperateDeciduousForest">
+                <label for="temperate-deciduous-forest">Temperate Deciduous Forest</label><br>
+
+                <input type="checkbox" id="coniferous-forest" name="biome[]" value="Coniferous Forest">
+                <label for="coniferous-forest">Coniferous Forest</label><br>
+
+                <input type="checkbox" id="woodland" name="biome[]" value="Woodland">
+                <label for="woodland">Woodland</label><br>
+
+                <input type="checkbox" id="chaparral" name="biome[]" value="Chaparral">
+                <label for="chaparral">Chaparral</label><br>
+
+                <input type="checkbox" id="tundra" name="biome[]" value="Tundra">
+                <label for="tundra">Tundra</label><br>
+
+                <input type="checkbox" id="grassland" name="biome[]" value="Grassland">
+                <label for="grassland">Grassland</label><br>
+
+                <input type="checkbox"id="desert" name="biome[]" value="Desert">
+                <label for="desert">Desert</label><br>
+
+                <input type="checkbox" id="tropical-savanna" name="biome[]" value="TropicalSavanna">
+                <label for="tropical-savanna">Tropical Savanna</label><br>
+
+                <input type="checkbox" id="tropical-forest" name="biome[]" value="TropicalForest">
+                <label for="tropical-forest">Tropical Forest</label><br>
             </div>
         </div>
 

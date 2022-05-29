@@ -9,6 +9,14 @@
 
         <?php 
         //gets all inputs from the form(except for images)
+            foreach($_POST["biome"] as $value){
+                $biomes=$biomes.$value.", ";
+            }
+
+            foreach($_POST["continent"] as $value){
+                $cont=$cont.$value.", ";
+            }
+
             $formInput = array("name"=>$_POST["name"],
             "scientificName"=>$_POST["scientificName"],
             "distribution"=>$_POST["distribution"],
@@ -16,13 +24,13 @@
             "diet"=>$_POST["diet"],
             "lifespan"=>$_POST["lifespan"],
             "species"=>$_POST["species"],
-            "continent"=>$_POST["continent"],
+            "continent"=>$cont,
             "order"=>$_POST["order"],
-            "biome"=>$_POST["biome"],
+            "biome"=>$biomes,
             "conservationStatus"=>$_POST["cons"],
             "description"=>$_POST["description"],
             "reproduction"=>$_POST["reproduction"],
-            "consercationStatusPara"=>$_POST["consercationStatusPara"],
+            "conservationStatusPara"=>$_POST["conservationStatusPara"],
             "funFacts"=>$_POST["funFacts"],
             "naturalEnemies"=>$_POST["naturalEnemies"],
             "relatedAnimal1"=>$_POST["relatedAnimal1"],
@@ -30,7 +38,6 @@
             "relatedAnimal3"=>$_POST["relatedAnimal3"]
             );
 
-            echo $divContent;
             foreach ($formInput as $key => $val){ 
                 echo $key.": ".$val."\n";
                 echo "<br>"; 
