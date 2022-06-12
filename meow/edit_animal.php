@@ -15,11 +15,16 @@
 
     <script src="funct/add_animal.js"></script>
     <script src="funct/pictureHandlers.js"></script>
+    <script src="funct/admin_page_funct.js"></script>
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
     <?php
-        $str_data = file_get_contents("funct/data/cat.json");
+        $jsonName = $_GET["name"];
+        $jsonName=strtolower($jsonName);
+        $jsonName=str_replace(" ","_",$jsonName);
+        $jsonName="funct/data/".$jsonName . ".json";
+        $str_data = file_get_contents($jsonName);
         $data = json_decode($str_data, true);
     ?>
 
@@ -37,37 +42,37 @@
             <div class="short-text-div">
                 <?php
                     echo '<label for="name">Name:</label><br>';
-                    echo  '<input type="text" id="name" value="'.$data["name"].'" name="name" class="short-text-input"><br>';
+                    echo  '<input type="text" id="name" value="'.$data["name"].'" name="name" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
                     echo '<label for="scientific-name">Scientific Name:</label><br>';
-                    echo  '<input type="text" id="scientific-name" value="'.$data["scientificName"].'" name="scientificName" class="short-text-input"><br>';
+                    echo  '<input type="text" id="scientific-name" value="'.$data["scientificName"].'" name="scientificName" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
                     echo '<label for="distribution">Distribution:</label><br>';
-                    echo  '<input type="text" id="distribution" value="'.$data["distribution"].'" name="distribution" class="short-text-input"><br>';
+                    echo  '<input type="text" id="distribution" value="'.$data["distribution"].'" name="distribution" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
                     echo '<label for="habitat">Habitat:</label><br>';
-                    echo  '<input type="text" id="habitat" value="'.$data["habitat"].'" name="habitat" class="short-text-input"><br>';
+                    echo  '<input type="text" id="habitat" value="'.$data["habitat"].'" name="habitat" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
                     echo '<label for="diet">Diet:</label><br>';
-                    echo  '<input type="text" id="diet" value="'.$data["diet"].'" name="diet" class="short-text-input"><br>';
+                    echo  '<input type="text" id="diet" value="'.$data["diet"].'" name="diet" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
                     echo '<label for="lifespan">Lifespan:</label><br>';
-                    echo  '<input type="text" id="lifespan" value="'.$data["lifespan"].'" name="lifespan" class="short-text-input"><br>';
+                    echo  '<input type="text" id="lifespan" value="'.$data["lifespan"].'" name="lifespan" class="short-text-input" required><br>';
                 ?>
             </div>
         </div>
@@ -80,9 +85,9 @@
                     $name="species";
                     for($i=0;$i<3;$i++){
                         if(strcmp($data["species"],$labels[$i])==0)
-                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"checked>';
+                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"checked required>';
                         else
-                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '">';
+                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"required>';
                         echo '<label for="' .$labels[$i]. ' ">'. $labels[$i]. '</label><br>';
                     }
                 ?>
@@ -97,9 +102,9 @@
                     $name="order";
                     for($i=0;$i<3;$i++){
                         if(strcmp($data["order"],$labels[$i])==0)
-                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"checked>';
+                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"checked required>';
                         else
-                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '">';
+                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"required>';
                         echo '<label for="' .$labels[$i]. ' ">'. $labels[$i]. '</label><br>';
                     }
                 ?>
@@ -114,9 +119,9 @@
                     $name="cons";
                     for($i=0;$i<6;$i++){
                         if(strcmp($data["conservationStatus"], $labels[$i])==0)
-                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"checked>';
+                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"checked required>';
                         else
-                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '">';
+                            echo '<input type="radio" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"required>';
                         echo '<label for="' .$labels[$i]. ' ">'. $labels[$i]. '</label><br>';
                     }
                 ?>
@@ -133,7 +138,7 @@
                         if(strpos($data["continent"],$labels[$i])!==false)
                             echo '<input type="checkbox" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '"checked>';
                         else
-                            echo '<input type="checkbox" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '">';
+                            echo '<input type="checkbox" id="'. $labels[$i]. '" name="'. $name. '" value="'. $labels[$i]. '" >';
                         echo '<label for="' .$labels[$i]. ' ">'. $labels[$i]. '</label><br>';
                     }
                 ?>
@@ -161,7 +166,7 @@
             <div class="text-area-div">
                 <p><label for="description">Description:</label></p>
                 <?php
-                    echo  '<textarea rows="8" cols="107" name="description" id="description">'. $data["description"].'</textarea>';
+                    echo  '<textarea rows="8" cols="107" name="description" id="description" required>'. $data["description"].'</textarea>';
                 ?>
                 <br>
             </div>
@@ -171,7 +176,7 @@
             <div class="text-area-div">
                 <p><label for="reproduction">Reproduction:</label></p>
                 <?php
-                    echo  '<textarea rows="8" cols="107" name="reproduction" id="reproduction">'. $data["reproduction"].'</textarea>';
+                    echo  '<textarea rows="8" cols="107" name="reproduction" id="reproduction" required>'. $data["reproduction"].'</textarea>';
                 ?>
                 <br>
             </div>
@@ -181,7 +186,7 @@
             <div class="text-area-div">
                 <p><label for="conservation-status-para">Conservation Status:</label></p>
                 <?php
-                    echo  '<textarea rows="8" cols="107" name="conservationStatusPara" id="conservation-status-para">'. $data["conservationStatusPara"].'</textarea>';
+                    echo  '<textarea rows="8" cols="107" name="conservationStatusPara" id="conservation-status-para" required>'. $data["conservationStatusPara"].'</textarea>';
                 ?>
                 <br>
             </div>
@@ -211,19 +216,19 @@
             <div class="short-text-div">
                 <label for="related-animal-1">First Related Animal (name):</label><br>
                 <?php
-                    echo  '<input type="text" id="related-animal-1" value="'.$data["relatedAnimal1"].'" name="relatedAnimal1" class="short-text-input"><br>';
+                    echo  '<input type="text" id="related-animal-1" value="'.$data["relatedAnimal1"].'" name="relatedAnimal1" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <label for="related-animal-2">Second Related Animal (name):</label><br>
                 <?php
-                    echo  '<input type="text" id="related-animal-2" value="'.$data["relatedAnimal2"].'" name="relatedAnimal2" class="short-text-input"><br>';
+                    echo  '<input type="text" id="related-animal-2" value="'.$data["relatedAnimal2"].'" name="relatedAnimal2" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <label for="related-animal-3">Third Related Animal (name):</label><br>
                 <?php
-                    echo '<input type="text" id="related-animal-3" value="'.$data["relatedAnimal3"].'" name="relatedAnimal3" class="short-text-input"><br>';
+                    echo '<input type="text" id="related-animal-3" value="'.$data["relatedAnimal3"].'" name="relatedAnimal3" class="short-text-input" required><br>';
                 ?>
             </div>
         </div>

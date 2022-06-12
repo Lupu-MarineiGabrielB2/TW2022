@@ -9,13 +9,6 @@
 
         <?php 
         //gets all inputs from the form(except for images)
-            foreach($_POST["biome"] as $value){
-                $biomes=$biomes.$value.", ";
-            }
-
-            foreach($_POST["continent"] as $value){
-                $cont=$cont.$value.", ";
-            }
 
             $formInput = array("name"=>$_POST["name"],
             "scientificName"=>$_POST["scientificName"],
@@ -38,11 +31,12 @@
             "relatedAnimal3"=>$_POST["relatedAnimal3"]
             );
 
+            /*
             foreach ($formInput as $key => $val){ 
                 echo $key.": ".$val."\n";
                 echo "<br>"; 
             } 
-
+            */
             //creates the .json file: data/name_name.json
             $jsonName=$formInput["name"];
             $jsonName=strtolower(trim($jsonName));
@@ -59,7 +53,7 @@
             @mkdir($picturesFolder, 0777);
 
             //fetches all files from upload and sends them to data/pictures/$warpedName
-            echo $_SERVER['DOCUMENT_ROOT'];
+            //echo $_SERVER['DOCUMENT_ROOT'];
             $uploadPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/upload";
             $arrFiles = scandir($uploadPath, 1);
             foreach ($arrFiles as $img) {
@@ -67,6 +61,11 @@
                 $targetPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/data/pictures/".$warpedName."/".$img;
                 rename($sourcePath, $targetPath);
             }
+
+            //window.location.replace("http://newpage.php/");
+            $redirect=$_SERVER['DOCUMENT_ROOT']."/meow/admin.php";
+            header("Location:".$redirect);
+            exit();
         ?>
     </body>
 </html>

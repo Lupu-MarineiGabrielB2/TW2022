@@ -26,61 +26,39 @@
     <div class="content" >
         <div id="title"> Add a new animal </div>
     </div>
-<!--
-    <div class="content">
-        <div id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-            <p>Drag one or more files to this Drop Zone ...</p>
-          </div>
-          <button type="button" onclick="getTheFile();">Insert </button>
-    </div>
-
-
-    <div class="content">
-        <input type="file" name="file" id="file" oninput="uploadFile('file');" >
-        <input type="button" id="btn_uploadfile" 
-           value="Clear selection" 
-           onclick="uploadFile();" >
-      </div>
-
-      <div class="content">
-        <input type="file" name="file" id="file" oninput="uploadFile('file');" >
-      </div>
--->
     
-
-
     <form action="funct/add_animal.php" method="post" id="form">
         <div class="content" >
             <div class="short-text-div">
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" class="short-text-input"><br>
+                <input type="text" id="name" name="name" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>
             </div>
             <div class="short-text-div">
                 <label for="scientific-name">Scietific Name:</label><br>
-                <input type="text" id="scientific-name" name="scientificName" class="short-text-input">
+                <input type="text" id="scientific-name" name="scientificName" class="short-text-input" pattern="[A-Z][ a-z]+" required>
             </div>
             <div class="short-text-div">
                 <label for="distribution">Distribution:</label><br>
-                <input type="text" id="distribution" name="distribution" class="short-text-input">
+                <input type="text" id="distribution" name="distribution" class="short-text-input" required>
             </div>
             <div class="short-text-div">
                 <label for="habitat">Habitat:</label><br>
-                <input type="text" id="habitat" name="habitat" class="short-text-input">
+                <input type="text" id="habitat" name="habitat" class="short-text-input" required>
             </div>
             <div class="short-text-div">
                 <label for="diet">Diet:</label><br>
-                <input type="text" id="diet" name="diet" class="short-text-input">
+                <input type="text" id="diet" name="diet" class="short-text-input" required>
             </div>
             <div class="short-text-div">
                 <label for="lifespan">Lifespan:</label><br>
-                <input type="text" id="lifespan" name="lifespan" class="short-text-input">
+                <input type="text" id="lifespan" name="lifespan" class="short-text-input" required>
             </div>
         </div>
 
         <div class="content" >
             <div class="radio-div">
                 <p> Species:</p>
-                <input type="radio" id="mammal" name="species" value="Mammal">
+                <input type="radio" id="mammal" name="species" value="Mammal" required>
                 <label for="mammal">Mammal</label><br>
         
                 <input type="radio" id="bird" name="species" value="Bird">
@@ -94,7 +72,7 @@
         <div class="content" >
             <div class="radio-div">
                 <p>Order</p>
-                <input type="radio" id="carnivora" name="order" value="Carnivora">
+                <input type="radio" id="carnivora" name="order" value="Carnivora" required>
                 <label for="carnivora">Carnivora</label><br>
 
                 <input type="radio" id="herbivora" name="order" value="Herbivora">
@@ -108,7 +86,7 @@
         <div class="content" >
             <div class="radio-div">
                 <p> Conservation Status:</p>
-                <input type="radio" id="least-concern" name="cons" value="LeastConcern">
+                <input type="radio" id="least-concern" name="cons" value="LeastConcern" required>
                 <label for="least-concern">Least Concern</label><br>
 
                 <input type="radio" id="near-threatened" name="cons" value="NearThreatened">
@@ -189,7 +167,7 @@
         <div class="content" >
             <div class="text-area-div">
                 <p><label for="description">Description:</label></p>
-                <textarea rows="8" cols="107" name="description" id="description"></textarea>
+                <textarea rows="8" cols="107" name="description" id="description" required></textarea>
                 <br>
             </div>
         </div>
@@ -197,7 +175,7 @@
         <div class="content" >
             <div class="text-area-div">
                 <p><label for="reproduction">Reproduction:</label></p>
-                <textarea rows="8" cols="107" name="reproduction" id="reproduction"></textarea>
+                <textarea rows="8" cols="107" name="reproduction" id="reproduction" required></textarea>
                 <br>
             </div>
         </div>
@@ -205,7 +183,7 @@
         <div class="content" >
             <div class="text-area-div">
                 <p><label for="conservation-status-para">Conservation Status:</label></p>
-                <textarea rows="8" cols="107" id="conservation-status-para" name="consercationStatusPara"></textarea>
+                <textarea rows="8" cols="107" id="conservation-status-para" name="conservationStatusPara" required></textarea>
                 <br>
             </div>
         </div>
@@ -229,15 +207,15 @@
         <div class="content" >
             <div class="short-text-div">
                 <label for="related-animal-1">First Related Animal (name):</label><br>
-                <input type="text" id="related-animal-1" name="relatedAnimal1" class="short-text-input"><br>
+                <input type="text" id="related-animal-1" name="relatedAnimal1" class="short-text-input" required>
             </div>
             <div class="short-text-div">
                 <label for="related-animal-2">Second Related Animal:</label><br>
-                <input type="text" id="related-animal-2" name="relatedAnimal2" class="short-text-input">
+                <input type="text" id="related-animal-2" name="relatedAnimal2" class="short-text-input" required>
             </div>
             <div class="short-text-div">
                 <label for="related-animal-3">Third Related Animal:</label><br>
-                <input type="text" id="related-animal-3" name="relatedAnimal3" class="short-text-input">
+                <input type="text" id="related-animal-3" name="relatedAnimal3" class="short-text-input" required>
             </div>
         </div>
 
