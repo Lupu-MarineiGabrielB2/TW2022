@@ -9,6 +9,13 @@
 
         <?php 
         //gets all inputs from the form(except for images)
+            foreach($_POST["biome"] as $value){
+                $biomes=$biomes.$value.", ";
+            }
+
+            foreach($_POST["continent"] as $value){
+                $cont=$cont.$value.", ";
+            }
 
             $formInput = array("name"=>$_POST["name"],
             "scientificName"=>$_POST["scientificName"],
@@ -62,10 +69,9 @@
                 rename($sourcePath, $targetPath);
             }
 
-            //window.location.replace("http://newpage.php/");
-            $redirect=$_SERVER['DOCUMENT_ROOT']."/meow/admin.php";
-            header("Location:".$redirect);
-            exit();
+            //redirects to admin page
+            header("Location:http://localhost/meow/admin.php");
+
         ?>
     </body>
 </html>

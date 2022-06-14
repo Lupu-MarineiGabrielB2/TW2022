@@ -30,34 +30,34 @@
     <form action="funct/add_animal.php" method="post" id="form">
         <div class="content" >
             <div class="short-text-div">
-                <label for="name">Name:</label><br>
+                <label for="name">Name* </label><br>
                 <input type="text" id="name" name="name" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>
             </div>
             <div class="short-text-div">
-                <label for="scientific-name">Scietific Name:</label><br>
+                <label for="scientific-name">Scietific Name* (ex: Procyon Lotor)</label><br>
                 <input type="text" id="scientific-name" name="scientificName" class="short-text-input" pattern="[A-Z][ a-z]+" required>
             </div>
             <div class="short-text-div">
-                <label for="distribution">Distribution:</label><br>
+                <label for="distribution">Distribution*</label><br>
                 <input type="text" id="distribution" name="distribution" class="short-text-input" required>
             </div>
             <div class="short-text-div">
-                <label for="habitat">Habitat:</label><br>
+                <label for="habitat">Habitat*</label><br>
                 <input type="text" id="habitat" name="habitat" class="short-text-input" required>
             </div>
             <div class="short-text-div">
-                <label for="diet">Diet:</label><br>
+                <label for="diet">Diet*</label><br>
                 <input type="text" id="diet" name="diet" class="short-text-input" required>
             </div>
             <div class="short-text-div">
-                <label for="lifespan">Lifespan:</label><br>
+                <label for="lifespan">Lifespan*</label><br>
                 <input type="text" id="lifespan" name="lifespan" class="short-text-input" required>
             </div>
         </div>
 
         <div class="content" >
             <div class="radio-div">
-                <p> Species:</p>
+                <p> Species*</p>
                 <input type="radio" id="mammal" name="species" value="Mammal" required>
                 <label for="mammal">Mammal</label><br>
         
@@ -71,7 +71,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p>Order</p>
+                <p>Order*</p>
                 <input type="radio" id="carnivora" name="order" value="Carnivora" required>
                 <label for="carnivora">Carnivora</label><br>
 
@@ -85,7 +85,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p> Conservation Status:</p>
+                <p> Conservation Status*</p>
                 <input type="radio" id="least-concern" name="cons" value="LeastConcern" required>
                 <label for="least-concern">Least Concern</label><br>
 
@@ -108,7 +108,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p> Continent of Origin:</p>
+                <p> Continent of Origin*</p>
                 <input type="checkbox" id="africa" name="continent[]" value="Africa">
                 <label for="africa">Africa</label><br>
 
@@ -134,7 +134,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p>Biome</p>
+                <p>Biome*</p>
                 <input type="checkbox" id="temperate-deciduous-forest" name="biome[]" value="TemperateDeciduousForest">
                 <label for="temperate-deciduous-forest">Temperate Deciduous Forest</label><br>
 
@@ -166,7 +166,7 @@
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label for="description">Description:</label></p>
+                <p><label for="description">Description*</label></p>
                 <textarea rows="8" cols="107" name="description" id="description" required></textarea>
                 <br>
             </div>
@@ -174,7 +174,7 @@
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label for="reproduction">Reproduction:</label></p>
+                <p><label for="reproduction">Reproduction*</label></p>
                 <textarea rows="8" cols="107" name="reproduction" id="reproduction" required></textarea>
                 <br>
             </div>
@@ -182,7 +182,7 @@
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label for="conservation-status-para">Conservation Status:</label></p>
+                <p><label for="conservation-status-para">Conservation Status*</label></p>
                 <textarea rows="8" cols="107" id="conservation-status-para" name="conservationStatusPara" required></textarea>
                 <br>
             </div>
@@ -206,15 +206,15 @@
 
         <div class="content" >
             <div class="short-text-div">
-                <label for="related-animal-1">First Related Animal (name):</label><br>
+                <label for="related-animal-1">First Related Animal (name)*</label><br>
                 <input type="text" id="related-animal-1" name="relatedAnimal1" class="short-text-input" required>
             </div>
             <div class="short-text-div">
-                <label for="related-animal-2">Second Related Animal:</label><br>
+                <label for="related-animal-2">Second Related Animal (name)*</label><br>
                 <input type="text" id="related-animal-2" name="relatedAnimal2" class="short-text-input" required>
             </div>
             <div class="short-text-div">
-                <label for="related-animal-3">Third Related Animal:</label><br>
+                <label for="related-animal-3">Third Related Animal (name)*</label><br>
                 <input type="text" id="related-animal-3" name="relatedAnimal3" class="short-text-input" required>
             </div>
         </div>
@@ -248,7 +248,8 @@
         </div>
         <div class="content" id="buttons-div">
             <button id="reset-button" onclick="resetForm();" type = "reset" value="Reset"> Reset </button>
-            <button id="submit-button" type = "submit" value = "Submit" > Submit </button>
+          
+            <input onclick="window.location.href = 'animals.html';" type="submit" value="Submit request" />
         </div>
     </form>
 

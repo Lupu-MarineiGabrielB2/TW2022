@@ -18,6 +18,8 @@
    }
  }
 
- function redirectToAdminPage(){
-        window.location.replace("admin.php");
+ function redirect(){
+      //  window.location.replace("C:/xampp/htdocs/meow/admin.php");
+      console.log("Asdasd")
+      window.location.href = "http://localhost/meow/admin.php";
  }

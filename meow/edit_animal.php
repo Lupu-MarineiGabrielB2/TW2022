@@ -41,37 +41,37 @@
         <div class="content" >
             <div class="short-text-div">
                 <?php
-                    echo '<label for="name">Name:</label><br>';
+                    echo '<label for="name">Name (By modifying the value of this field, a new entry is created!)</label><br>';
                     echo  '<input type="text" id="name" value="'.$data["name"].'" name="name" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
-                    echo '<label for="scientific-name">Scientific Name:</label><br>';
+                    echo '<label for="scientific-name">Scientific Name* (ex: Procyon Lotor)</label><br>';
                     echo  '<input type="text" id="scientific-name" value="'.$data["scientificName"].'" name="scientificName" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
-                    echo '<label for="distribution">Distribution:</label><br>';
+                    echo '<label for="distribution">Distribution*</label><br>';
                     echo  '<input type="text" id="distribution" value="'.$data["distribution"].'" name="distribution" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
-                    echo '<label for="habitat">Habitat:</label><br>';
+                    echo '<label for="habitat">Habitat*</label><br>';
                     echo  '<input type="text" id="habitat" value="'.$data["habitat"].'" name="habitat" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
-                    echo '<label for="diet">Diet:</label><br>';
+                    echo '<label for="diet">Diet*</label><br>';
                     echo  '<input type="text" id="diet" value="'.$data["diet"].'" name="diet" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
-                    echo '<label for="lifespan">Lifespan:</label><br>';
+                    echo '<label for="lifespan">Lifespan*</label><br>';
                     echo  '<input type="text" id="lifespan" value="'.$data["lifespan"].'" name="lifespan" class="short-text-input" required><br>';
                 ?>
             </div>
@@ -79,7 +79,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p> Species:</p>
+                <p> Species*</p>
                 <?php
                     $labels=array("Mammal", "Bird", "Reptile");
                     $name="species";
@@ -96,7 +96,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p>Order</p>
+                <p>Order*</p>
                 <?php
                     $labels=array("Carnivora", "Herbivora", "Omnivora");
                     $name="order";
@@ -113,7 +113,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p> Conservation Status:</p>
+                <p> Conservation Status*</p>
                 <?php
                     $labels=array("Least Concern", "Near Threatened", "Vulnerable", "Endangered", "Critically Endangered", "Extinct In The Wild");
                     $name="cons";
@@ -130,7 +130,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p> Continent of Origin:</p>
+                <p> Continent of Origin*</p>
                 <?php
                     $labels=array("Africa", "Antarctica", "Australia", "Asia", "Europe", "North America", "South America");
                     $name="continent[]";
@@ -147,7 +147,7 @@
 
         <div class="content" >
             <div class="radio-div">
-                <p>Biome</p>
+                <p>Biome*</p>
                 <?php
                     $labels=array("Temperate Deciduous Forest","Coniferous Forest", "Woodland", "Chaparral", "Tundra", "Grassland", "Desert", "Tropical Savanna", "Tropical Forest");
                     $name="biome[]";
@@ -164,7 +164,7 @@
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label for="description">Description:</label></p>
+                <p><label for="description">Description*</label></p>
                 <?php
                     echo  '<textarea rows="8" cols="107" name="description" id="description" required>'. $data["description"].'</textarea>';
                 ?>
@@ -174,7 +174,7 @@
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label for="reproduction">Reproduction:</label></p>
+                <p><label for="reproduction">Reproduction*</label></p>
                 <?php
                     echo  '<textarea rows="8" cols="107" name="reproduction" id="reproduction" required>'. $data["reproduction"].'</textarea>';
                 ?>
@@ -184,7 +184,7 @@
 
         <div class="content" >
             <div class="text-area-div">
-                <p><label for="conservation-status-para">Conservation Status:</label></p>
+                <p><label for="conservation-status-para">Conservation Status*</label></p>
                 <?php
                     echo  '<textarea rows="8" cols="107" name="conservationStatusPara" id="conservation-status-para" required>'. $data["conservationStatusPara"].'</textarea>';
                 ?>
@@ -214,19 +214,19 @@
 
         <div class="content" >
             <div class="short-text-div">
-                <label for="related-animal-1">First Related Animal (name):</label><br>
+                <label for="related-animal-1">First Related Animal (name)*</label><br>
                 <?php
                     echo  '<input type="text" id="related-animal-1" value="'.$data["relatedAnimal1"].'" name="relatedAnimal1" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
-                <label for="related-animal-2">Second Related Animal (name):</label><br>
+                <label for="related-animal-2">Second Related Animal (name)*</label><br>
                 <?php
                     echo  '<input type="text" id="related-animal-2" value="'.$data["relatedAnimal2"].'" name="relatedAnimal2" class="short-text-input" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
-                <label for="related-animal-3">Third Related Animal (name):</label><br>
+                <label for="related-animal-3">Third Related Animal (name)*</label><br>
                 <?php
                     echo '<input type="text" id="related-animal-3" value="'.$data["relatedAnimal3"].'" name="relatedAnimal3" class="short-text-input" required><br>';
                 ?>
@@ -260,9 +260,10 @@
                 <input type="file" name="file" id="gallery-img3" oninput="uploadFile('gallery-img3');" ><br><br>
             </div>
         </div>
+
         <div class="content" id="buttons-div">
             <button id="reset-button" onclick="resetForm();" type = "reset" value="Reset"> Undo</button>
-            <button id="submit-button" type = "submit" value = "Submit" > Submit </button>
+            <button id="submit-button" type = "submit" value = "Submit" > Submit </button>  
         </div>
     </form>
 
