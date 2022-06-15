@@ -18,6 +18,7 @@
    }
  }
 
+
  function redirect(){
       //  window.location.replace("C:/xampp/htdocs/meow/admin.php");
       console.log("Asdasd")

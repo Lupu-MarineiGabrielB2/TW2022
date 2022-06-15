@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animals/tile.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="funct/javaScript/animals_funct.js"></script>
 </head>
 
 
@@ -199,61 +200,27 @@
 
 <!-- template tile for: 1.animal picture and name; 2.basic info about said animal -->
 <div class="tile_set col-9">
-  <a class="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p class="animal_name">Common Raccoon </p> 
-      <p class="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a> 
-  <a class="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p class="animal_name">Common Raccoon </p> 
-      <p class="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a> 
-  <a class="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p class="animal_name">Common Raccoon </p> 
-      <p class="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a> 
-  <a class="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p class="animal_name">Common Raccoon </p> 
-      <p class="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a> 
-  <a class="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p class="animal_name">Common Raccoon </p> 
-      <p class="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a> 
-  <a class="link_to_template_page" href="animal_template.html">
-    <div class="tile">
-      <img class="animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-      <p class="animal_name">Common Raccoon </p> 
-      <p class="scientific_name"> (Procyon lotor) </p>
-      <div class="animal_text"><p>The raccoon sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm, and a body weight of 5 to 26 kg.</p>
-      </div>
-    </div>  
-  </a> 
+  <?php
+    $dataPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/data";
+    $arrFiles = scandir($dataPath, 1);
+    foreach ($arrFiles as $file) {
+        if(!is_dir($file)){
+            $str_data = file_get_contents("funct/data/" . $file);
+            $data = json_decode($str_data, true);
+            $name=$data["name"];
+            $filename = glob("funct/data/pictures/".$name."/tile-img.*");
 
+            echo '<div class="tile" onclick="getAnimalPage('.'\''.$name.'\''.');">
+              <img class="animal_img" src="'.$filename[0].'" alt="Raccoon">
+              <p class="animal_name">'.$name.' </p> 
+              <p class="scientific_name"> ('.$data["scientificName"].') </p>
+              <div class="animal_text"><p>'.$data["description"].'</p>
+              </div>
+            </div>';
+        }
+         
+      }
+  ?>
 </div>
 
 </div>    <!-- end of "content"-->

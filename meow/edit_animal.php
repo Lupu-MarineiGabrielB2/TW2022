@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="styles/admin/add_animal_layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="funct/add_animal.js"></script>
-    <script src="funct/pictureHandlers.js"></script>
-    <script src="funct/admin_page_funct.js"></script>
+    <script src="funct/javaScript/add_animal.js"></script>
+    <script src="funct/javaScript/pictureHandlers.js"></script>
+    <script src="funct/javaScript/admin_page_funct.js"></script>
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
@@ -42,13 +42,13 @@
             <div class="short-text-div">
                 <?php
                     echo '<label for="name">Name (By modifying the value of this field, a new entry is created!)</label><br>';
-                    echo  '<input type="text" id="name" value="'.$data["name"].'" name="name" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>';
+                    echo  '<input type="text" id="name" value="'.$data["name"].'" name="name" class="short-text-input" pattern="([A-Z][a-z]* )*([A-Z][a-z]*)+[ ]*" required><br>';
                 ?>
             </div>
             <div class="short-text-div">
                 <?php
                     echo '<label for="scientific-name">Scientific Name* (ex: Procyon Lotor)</label><br>';
-                    echo  '<input type="text" id="scientific-name" value="'.$data["scientificName"].'" name="scientificName" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>';
+                    echo  '<input type="text" id="scientific-name" value="'.$data["scientificName"].'" name="scientificName" class="short-text-input" pattern="([A-Z][a-z]* )*([A-Z][a-z]*)+[ ]*" required><br>';
                 ?>
             </div>
             <div class="short-text-div">

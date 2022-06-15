@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/admin/layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="funct/admin_page_funct.js"></script>
+    <script src="funct/javaScript/admin_page_funct.js"></script>
 </head>
 
 <body>

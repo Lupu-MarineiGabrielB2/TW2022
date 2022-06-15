@@ -2,36 +2,48 @@
 
 <html lang="en">
 
+<?php
+        $jsonName = $_GET["name"];
+        $jsonName=strtolower($jsonName);
+        $jsonName=str_replace(" ","_",$jsonName);
+        $jsonName="funct/data/".$jsonName . ".json";
+        $str_data = file_get_contents($jsonName);
+        $data = json_decode($str_data, true);
+?>
+
 <head>
     <meta name="description" content="1 animal">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="pictures/favicon-16x16.ico"/>
-    <title> Common Raccoon </title>
+    <?php
+        echo '<title>'.$data["name"].'</title>';
+    ?>
+    
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animal_temp/layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+
     <header>
         <div class="upper-bar-text"><a id="nav-button" href="home.html">Test Zoo</a></div>
     </header>
+    <?php
+        $titleImg = glob("funct/data/pictures/".$data["name"]."/title-img.*");
+        echo '<div class="title-img" style="background-image: url('.$titleImg[0].')"></div>';
 
-    <div class="title-img" style="background-image: url('pictures/template/raccoon_title.jpg')"></div>
-
-    <div class="title col-12">Common Raccoon</div>
-
+        echo '<div class="title col-12">'.$data["name"].'</div>';
+    ?>
     <div class="content">
         <div class="side_div col-3">
-            <!--
-            <ul class="conservation">
-                <li id="conservation_status" style="list-style-image: url('pictures/template/exclamation-triangle-svgrepo-com.svg'); "> Least Concern</li>
-            </ul> -->
 
             <div class="conservation">
                 <button class="conservation_icon"><i class="fa fa-exclamation-triangle"></i></button>
-                <h3 id="conservation_status">Least Concern</h3>
+                <?php
+                echo '<h3 id="conservation_status">'.$data["conservationStatus"].'</h3>';
+                ?>
             </div>
 
             <div class="side_collumn">
@@ -39,38 +51,52 @@
                     <button class="side_icon"><i class="fa fa-map-marker"></i></button>
                     <h2 class="side_title">Distribution:</h2>
                 </div>
-                <p class="side_information">North America, Central Europe, Japan</p>
+                <?php
+                echo '<p class="side_information">'.$data["distribution"].'</p>';
+                ?>
 
                 <div class="side_title_and_icon">
                     <button class="side_icon"><i class="fa fa-tree"></i></button>
                     <h2 class="side_title">Habitat:</h2>
                 </div>
-                <p class="side_information">Lowland forests and marshes</p>
+                <?php
+                echo '<p class="side_information">'.$data["habitat"].'</p>';
+                ?>
 
                 <div class="side_title_and_icon">
                     <button class="side_icon"><i class="fa fa-cutlery"></i></button>
                     <h2 class="side_title">Diet:</h2>
                 </div>
-                <p class="side_information">Plants, invertebrates and small vertebrates</p>
+                <?php
+                echo '<p class="side_information">'.$data["diet"].'</p>';
+                ?>
 
                 <div class="side_title_and_icon">
                     <button class="side_icon"><i class="fa fa-hourglass"></i></button>
                     <h2 class="side_title">Lifespan:</h2>
                 </div>
-                <p class="side_information">5 years(wild); 20 years(captivity)</p>
+                <?php
+                echo '<p class="side_information">'.$data["lifespan"].'</p>';
+                ?>
             </div>
         </div>
 
         <div class="center_div col-5">
             <h2>Description</h2>
-            <p>The raccoon, sometimes called the common raccoon to distinguish it from other species, is a medium-sized mammal native to North America. It is the largest of the procyonid family, having a body length of 40 to 70 cm (16 to 28 in), and a body weight of 5 to 26 kg (11 to 57 lb). </p>
-            <p> Its grayish coat mostly consists of dense underfur, which insulates it against cold weather. Three of the raccoon's most distinctive features are its extremely dexterous front paws, its facial mask, and its ringed tail, which are themes in the mythologies of the indigenous peoples of the Americas relating to the animal.</p>
-            <p> The raccoon is noted for its intelligence, as studies show that it is able to remember the solution to tasks for at least three years. It is usually nocturnal and omnivorous, </p>
+            <?php 
+            $arrayString=  explode("\r", $data["description"] );
+            foreach($arrayString as $para){
+                echo '<p>'.$para.'</p>';
+            }
+            ?>
             
             <h2>Reproduction</h2>
-            <p>Raccoons usually mate in a period triggered by increasing daylight between late January and mid-March.</p>
-            <p>After usually 63 to 65 days of gestation (although anywhere from 54 to 70 days is possible), a litter of typically two to five young is born. The birth weight of the about 10 cm long kits is between 60 and 75 g. Their ear canals open after around 18 to 23 days, a few days before their eyes open for the first time.</p>
-            <p>In the fall, after their mother has shown them dens and feeding grounds, the juvenile group splits up. While many females will stay close to the home range of their mother, males can sometimes move more than 20 km (12 mi) away.</p>
+            <?php
+            $arrayString=  explode("\r", $data["reproduction"] ); 
+            foreach($arrayString as $para){
+                echo '<p>'.$para.'</p>';
+            }
+            ?>
            
             <h2>Natural Enemies</h2>
             <ul>
@@ -78,24 +104,35 @@
             </ul>
 
             <h2>Conservation Status</h2>
-            <p>The common raccoon is not a threathened species.</p>
-            <p>Hunters and trappers may pursue raccoons during furbearer season.</p>
+            <?php
+            $arrayString=  explode("\r", $data["conservationStatusPara"] ); 
+            foreach($arrayString as $para){
+                echo '<p>'.$para.'</p>';
+            }
+            ?>
             
             <h2>Fun Facts:</h2>
             <ul>
-                <li>Raccoons are commonly associated with wild, violent and vicious behaviour; however,  this is not always the case and are actually quite skillful. As a result of their notable intelligence, people have been able to train raccoons to mirror the same basic skills that the average human toddler possesses, such as clapping and dancing.</li>
-                <li>Raccoons were originally found in natural tropical areas but overtime, especially throughout the twentieth-century, they have managed to migrate and were then introduced to a wider array of habitats ranging from mountainous terrains to crowded cities; this is because of their noteworthy and uncommon ability to adapt to foreign environments.</li>
+            <?php
+            $arrayString=  explode("\r", $data["funFacts"] ); 
+            foreach($arrayString as $para){
+                if(strlen($para)>2)
+                    echo '<li>'.$para.'</li>';
+            }
+            ?>
             </ul>
             
         </div>
 
         <div class="side_img_div col-7">
-            <a target="_blank" href="pictures/template/raccoon_gallery1.jpeg">
-                <img class="animal_side_img" src="pictures/template/raccoon_gallery1.jpeg" alt="Raccoon">
-            </a>
-            <a target="_blank" href="pictures/template/raccoon_gallery2.jpg">
-                <img class="animal_side_img" src="pictures/template/raccoon_gallery2.jpg" alt="Raccoon">
-            </a>
+            <?php
+                $imgSet = glob("funct/data/pictures/".$data["name"]."/gallery-img*.*");
+                foreach($imgSet as $img){
+                    echo '<a target="_blank" href='.$img.'>
+                            <img class="animal_side_img" src='.$img.' alt='.$data["name"].'>
+                         </a>';
+                }
+            ?>
         </div>
     </div>
 

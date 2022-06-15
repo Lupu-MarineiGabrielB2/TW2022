@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="styles/admin/add_animal_layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="funct/add_animal.js"></script>
-    <script src="funct/pictureHandlers.js"></script>
+    <script src="funct/javaScript/add_animal.js"></script>
+    <script src="funct/javaScript/pictureHandlers.js"></script>
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
@@ -31,11 +31,11 @@
         <div class="content" >
             <div class="short-text-div">
                 <label for="name">Name* </label><br>
-                <input type="text" id="name" name="name" class="short-text-input" pattern="[A-Z][ a-z]+" required><br>
+                <input type="text" id="name" name="name" class="short-text-input" pattern="([A-Z][a-z]* )*([A-Z][a-z]*)+[ ]*" required><br>
             </div>
             <div class="short-text-div">
                 <label for="scientific-name">Scietific Name* (ex: Procyon Lotor)</label><br>
-                <input type="text" id="scientific-name" name="scientificName" class="short-text-input" pattern="[A-Z][ a-z]+" required>
+                <input type="text" id="scientific-name" name="scientificName" class="short-text-input" pattern="([A-Z][a-z]* )*([A-Z][a-z]*)+[ ]*" required>
             </div>
             <div class="short-text-div">
                 <label for="distribution">Distribution*</label><br>
@@ -248,8 +248,9 @@
         </div>
         <div class="content" id="buttons-div">
             <button id="reset-button" onclick="resetForm();" type = "reset" value="Reset"> Reset </button>
+            <button id="submit-button" type = "submit" value = "Submit" > Submit </button>  
           
-            <input onclick="window.location.href = 'animals.html';" type="submit" value="Submit request" />
+          <!--  <input onclick="window.location.href = 'animals.html';" type="submit" value="Submit request" /> -->
         </div>
     </form>
 
