@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animal_temp/layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="funct/javaScript/animals_funct.js"></script>
 </head>
 
 <body>
@@ -100,7 +102,14 @@
            
             <h2>Natural Enemies</h2>
             <ul>
-                <li> <a id="link_to_natural_enemy" href="animal_template.html">Common Raccoon</a> </li>
+            <?php
+            $arrayString= explode("\r", $data["naturalEnemies"] );
+            foreach($arrayString as $animal){
+                if(glob("funct/data/".$animal.".json")){
+                         echo '<li> <div id="link_to_natural_enemy" onclick="getAnimalPage('.'\''.$animal.'\''.');">'.$animal.'</div> </li>';
+                    }   
+            }  
+            ?>    
             </ul>
 
             <h2>Conservation Status</h2>
@@ -138,30 +147,25 @@
 
     <div class="related_animals_div col-9">
         <h1 id="related_animals">Related Animals</h1>
-
         <div class="related_animals_tiles">
-              <a class="link_to_template_page" href="animal_template.html">
-              <div class="animal_tile">
-                  <img class="related_animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-                  <div class="related_animal_name"><p>Common Raccoon </p></div>
-                </div>  
-            </a> 
-            <a class="link_to_template_page" href="animal_template.html">
-                <div class="animal_tile">
-                  <img class="related_animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-                  <div class="related_animal_name"> <p>Common Raccoon</p> </div>
-                </div>  
-            </a> 
-            <a class="link_to_template_page" href="animal_template.html">
-                <div class="animal_tile">
-                  <img class="related_animal_img" src="pictures/raccoon.jpeg" alt="Raccoon">
-                  <div class="related_animal_name"> <p>Alligator snapping turtle</p></div>
-                </div>  
-            </a> 
+        <?php
+        for($i=1;$i<3;$i++){
+            $relatedAnimal=$data["relatedAnimal".$i];
+            if(strlen($relatedAnimal)>1){
+                if(glob("funct/data/".$relatedAnimal.".json")){
+                    $img = glob("funct/data/pictures/".$relatedAnimal."/tile-img.*");
+                    echo '<div class="link_to_template_page" onclick="getAnimalPage('.'\''.$relatedAnimal.'\''.');">
+                        <div class="animal_tile">
+                            <img class="related_animal_img" src='.$img[0].' alt="Raccoon">
+                            <div class="related_animal_name"><p>'.$relatedAnimal.' </p></div>
+                        </div>  
+                    </div>'; 
+                } 
+            }  
+        }  
+        ?>    
         </div>
     </div>
-
-    
 
     <footer>
         <p> Test zoo 2022 </p>

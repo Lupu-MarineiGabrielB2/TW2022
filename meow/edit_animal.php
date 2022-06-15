@@ -24,8 +24,10 @@
         $jsonName=strtolower($jsonName);
         $jsonName=str_replace(" ","_",$jsonName);
         $jsonName="funct/data/".$jsonName . ".json";
-        $str_data = file_get_contents($jsonName);
-        $data = json_decode($str_data, true);
+        $strData = file_get_contents($jsonName);
+        $data = json_decode($strData, true);
+
+        $oldName = $data["name"];
     ?>
 
     <header>
@@ -37,7 +39,9 @@
     </div>
 
 
-    <form action="funct/add_animal.php" method="post" id="form">
+    <?php
+    echo '<form action="funct/add_animal.php?oldName='.$oldName.'" method="post" id="form">';
+    ?>
         <div class="content" >
             <div class="short-text-div">
                 <?php
