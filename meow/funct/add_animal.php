@@ -24,7 +24,8 @@
                 $cont=$cont.trim($value).", ";
             }
 
-            $formInput = array("name"=>trim($_POST["name"]),
+            $formInput = array( "visible"=>1,
+            "name"=>trim($_POST["name"]),
             "scientificName"=>trim($_POST["scientificName"]),
             "distribution"=>trim($_POST["distribution"]),
             "habitat"=>trim($_POST["habitat"]),

@@ -9,6 +9,10 @@
         $jsonName="funct/data/".$jsonName . ".json";
         $str_data = file_get_contents($jsonName);
         $data = json_decode($str_data, true);
+
+        if($data["visible"]==0){
+            $data=NULL;
+        }
 ?>
 
 <head>

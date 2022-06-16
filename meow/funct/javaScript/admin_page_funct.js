@@ -18,9 +18,14 @@
    }
  }
 
+function setVisible(name){
+  var xmlHttp = new XMLHttpRequest();   
+  xmlHttp.open( "GET", "funct/update_visible.php?name=" + name, false );
+  xmlHttp.send( null );
+  /*
+  let element = document.getElementsByName(name);
+  console.log(name);
+  if(element[0].checked==true){
 
- function redirect(){
-      //  window.location.replace("C:/xampp/htdocs/meow/admin.php");
-      console.log("Asdasd")
-      window.location.href = "http://localhost/meow/admin.php";
- }
+  }*/
+}

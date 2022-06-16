@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="funct/javaScript/admin_page_funct.js"></script>
+    <script src="funct/javaScript/animals_funct.js"></script>
 </head>
 
 <body>
@@ -48,10 +49,14 @@
                     $name=$data["name"];
                     
                     echo  '<div class="tile" id='.$name.'>
-                        <div class="animal-name"> <a href="animal_template.html">' . $name .' </a></div>
+                        <div class="animal-name"> <div onclick="getAnimalPage('.'\''.$name.'\''.');">' . $name .' </div></div>
                             <div class="tile_buttons">
                                 <button type="submit" class="edit-button" onclick="getEditPage('.'\''.$name.'\''.');"> Edit </button>
                                 <button type="submit" class="remove-button" onclick="removeAnimal('.'\''.$name.'\''.');"> Remove </button>
+                                <div class="visible_checkbox">
+                                    <input type="checkbox" id="is_visible" name='. $name.' value="is_visible" checked  onclick="setVisible('.'\''.$name.'\''.');">
+                                    <label > Visible</label>
+                                </div>
                             </div>
                         </div>';
                 }

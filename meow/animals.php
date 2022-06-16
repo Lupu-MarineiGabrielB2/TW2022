@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animals/tile.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <script src="funct/javaScript/animals_funct.js"></script>
 </head>
 
@@ -207,16 +208,18 @@
         if(!is_dir($file)){
             $str_data = file_get_contents("funct/data/" . $file);
             $data = json_decode($str_data, true);
-            $name=$data["name"];
-            $filename = glob("funct/data/pictures/".$name."/tile-img.*");
+            if($data["visible"]==1){
+              $name=$data["name"];
+              $filename = glob("funct/data/pictures/".$name."/tile-img.*");
 
-            echo '<div class="tile" onclick="getAnimalPage('.'\''.$name.'\''.');">
-              <img class="animal_img" src="'.$filename[0].'" alt="Raccoon">
-              <p class="animal_name">'.$name.' </p> 
-              <p class="scientific_name"> ('.$data["scientificName"].') </p>
-              <div class="animal_text"><p>'.$data["description"].'</p>
-              </div>
-            </div>';
+              echo '<div class="tile" onclick="getAnimalPage('.'\''.$name.'\''.');">
+                <img class="animal_img" src="'.$filename[0].'" alt="Raccoon">
+                <p class="animal_name">'.$name.' </p> 
+                <p class="scientific_name"> ('.$data["scientificName"].') </p>
+                <div class="animal_text"><p>'.$data["description"].'</p>
+                </div>
+              </div>';
+            }
         }
          
       }
