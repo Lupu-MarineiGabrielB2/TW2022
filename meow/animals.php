@@ -57,15 +57,15 @@
 
             <fieldset>                                                                     <!--the list of checkboxes-->
               <div class="selector">
-                  <input type="checkbox" id="mammal" name="source" value="mammal" >
+                  <input type="checkbox" id="mammal" name="source" value="Mammal" >
                   <label for="mammal" >Mammal</label>
               </div>
               <div class="selector">
-                  <input type="checkbox" id="bird" name="source" value="bird">
+                  <input type="checkbox" id="bird" name="source" value="Bird">
                   <label for="bird">Bird</label>
               </div>
               <div class="selector">
-                <input type="checkbox" id="reptile" name="source" value="reptile">
+                <input type="checkbox" id="reptile" name="source" value="Reptile">
                 <label for="reptile">Reptile</label>
               </div>
             </fieldset>
@@ -112,15 +112,15 @@
           <label class="criterion" for="legend3">Order</label>
           <fieldset>
             <div class="selector">
-                <input type="checkbox" id="carnivora" name="source" value="carnivora">
+                <input type="checkbox" id="carnivora" name="source" value="Carnivora">
                 <label for="carnivora">Carnivora</label>
             </div>
             <div class="selector">
-                <input type="checkbox" id="herbivora" name="source" value="herbivora">
+                <input type="checkbox" id="herbivora" name="source" value="Herbivora">
                 <label for="herbivora">Herbivora</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="omnivora" name="source" value="omnivora">
+              <input type="checkbox" id="omnivora" name="source" value="Omnivora">
               <label for="omnivora">Omnivora</label>
             </div>
           </fieldset>
@@ -131,39 +131,39 @@
           <label class="criterion" for="legend4">Biome</label>
           <fieldset>
             <div class="selector">
-                <input type="checkbox" id="temp_forest" name="source" value="temp_forest">
+                <input type="checkbox" id="temp_forest" name="source" value="Temperate Deciduous Forest">
                 <label for="temp_forest">Temperate Deciduous Forest</label>   <!-- former Temperate Deciduous Forest; renamed to decrease filters section size-->
             </div>
             <div class="selector">
-                <input type="checkbox" id="coniferous_forest" name="source" value="coniferous_forest">
+                <input type="checkbox" id="coniferous_forest" name="source" value="Coniferous Forest">
                 <label for="coniferous_forest">Coniferous Forest</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="woodland" name="source" value="woodland">
+              <input type="checkbox" id="woodland" name="source" value="Woodland">
               <label for="woodland">Woodland</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="chaparral" name="source" value="chaparral">
+              <input type="checkbox" id="chaparral" name="source" value="Chaparral">
               <label for="chaparral">Chaparral</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="tundra" name="source" value="tundra">
+              <input type="checkbox" id="tundra" name="source" value="Tundra">
               <label for="tundra">Tundra</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="grassland" name="source" value="grassland">
+              <input type="checkbox" id="grassland" name="source" value="Grassland">
               <label for="grassland">Grassland</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="desert" name="source" value="desert">
+              <input type="checkbox" id="desert" name="source" value="Desert">
               <label for="desert">Desert</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="tropical_savannah" name="source" value="tropical_savannah">
+              <input type="checkbox" id="tropical_savannah" name="source" value="Tropical Savannah">
               <label for="tropical_savannah">Tropical Savanna</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="tropical_forest" name="source" value="tropical_forest">
+              <input type="checkbox" id="tropical_forest" name="source" value="Tropical Forest">
               <label for="tropical_forest">Tropical Forest</label>
             </div>
           </fieldset>
@@ -174,27 +174,27 @@
           <label class="criterion" for="legend5">Conservation Status</label>
           <fieldset>
             <div class="selector">
-                <input type="checkbox" id="least_concern" name="source" value="least_concern">
+                <input type="checkbox" id="least_concern" name="source" value="Least Concern">
                 <label for="least_concern">Least Concern</label>
             </div>
             <div class="selector">
-                <input type="checkbox" id="near_threatened" name="source" value="near_threatened">
+                <input type="checkbox" id="near_threatened" name="source" value="Near Threatened">
                 <label for="near_threatened">Near Threatened</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="vulnerable" name="source" value="vulnerable">
+              <input type="checkbox" id="vulnerable" name="source" value="Vulnerable">
               <label for="vulnerable">Vulnerable</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="endangered" name="source" value="endangered">
+              <input type="checkbox" id="endangered" name="source" value="Endangered">
               <label for="endangered">Endangered</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="critically_endangered" name="source" value="critically_endangered">
+              <input type="checkbox" id="critically_endangered" name="source" value="Critically Endangered">
               <label for="critically_endangered">Critically Endangered</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="extinct_in_the_wild" name="source" value="extinct_in_the_wild">
+              <input type="checkbox" id="extinct_in_the_wild" name="source" value="Extinct In The Wild">
               <label for="extinct_in_the_wild">Extinct In The Wild</label>
             </div>
           </fieldset>

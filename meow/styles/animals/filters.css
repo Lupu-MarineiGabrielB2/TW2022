@@ -8,7 +8,6 @@ form, .filters, .search_bar{
   min-width: 270px;
 }
 
-
 .filters, .search_bar{
   max-height: fit-content;
   margin-left: 2%;
