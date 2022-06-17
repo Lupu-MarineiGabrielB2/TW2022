@@ -37,6 +37,8 @@
     <div class="content" >
         <div id="title"> Edit Information</div>
     </div>
++
+
 
 
     <?php
@@ -45,7 +47,7 @@
         <div class="content" >
             <div class="short-text-div">
                 <?php
-                    echo '<label for="name">Name (By modifying the value of this field, a new entry is created!)</label><br>';
+                    echo '<label for="name">Name*</label><br>';
                     echo  '<input type="text" id="name" value="'.$data["name"].'" name="name" class="short-text-input" pattern="([A-Z][a-z]* )*([A-Z][a-z]*)+[ ]*" required><br>';
                 ?>
             </div>

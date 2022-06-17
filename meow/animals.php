@@ -15,12 +15,16 @@
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animals/tile.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <script src="funct/javaScript/animals_funct.js"></script>
+    <script src="funct/javaScript/get_animal_page.js"></script>
 </head>
 
 
 <body>
+  <script>
+    setAnimals();
+  </script>
     
     <!--upper banner-->
     <header>
@@ -48,7 +52,7 @@
       
       <form>
         <div class="accordion">
-                <input type="checkbox" id="legend1" name="source" value="legend1" >       <!-- "legend" and its label-->
+                <input type="checkbox" id="legend1"  value="legend1" >       <!-- "legend" and its label-->
                 <label class="criterion" for="legend1">Species</label>
 
             <fieldset>                                                                     <!--the list of checkboxes-->
@@ -69,7 +73,7 @@
 
 
         <div class="accordion">
-          <input type="checkbox" id="legend2" name="source" value="legend2">
+          <input type="checkbox" id="legend2" value="legend2">
           <label class="criterion" for="legend2">Continent of origin</label>
           <fieldset>
             <div class="selector">
@@ -93,8 +97,8 @@
               <label for="Europe">Europe</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="North_America" name="source" value="North America">
-              <label for="North_America">North America</label>
+              <input type="checkbox" id="North America" name="source" value="North America">
+              <label for="North America">North America</label>
             </div>
             <div class="selector">
               <input type="checkbox" id="South_America" name="source" value="South America">
@@ -104,7 +108,7 @@
         </div>
 
         <div class="accordion">
-          <input type="checkbox" id="legend3" name="source" value="legend3" >
+          <input type="checkbox" id="legend3"  value="legend3" >
           <label class="criterion" for="legend3">Order</label>
           <fieldset>
             <div class="selector">
@@ -123,7 +127,7 @@
         </div>
 
         <div class="accordion">
-          <input type="checkbox" id="legend4" name="source" value="legend4" >
+          <input type="checkbox" id="legend4" value="legend4" >
           <label class="criterion" for="legend4">Biome</label>
           <fieldset>
             <div class="selector">
@@ -166,7 +170,7 @@
         </div>
 
         <div class="accordion">
-          <input type="checkbox" id="legend5" name="source" value="legend5" >
+          <input type="checkbox" id="legend5" value="legend5" >
           <label class="criterion" for="legend5">Conservation Status</label>
           <fieldset>
             <div class="selector">
@@ -201,30 +205,19 @@
 
 <!-- template tile for: 1.animal picture and name; 2.basic info about said animal -->
 <div class="tile_set col-9">
-  <?php
-    $dataPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/data";
-    $arrFiles = scandir($dataPath, 1);
-    foreach ($arrFiles as $file) {
-        if(!is_dir($file)){
-            $str_data = file_get_contents("funct/data/" . $file);
-            $data = json_decode($str_data, true);
-            if($data["visible"]==1){
-              $name=$data["name"];
-              $filename = glob("funct/data/pictures/".$name."/tile-img.*");
-
-              echo '<div class="tile" onclick="getAnimalPage('.'\''.$name.'\''.');">
-                <img class="animal_img" src="'.$filename[0].'" alt="Raccoon">
-                <p class="animal_name">'.$name.' </p> 
-                <p class="scientific_name"> ('.$data["scientificName"].') </p>
-                <div class="animal_text"><p>'.$data["description"].'</p>
-                </div>
-              </div>';
-            }
-        }
-         
-      }
-  ?>
+<script>
+    fetchAnimals();
+    getAllTiles();
+</script>
 </div>
+
+<script>
+  const filterCheckboxes = document.getElementsByName("source");
+  filterCheckboxes.forEach( function(i) {
+    i.addEventListener("click", updateFilteredItems);
+  });
+</script>
+
 
 </div>    <!-- end of "content"-->
 

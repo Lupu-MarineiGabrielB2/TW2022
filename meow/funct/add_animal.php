@@ -83,12 +83,18 @@
             $arrFiles = scandir($uploadPath, 1);
             foreach ($arrFiles as $img) {
                 $sourcePath=$uploadPath."/".$img;
-                $targetPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/data/pictures/".$warpedName."/".$img;
-                rename($sourcePath, $targetPath);
+                $targetPath=$_SERVER['DOCUMENT_ROOT']."/meow/funct/data/pictures/".$warpedName."/";
+                //$name2 =pathinfo($url, PATHINFO_FILENAME);
+                // $imgSet = glob("funct/data/pictures/".$data["name"]."/gallery-img*.*");
+            
+              //  $oldImg = glob($targetPath.pathinfo($img, PATHINFO_FILENAME)."*");
+                //echo "asdasd    " . $oldImg[0];
+               // unlink($oldImg[0]);
+                rename($sourcePath, $targetPath.$img);
             }
 
             //redirects to admin page
-            header("Location:http://localhost/meow/admin.php");
+             header("Location:http://localhost/meow/admin.php");
 
         ?>
     </body>
