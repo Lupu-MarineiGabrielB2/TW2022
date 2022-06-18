@@ -2,6 +2,16 @@
 
 <html lang="en">
 
+<?php
+// Initialize the session
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com")){
+    header("location: login.php");
+    exit;
+}
+?>
+
 <head>
     <meta name="description" content="The list of animals">
     <meta charset="utf-8">
@@ -31,7 +41,7 @@
     ?>
 
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
     </header>
 
     <div class="content" >

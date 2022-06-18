@@ -17,6 +17,7 @@ header{
     max-height: 80px;
     z-index: 255;
     margin-bottom: 100px;
+    flex-direction: row;
 }
 
 .upper-bar-text{

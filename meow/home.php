@@ -4,8 +4,8 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
+   // header("location: login.php");
+   // exit;
 }
 ?>
 
@@ -28,7 +28,25 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <!--upper banner-->
     <header>
-        <div class="upper-bar-text"><a id="nav-button" href="home.html">Home</a></div>
+        <div class="upper-bar-text"><a id="nav-button" href="home.php">Home</a></div>
+        <div class="upper-buttons">
+        <?php
+          error_reporting(0);     //removes a notice that appears when the user is not logged in
+          if($_SESSION["loggedin"]){
+            echo '<div class="upper-bar-button"><a href="logout.php">Logout</a></div>';
+            echo '<div class="upper-bar-button"><a href="reset-password.php">Reset Password</a></div>';
+
+            if( $_SESSION["username"] == "admin@admin.com"){
+              echo ' <div class="upper-bar-button"><a href="admin.php"> Admin Page </a></div>';
+            }
+          }
+          else{
+            echo '<div class="upper-bar-button"><a href="login.php">Login</a></div>';
+            echo '<div class="upper-bar-button"><a href="sign_up.php">Sign Up</a></div>';
+          }
+          error_reporting(1);
+        ?>
+        </div>
     </header>
 
 
@@ -63,10 +81,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <span class="dot" onclick="currentSlide(3)"></span>
   </div>
   <br>
-  <a class="title" href="animals.html">Our animals</a>
-
-  <a href="logout.php">Logout</a>
-  <a href="reset-password.php">Reset Password</a>
+  <a class="title" href="animals.php">Our animals</a>
   
 
   <script>

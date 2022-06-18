@@ -4,8 +4,8 @@ session_start();
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
-    exit;
+    //header("location: login.php");
+    //exit;
 }
 ?>
 
@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
     <!--upper banner-->
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
     </header>
 
     <!-- Sets the "Animals" title and its background image-->

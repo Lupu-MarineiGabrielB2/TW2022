@@ -31,7 +31,34 @@ header{
     position: absolute;
     text-align: center;
     top: 50%;
-    width: 100%;
+    width: fit-content;
+    left: 50%;
+}
+
+.upper-bar-button{
+    height: fit-content;
+    width: fit-content;
+    color:rgb(185, 163, 136);
+    margin-left: 20px;
+    height: 50px;
+
+    text-align: center;
+    display:inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+.upper-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .title-img{

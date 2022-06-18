@@ -106,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
     </header>
 
     <div class="content" >
