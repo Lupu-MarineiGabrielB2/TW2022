@@ -11,11 +11,7 @@
         }
     }
 
-
-//$myArr = array("John", "Mary", "Peter", "Sally");
-
 $myJSON = json_encode($animals);
 
 echo $myJSON;
-//echo $animals;
 ?>

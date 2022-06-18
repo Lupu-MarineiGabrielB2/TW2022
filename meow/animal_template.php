@@ -37,7 +37,7 @@
         <div class="upper-bar-text"><a id="nav-button" href="home.html">Test Zoo</a></div>
     </header>
     <?php
-        $titleImg = glob("funct/data/pictures/".$data["name"]."/title-img.*");
+        $titleImg = glob("funct/data/pictures/".str_replace(" ","_",$data["name"])."/title-img.*");
         echo '<div class="title-img" style="background-image: url('.$titleImg[0].')"></div>';
 
         echo '<div class="title col-12">'.$data["name"].'</div>';
@@ -109,7 +109,7 @@
             <?php
             $arrayString= explode("\r", $data["naturalEnemies"] );
             foreach($arrayString as $animal){
-                if(glob("funct/data/".$animal.".json")){
+                if(glob("funct/data/".str_replace(" ","_",$animal).".json")){
                          echo '<li> <div id="link_to_natural_enemy" onclick="getAnimalPage('.'\''.$animal.'\''.');">'.$animal.'</div> </li>';
                     }   
             }  
@@ -139,7 +139,7 @@
 
         <div class="side_img_div col-7">
             <?php
-                $imgSet = glob("funct/data/pictures/".$data["name"]."/gallery-img*.*");
+                $imgSet = glob("funct/data/pictures/".str_replace(" ","_",$data["name"])."/gallery-img*.*");
                 foreach($imgSet as $img){
                     echo '<a target="_blank" href='.$img.'>
                             <img class="animal_side_img" src='.$img.' alt='.$data["name"].'>
@@ -156,8 +156,8 @@
         for($i=1;$i<3;$i++){
             $relatedAnimal=$data["relatedAnimal".$i];
             if(strlen($relatedAnimal)>1){
-                if(glob("funct/data/".$relatedAnimal.".json")){
-                    $img = glob("funct/data/pictures/".$relatedAnimal."/tile-img.*");
+                if(glob("funct/data/".str_replace(" ","_",$relatedAnimal).".json")){
+                    $img = glob("funct/data/pictures/".str_replace(" ","_",$relatedAnimal)."/tile-img.*");
                     echo '<div class="link_to_template_page" onclick="getAnimalPage('.'\''.$relatedAnimal.'\''.');">
                         <div class="animal_tile">
                             <img class="related_animal_img" src='.$img[0].' alt="Raccoon">

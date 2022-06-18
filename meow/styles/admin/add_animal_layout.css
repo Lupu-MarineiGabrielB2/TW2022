@@ -72,3 +72,10 @@ button{
 .text-area-div textarea{
     margin-left: 20px;
 }
+
+.clear-button{
+    margin-left: 350px;
+    font-size: small;
+    width: fit-content;
+    height: fit-content;
+}

@@ -31,7 +31,7 @@
             </div>
 
             <div class="search-bar">
-                <input type="text" class="search-term" placeholder="Search by name...">
+                <input type="text" id="search" class="search-term" placeholder="Search by name...">
                 <button type="submit" class="search-button">
                   <i class="fa fa-search"></i>
                </button>
@@ -48,7 +48,7 @@
                     $data = json_decode($str_data, true);
                     $name=$data["name"];
                     
-                    echo  '<div class="tile" id='.$name.'>
+                    echo  '<div class="tile" id='.$name.' name='.$name.'>
                         <div class="animal-name"> <div onclick="getAnimalPage('.'\''.$name.'\''.');">' . $name .' </div></div>
                             <div class="tile_buttons">
                                 <button type="submit" class="edit-button" onclick="getEditPage('.'\''.$name.'\''.');"> Edit </button>
@@ -64,6 +64,8 @@
             ?>
         </div>
     </div>
+
+    <script src="funct/javaScript/search_bar.js"></script>
 
     <footer class="col-12">
     <p> Test zoo 2022 </p>

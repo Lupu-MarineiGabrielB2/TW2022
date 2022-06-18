@@ -243,6 +243,7 @@
             <div class="short-text-div">
                 <label for="title-image">Title Image (banner on the animal's page; if no new image is selected, the old one will be kept):</label><br><br>
                 <input type="file" name="file" id="title-img"  oninput="uploadFile('title-img');">
+                <button class="clear-button" type="button">Clear Selection</button>
             </div>
         </div>
 
@@ -250,6 +251,7 @@
             <div class="short-text-div">
                 <label for="tile-image">Tile Image (for the animal's "card"; if no new image is selected, the old one will be kept):</label><br><br>
                 <input type="file" name="file" id="tile-img" oninput="uploadFile('tile-img');" >
+                <button class="clear-button" type="button">Clear Selection</button>
             </div>
         </div>
 
@@ -257,13 +259,16 @@
             <div class="short-text-div">
                 <p>Gallery Images (if no new image is selected, the old ones will be kept </p>
                 <label for="gallery-1">Image 1:</label><br>
-                <input type="file" name="file" id="gallery-img1" oninput="uploadFile('gallery-img1');" ><br><br>
+                <input type="file" name="file" id="gallery-img1" oninput="uploadFile('gallery-img1');" >
+                <button class="clear-button" type="button">Clear Selection</button><br><br>
 
                 <label for="gallery-2">Image 2:</label><br>
-                <input type="file" name="file" id="gallery-img2" oninput="uploadFile('gallery-img2');" ><br><br>
+                <input type="file" name="file" id="gallery-img2" oninput="uploadFile('gallery-img2');" >
+                <button class="clear-button" type="button">Clear Selection</button><br><br>
 
                 <label for="gallery-3">Image 3:</label><br>
-                <input type="file" name="file" id="gallery-img3" oninput="uploadFile('gallery-img3');" ><br><br>
+                <input type="file" name="file" id="gallery-img3" oninput="uploadFile('gallery-img3');" >
+                <button class="clear-button" type="button">Clear Selection</button><br><br>
             </div>
         </div>
 

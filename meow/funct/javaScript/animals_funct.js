@@ -2,30 +2,13 @@
 
 var animals;
 
-const species=["Mammal", "Bird", "Reptile"];
-const continent=["Africa", "Antarctica", "Australia", "Asia", "Europe", "North America", "South America"];
-const order=["Carnivora", "Herbivora", "Omnivora"];
-const biome=["Temperate Deciduous Forest", "Coniferous Forest", "Woodland", "Chaparral", "Tundra", "Grassland", "Desert", "Tropical Savanna", "Tropical Forest"];
-const conservation=["Least Concern", "Near Threatened", "Vulnerable", "Endangered", "Critically Endangered", "Extinct In The Wild"];
-
-var checkedSpecies=[];
-var checkedContinent=[];
-var checkedOrder=[];
-var checkedBiome=[];
-var checkedConservation=[];
-
-function setAnimals(r){
-  window.animals=r;
-}
-
 function fetchAnimals(){
   const xmlhttp = new XMLHttpRequest();
   
   xmlhttp.onload = function() {
-    r = JSON.parse(this.responseText);
-    setAnimals(r);
+    window.animals = JSON.parse(this.responseText);
   }
-  xmlhttp.open("GET", "funct/get_tile.php", false);
+  xmlhttp.open("POST", "funct/get_tiles.php", false);
   xmlhttp.send();
 }
 
@@ -39,7 +22,7 @@ function getAllTiles(){
 
 function getTile(animal){
   document.write("<div class='tile' name=", animal.name," onclick='getAnimalPage(\"",animal.name,"\");'>");
-  document.write("<img class='animal_img' alt=", animal.name, " src='funct/data/pictures/", animal.name, "/tile-img.jpg'>");
+  document.write("<img class='animal_img' alt=", animal.name, " src='funct/data/pictures/", animal.name.replace(/ /g, "_"), "/tile-img.jpg'>");
   document.write("<p class='animal_name'>", animal.name,"</p>"); 
   document.write("<p class='scientific_name'>", animal.scientificName, "</p>");
   document.write("<div class='animal_text'><p>", animal.description, "</p>");
@@ -48,6 +31,18 @@ function getTile(animal){
 }
   
 //---------------------
+
+const species=["Mammal", "Bird", "Reptile"];
+const continent=["Africa", "Antarctica", "Australia", "Asia", "Europe", "North America", "South America"];
+const order=["Carnivora", "Herbivora", "Omnivora"];
+const biome=["Temperate Deciduous Forest", "Coniferous Forest", "Woodland", "Chaparral", "Tundra", "Grassland", "Desert", "Tropical Savanna", "Tropical Forest"];
+const conservation=["Least Concern", "Near Threatened", "Vulnerable", "Endangered", "Critically Endangered", "Extinct In The Wild"];
+
+var checkedSpecies=[];
+var checkedContinent=[];
+var checkedOrder=[];
+var checkedBiome=[];
+var checkedConservation=[];
 
 function getCheckedBoxes(chkboxName) {
   var checkboxes = document.getElementsByName(chkboxName);
