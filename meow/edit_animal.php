@@ -24,8 +24,9 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="funct/javaScript/add_animal.js"></script>
-    <script src="funct/javaScript/pictureHandlers.js"></script>
+    <script src="funct/javaScript/picture_handlers.js"></script>
     <script src="funct/javaScript/admin_page_funct.js"></script>
+    <script src="funct/javaScript/clear_img_input.js"></script>
 </head>
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
@@ -47,9 +48,6 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
     <div class="content" >
         <div id="title"> Edit Information</div>
     </div>
-+
-
-
 
     <?php
     echo '<form action="funct/add_animal.php?oldName='.$oldName.'" method="post" id="form">';
@@ -57,7 +55,7 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
         <div class="content" >
             <div class="short-text-div">
                 <?php
-                    echo '<label for="name">Name*</label><br>';
+                    echo '<label for="name">Name* (ex: Common Raccoon)</label><br>';
                     echo  '<input type="text" id="name" value="'.$data["name"].'" name="name" class="short-text-input" pattern="([A-Z][a-z]* )*([A-Z][a-z]*)+[ ]*" required><br>';
                 ?>
             </div>
@@ -253,7 +251,9 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
             <div class="short-text-div">
                 <label for="title-image">Title Image (banner on the animal's page; if no new image is selected, the old one will be kept):</label><br><br>
                 <input type="file" name="file" id="title-img"  oninput="uploadFile('title-img');">
-                <button class="clear-button" type="button">Clear Selection</button>
+                <?php
+                echo '<button class="clear-button" type="button" onclick="clearInput(\'title-img\', '.'\''.$data["name"].'\''.');">Clear Selection</button>';
+                ?>
             </div>
         </div>
 
@@ -261,7 +261,9 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
             <div class="short-text-div">
                 <label for="tile-image">Tile Image (for the animal's "card"; if no new image is selected, the old one will be kept):</label><br><br>
                 <input type="file" name="file" id="tile-img" oninput="uploadFile('tile-img');" >
-                <button class="clear-button" type="button">Clear Selection</button>
+                <?php
+                echo '<button class="clear-button" type="button" onclick="clearInput(\'tile-img\', '.'\''.$data["name"].'\''.');">Clear Selection</button>';
+                ?>
             </div>
         </div>
 
@@ -270,15 +272,21 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
                 <p>Gallery Images (if no new image is selected, the old ones will be kept </p>
                 <label for="gallery-1">Image 1:</label><br>
                 <input type="file" name="file" id="gallery-img1" oninput="uploadFile('gallery-img1');" >
-                <button class="clear-button" type="button">Clear Selection</button><br><br>
+                <?php
+                echo '<button class="clear-button" type="button" onclick="clearInput(\'gallery-img1\', '.'\''.$data["name"].'\''.');">Clear Selection</button><br><br>';
+                ?>
 
                 <label for="gallery-2">Image 2:</label><br>
                 <input type="file" name="file" id="gallery-img2" oninput="uploadFile('gallery-img2');" >
-                <button class="clear-button" type="button">Clear Selection</button><br><br>
+                <?php
+                echo '<button class="clear-button" type="button" onclick="clearInput(\'gallery-img2\', '.'\''.$data["name"].'\''.');">Clear Selection</button><br><br>';
+                ?>
 
                 <label for="gallery-3">Image 3:</label><br>
                 <input type="file" name="file" id="gallery-img3" oninput="uploadFile('gallery-img3');" >
-                <button class="clear-button" type="button">Clear Selection</button><br><br>
+                <?php
+                echo '<button class="clear-button" type="button" onclick="clearInput(\'gallery-img3\', '.'\''.$data["name"].'\''.');">Clear Selection</button><br><br>';
+                ?>
             </div>
         </div>
 
