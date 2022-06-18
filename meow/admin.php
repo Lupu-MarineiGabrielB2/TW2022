@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
+    header("location: login.php");
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -19,7 +30,7 @@
 
 <body>
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
     </header>
 
     <div class="title">Admin page</div>
@@ -27,7 +38,7 @@
     <div class="content">
         <div class="upper-content">
             <div class="add-div">
-                <button type="submit" id="add-button" class=""> <a href="add_animal.html"> Add new animal </a></button>
+                <button type="submit" id="add-button" class=""> <a href="add_animal.php"> Add new animal </a></button>
             </div>
 
             <div class="search-bar">
