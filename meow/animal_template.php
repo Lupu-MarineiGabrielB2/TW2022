@@ -34,6 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
         echo '<title>'.$data["name"].'</title>';
     ?>
     
+    <link rel="stylesheet" href="styles/general_layout.css"/>
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animal_temp/layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

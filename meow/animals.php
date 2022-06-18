@@ -23,6 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="icon" href="pictures/favicon-16x16.ico"/>
     <title> Animals </title>
 
+    <link rel="stylesheet" href="styles/general_layout.css"/>
     <link rel="stylesheet" href="styles/animals/filters.css" />
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="stylesheet" href="styles/animals/tile.css"/>

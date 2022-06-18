@@ -13,11 +13,8 @@ header{
     background-color: rgb(58, 56, 53);
     position: sticky;
     top: 0em;
-    min-height: 60px;
-    max-height: 80px;
+    height: 70px;
     z-index: 255;
-    margin-bottom: 100px;
-    flex-direction: row;
 }
 
 .upper-bar-text{
@@ -28,7 +25,8 @@ header{
     position: absolute;
     text-align: center;
     top: 50%;
-    width: 100%;
+    width: fit-content;
+    left: 48%;
 }
 
 footer{

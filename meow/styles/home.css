@@ -141,3 +141,36 @@ footer{
     margin-top: 75px;
   }
 }
+
+.upper-bar-button{
+  min-width: 110px;
+  margin-right: 20px;
+  margin-top: 20px;
+  color: black;
+
+  text-align: center;
+  border:2px solid rgb(241, 191, 53);
+  border-radius: 15px 15px 15px 15px;
+  background:rgb(223, 185, 80);
+  cursor:pointer;
+  padding: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.upper-bar-button a{
+  text-decoration: none;
+  color: black;
+}
+
+.upper-buttons{
+  color: black;
+  justify-content: right;
+  display: flex;
+  vertical-align: middle;
+}
+
+#admin-page{
+  background-color: brown;
+  margin-right: 50px;
+}

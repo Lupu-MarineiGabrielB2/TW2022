@@ -22,6 +22,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" href="styles/animals/layout.css"/>
     <link rel="icon" href="pictures/favicon-16x16.ico"/>
 
+    <link rel="stylesheet" href="styles/general_layout.css"/>
     <link rel="stylesheet" href="styles/home.css"/>
     <!--<script src="js/slideshow-home.js"></script>-->
 </head>
@@ -33,12 +34,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <?php
           error_reporting(0);     //removes a notice that appears when the user is not logged in
           if($_SESSION["loggedin"]){
+            if( $_SESSION["username"] == "admin@admin.com"){
+              echo ' <div class="upper-bar-button" id="admin-page"><a href="admin.php"> Admin Page </a></div>';
+            }
             echo '<div class="upper-bar-button"><a href="logout.php">Logout</a></div>';
             echo '<div class="upper-bar-button"><a href="reset-password.php">Reset Password</a></div>';
-
-            if( $_SESSION["username"] == "admin@admin.com"){
-              echo ' <div class="upper-bar-button"><a href="admin.php"> Admin Page </a></div>';
-            }
           }
           else{
             echo '<div class="upper-bar-button"><a href="login.php">Login</a></div>';

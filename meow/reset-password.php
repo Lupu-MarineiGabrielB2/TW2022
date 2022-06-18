@@ -82,6 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="icon" href="pictures/favicon-16x16.ico"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+    <link rel="stylesheet" href="styles/general_layout.css"/>
     <link rel="stylesheet" href="styles/login_and_sign_up/layout.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -98,7 +99,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <div class="content" >
         <h2 style="text-align:center;">Reset Password</h2>
-        <p>Please fill out this form to reset your password.</p>
+        <p id="reset-para">Please fill out this form to reset your password.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group">
                 <label>New Password</label>
