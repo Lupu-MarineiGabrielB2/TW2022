@@ -29,20 +29,47 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <!--upper banner-->
     <header>
-        <div class="upper-bar-text"><a id="nav-button" href="home.php">Home</a></div>
         <div class="upper-buttons">
         <?php
           error_reporting(0);     //removes a notice that appears when the user is not logged in
           if($_SESSION["loggedin"]){
             if( $_SESSION["username"] == "admin@admin.com"){
-              echo ' <div class="upper-bar-button" id="admin-page"><a href="admin.php"> Admin Page </a></div>';
+              echo ' <div class="upper-bar-button" id="admin-page"><a class="hyperlink-button" href="admin.php"> Admin Page </a></div>';
+              echo '<div class="upper-bar-button"><a class="hyperlink-button" href="logout.php">Logout</a></div>';
+              echo '<div class="upper-bar-button"><a class="hyperlink-button" href="reset-password.php">Reset Password</a></div>';  
+              echo '<div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn"></button>
+                      <div id="myDropdown" class="dropdown-content">
+                        <a href="logout.php">Logout</a>
+                        <a href="reset-password.php">Reset Password</a>
+                        <a href="admin.php">Admin</a>
+                      </div>
+                    </div>';
             }
-            echo '<div class="upper-bar-button"><a href="logout.php">Logout</a></div>';
-            echo '<div class="upper-bar-button"><a href="reset-password.php">Reset Password</a></div>';
+            else{
+            echo '<div class="upper-bar-button"><a class="hyperlink-button" href="logout.php">Logout</a></div>';
+            echo '<div class="upper-bar-button"><a class="hyperlink-button" href="reset-password.php">Reset Password</a></div>';
+            echo '<div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn"></button>
+                <div id="myDropdown" class="dropdown-content">
+                <a href="logout.php">Logout</a>
+                <a href="reset-password.php">Reset Password</a>
+                <a href="contact_us.php">Contact Us</a>
+              </div>
+            </div>';
+                }
           }
           else{
-            echo '<div class="upper-bar-button"><a href="login.php">Login</a></div>';
-            echo '<div class="upper-bar-button"><a href="sign_up.php">Sign Up</a></div>';
+            echo '<div class="upper-bar-button"><a class="class="hyperlink-button"" href="login.php">Login</a></div>';
+            echo '<div class="upper-bar-button"><a class="class="hyperlink-button"" href="sign_up.php">Sign Up</a></div>';
+            echo '<div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="login.php">Login</a>
+              <a href="sign_up.php">Sign Up</a>
+              <a href="contact_us.php">Contact Us</a>
+            </div>
+          </div>';
           }
           error_reporting(1);
         ?>
@@ -82,7 +109,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </div>
   <br>
   <a class="title" href="animals.php">Our animals</a>
-  
 
   <script>
     let slideIndex = 1;
@@ -112,6 +138,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       dots[slideIndex-1].className += " active";
     }
     </script>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
 
     <footer id="footer">
         <p> Test zoo 2022 </p>
