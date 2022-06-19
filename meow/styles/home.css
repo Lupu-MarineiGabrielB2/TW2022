@@ -96,25 +96,16 @@ footer{
     position: relative;
     object-fit: cover;
 }
+
 .title{
-  max-width: fit-content;
-  border-top: 5px solid rgb(241, 191, 53);
-  border-bottom: 5px solid rgb(241, 191, 53);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  font-size: 6vw;
-  color:rgb(65, 164, 65);;
-  letter-spacing: 2px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  position: absolute;
-  transform: translate(-50%, -50%);
+  text-decoration: none;
   left: 50%;
-  margin-top: 25px;
+  margin-bottom: 1000px;
 }
 
 @media only screen and (min-width: 768px) {
   footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: rgb(58, 56, 53);
@@ -131,10 +122,9 @@ footer{
     border-bottom: 5px solid rgb(241, 191, 53);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 6vw;
-    color:rgb(65, 164, 65);;
+    color:rgb(65, 164, 65);
     letter-spacing: 2px;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;

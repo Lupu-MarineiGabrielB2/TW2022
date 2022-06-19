@@ -19,12 +19,16 @@
     margin-bottom: 55px;
 }
 
-.content{
-    margin-top: 260px;
-    display: flex;
-    flex-direction: column;
+.all-content{
+    margin-top: 40px;
     margin-right: 200px;
     margin-left: 200px;
+}
+
+.content{
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .tile-set{
@@ -36,27 +40,30 @@
     column-gap: 65px;
 }
 
-.upper-content{
+#upper-content{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.search-bar {
-    width: 235px;
-    height: 35px; 
-    display: flex;
+#search-bar {
+    background:  rgb(58, 56, 53);
+    width: 300px;
+    height:fit-content; 
+    justify-content: space-around;
+    vertical-align: middle;
 }
 
 .search-term {
-    width: 100%;
+    width: 250px;
+    height: 37px; 
     border: 3px solid  rgb(58, 56, 53);
     border-radius: 5px 0 0 5px;
     font-size: 17px;
     padding: 5px;
   }
   
-button{
+button, #add-button{
     margin-bottom: 10px;
     width: 200px;
     height: 35px; 
@@ -65,6 +72,7 @@ button{
 }
 
 .search-button {
+    height: 36px; 
     width: 40px;
     border: 1px ;
     border-radius: 0 5px 5px 0;
@@ -73,10 +81,17 @@ button{
     color: white;
     cursor: pointer;
     font-size: 20px;
+    margin: 0px;
+    padding-left: 0px;
 }
 
 
 #add-button{
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: 10px;
 }
 
@@ -103,8 +118,6 @@ button{
     width: 230px;
     height: 190px;
     margin-top: 50px;
-   /* border: 5px solid rgb(58, 56, 53); 
-    transform: translate(20%, 0%);*/
     border: 5px solid rgb(58, 56, 53);
     padding: 10px;
     background-color: white;
@@ -115,7 +128,7 @@ button{
     transform: translate(30%, 0%);
 }
 
-.tile .animal-name{
+.tile .animal-name, .user-name{
     padding: 10px;
     margin-bottom: 10px;
     text-align: center;
@@ -130,3 +143,20 @@ button{
     cursor: pointer;
 }
 
+.available-tabs{
+    width: fit-content;
+    height: 40px;
+    background-color:gainsboro;
+    margin-top: 260px;
+    margin-left: 200px;
+}
+
+.available-tabs button{
+    background-color:gainsboro;
+    width: 120px;
+    height: 40px;
+}
+
+.available-tabs  button:active{
+    background-color: rgb(191, 191, 191);
+}
