@@ -42,7 +42,7 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
     ?>
 
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Zoo</a></div>
     </header>
 
     <div class="content" >
@@ -297,7 +297,7 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
     </form>
 
     <footer class="col-12">
-    <p> Test zoo 2022 </p>
+    <p> Zoo 2022 </p>
     <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
     </footer>
 

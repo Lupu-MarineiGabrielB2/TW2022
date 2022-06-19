@@ -1,8 +1,23 @@
 <?php
-// Initialize the session
 session_start();
+function isBanned(){
+    $dir=$_SERVER['DOCUMENT_ROOT']."/meow/config.php";
+    require_once $dir;
+    $sql = "SELECT banned FROM users where email=?";
+    $stmt = mysqli_prepare($link, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $_SESSION["username"]);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $banned);
+    while ($stmt->fetch()) {
+        if($banned==1)
+            return true;
+    }
+    return false;
+}
+// Initialize the session
+
 // Check if the user is logged in, if not then redirect him to login page
-if(! ($_SESSION["loggedin"])){
+if(! ($_SESSION["loggedin"])||isBanned()){
     header("location: login.php");
     exit;
 }
@@ -28,7 +43,7 @@ if(! ($_SESSION["loggedin"])){
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Zoo</a></div>
     </header>
 
     <div class="content" >
@@ -44,14 +59,6 @@ if(! ($_SESSION["loggedin"])){
             </select>
             <br> <br> <br>
 
-            <!--
-            <p>Would you like to be contacted about your experience?</p>
-            <select name="allow-contact">
-                <option value=”yes”> Yes </option>
-                <option value=”no”> No </option>
-            </select>
-            <br> <br> <br>
-        -->
             <p>Please rate your overall experience during your recent visit (5 = Very satisfied, 1 = Very dissatisfied)</p>
             <select name="rating">
                 <option value="default">None selected</option>
@@ -64,7 +71,7 @@ if(! ($_SESSION["loggedin"])){
             <br> <br> <br>
 
             <p>Message*</p>
-            <textarea rows="8" cols="85" id="message" name="message" required></textarea>
+            <textarea rows="8" cols="85" id="message" name="message" minlength=20 maxlength=3000 required></textarea>
             <br> <br> <br>
 
             <button id="submit-button" type = "submit" value = "Submit" > Submit </button> 
@@ -74,7 +81,7 @@ if(! ($_SESSION["loggedin"])){
 
 
     <footer class="col-12">
-    <p> Test zoo 2022 </p>
+    <p> Zoo 2022 </p>
     <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
     </footer>
 

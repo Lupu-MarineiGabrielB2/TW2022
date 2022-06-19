@@ -31,7 +31,7 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
 
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Zoo</a></div>
     </header>
 
     <div class="content" >
@@ -41,7 +41,7 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
     <form action="funct/add_animal.php" method="post" id="form">
         <div class="content" >
             <div class="short-text-div">
-                <label for="name">Name* </label><br>
+                <label for="name">Name* (ex: Common Raccoon)</label><br>
                 <input type="text" id="name" name="name" class="short-text-input" pattern="([A-Z][a-z]* )*([A-Z][a-z]*)+[ ]*" required><br>
             </div>
             <div class="short-text-div">
@@ -232,7 +232,7 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 
         <div class="content" >
             <div class="short-text-div">
-                <label for="title-image">Title Image (banner on the animal's page):</label><br><br>
+                <label for="title-image">Title Image* (banner on the animal's page):</label><br><br>
                 <input type="file" name="file" id="title-img"  oninput="uploadFile('title-img');">
                 <?php
                 error_reporting(0);
@@ -243,7 +243,7 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 
         <div class="content" >
             <div class="short-text-div">
-                <label for="tile-image">Tile Image (for the animal's "card"):</label><br><br>
+                <label for="tile-image">Tile Image* (for the animal's "card"):</label><br><br>
                 <input type="file" name="file" id="tile-img" oninput="uploadFile('tile-img');" >
                 <?php
                 echo '<button class="clear-button" type="button" onclick="clearInput(\'tile-img\', '.'\''.$data["name"].'\''.');">Clear Selection</button>';
@@ -283,7 +283,7 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
     </form>
 
     <footer class="col-12">
-    <p> Test zoo 2022 </p>
+    <p> Zoo 2022 </p>
     <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
     </footer>
 

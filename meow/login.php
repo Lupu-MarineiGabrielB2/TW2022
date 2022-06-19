@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
-        $sql = "SELECT id, email, passwd FROM users WHERE email = ?";
+        $sql = "SELECT id, email, passwd, banned FROM users WHERE email = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -52,9 +52,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // Check if username exists, if yes then verify password
                 if(mysqli_stmt_num_rows($stmt) == 1){                    
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $banned);
                     if(mysqli_stmt_fetch($stmt)){
-                        if(password_verify($password, $hashed_password)){
+                        if(password_verify($password, $hashed_password)&&$banned==0){
                             // Password is correct, so start a new session
                             session_start();
                             
@@ -107,7 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Zoo</a></div>
     </header>
 
     <div class="content" >
@@ -140,7 +140,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
     <footer class="col-12">
-    <p> Test zoo 2022 </p>
+    <p> Zoo 2022 </p>
     <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
     </footer>
 

@@ -22,7 +22,7 @@ function getAllTiles(){
 
 function getTile(animal){
   document.write("<div class='tile' name=", animal.name.replace(/\s+/g, "_")," onclick='getAnimalPage(\"",animal.name,"\");'>");
-  document.write("<img class='animal_img' alt=", animal.name, " src='funct/data/pictures/", animal.name.replace(/ /g, "_"), "/tile-img.jpg'>");
+  document.write("<img class='animal_img' alt=", animal.name.replace(/\s+/g, "_"), " src='funct/data/pictures/", animal.name.replace(/ /g, "_"), "/tile-img.jpg'>");
   document.write("<p class='animal_name'>", animal.name,"</p>"); 
   document.write("<p class='scientific_name'>", animal.scientificName, "</p>");
   document.write("<div class='animal_text'><p>", animal.description, "</p>");

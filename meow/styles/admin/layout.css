@@ -17,6 +17,7 @@
     left: 50%;
     margin-top: 25px;
     margin-bottom: 55px;
+    height: fit-content;
 }
 
 .all-content{
@@ -113,14 +114,14 @@ button, #add-button{
 }
 
 .tile{
+    background-color: rgb(228, 228, 228);
     flex-direction: column;
     justify-content: center;
     width: 230px;
-    height: 190px;
+    height: fit-content;
     margin-top: 50px;
     border: 5px solid rgb(58, 56, 53);
     padding: 10px;
-    background-color: white;
 }
 
 .visible_checkbox{
@@ -159,4 +160,19 @@ button, #add-button{
 
 .available-tabs  button:active{
     background-color: rgb(191, 191, 191);
+}
+
+.delete-button, .ban-button, .unban-button{
+    background-color: white;
+    border: 3px solid rgb(241, 191, 53);
+    transition: background-color 0.6s ease;
+}
+
+.delete-button:hover, .ban-button:hover:enabled, .unban-button:hover:active:enabled{
+    background-color: rgb(241, 191, 53);
+}
+
+.banned-para{
+    margin-bottom: 3px;
+    transform: translate(35%, 0%);
 }

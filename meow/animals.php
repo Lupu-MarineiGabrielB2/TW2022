@@ -38,7 +38,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
     <!--upper banner-->
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Zoo</a></div>
     </header>
 
     <!-- Sets the "Animals" title and its background image-->
@@ -107,7 +107,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <label for="Europe">Europe</label>
             </div>
             <div class="selector">
-              <input type="checkbox" id="North America" name="source" value="North America">
+              <input type="checkbox" id="North_America" name="source" value="North America">
               <label for="North America">North America</label>
             </div>
             <div class="selector">
@@ -233,7 +233,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </div>    <!-- end of "content"-->
 
 <footer class="col-12">
-  <p> Test zoo 2022 </p>
+  <p> Zoo 2022 </p>
   <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
   <a class="link_in_footer" href="contact_us.php" > Contact Us</a>
 </footer>

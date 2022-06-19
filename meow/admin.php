@@ -38,7 +38,7 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 
 <body>
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Zoo</a></div>
     </header>
 
     <div class="title">Admin page</div>
@@ -96,28 +96,34 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 
     <div id="users-tab" class="tab">
         <?php
-            $sql = "SELECT email FROM users";
+            $sql = "SELECT email, banned FROM users";
             $stmt = mysqli_prepare($link, $sql);
             mysqli_stmt_execute($stmt);
-            mysqli_stmt_bind_result($stmt, $email);
+            mysqli_stmt_bind_result($stmt, $email, $banned);
         ?>
         <div class="content">
             <div class="tile-set">
                 <?php
                 while ($stmt->fetch()) {
                     if(strcmp($email, "admin@admin.com")!=0){
-                        echo  '<div class="tile" id='.$email.' name='.$email.'>
+                        echo  '<div class="tile" id='.$email.'>
                         <div class="user-name">'. $email .'</div>
                             <div class="tile_buttons">
-                                <button type="submit" class="delete-button" onclick="getEditPage('.'\''.$name.'\''.');"> Delete Account </button>
-                                <button type="submit" class="ban-button" onclick="removeAnimal('.'\''.$name.'\''.');"> Ban User </button>
-                            </div>
+                                <button type="submit" class="delete-button" onclick="handleAccount('.'\''.$email.'\''.', 0);"> Remove Account </button>';
+                                if($banned==0){
+                                echo '<button type="submit" name='.$email.' class="ban-button" onclick="handleAccount('.'\''.$email.'\''.', 1);"> Ban User </button>';
+                                echo '<button type="submit" name='.$email.' class="unban-button" onclick="handleAccount('.'\''.$email.'\''.', 2);" disabled> Unban User </button>';
+                                }
+                                else{
+                                    echo '<button type="submit" name='.$email.' class="ban-button" onclick="handleAccount('.'\''.$email.'\''.', 1);" disabled> Ban User </button>';
+                                    echo '<button type="submit" name='.$email.' class="unban-button" onclick="handleAccount('.'\''.$email.'\''.', 2);"> Unban User </button>';
+                                }
+                            echo   ' </div>
                         </div>';
                     }
                 }
                 ?>
             </div>
-
             <div class="tile-set">
             </div>
         </div>
@@ -168,7 +174,7 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
     </script>
 
     <footer class="col-12">
-    <p> Test zoo 2022 </p>
+    <p> Zoo 2022 </p>
     </footer>
 
 </body>
