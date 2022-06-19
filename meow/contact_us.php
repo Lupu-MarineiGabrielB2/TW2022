@@ -1,15 +1,13 @@
-
-<!--
 <?php
 // Initialize the session
 session_start();
 // Check if the user is logged in, if not then redirect him to login page
-if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com")){
+if(! ($_SESSION["loggedin"])){
     header("location: login.php");
     exit;
 }
 ?>
--->
+
 
 <!DOCTYPE html>
 
@@ -30,7 +28,7 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 
 <body style="background-image: url('pictures/login-sign-up-background.jpeg')">
     <header>
-        <div class="upper-bar-text"> <a id="nav-button" href="home.html">Test Zoo</a></div>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
     </header>
 
     <div class="content" >
@@ -77,7 +75,7 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 
     <footer class="col-12">
     <p> Test zoo 2022 </p>
-    <p>All photos are copyright-free and were obtained from <a id="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
+    <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
     </footer>
 
 </body>

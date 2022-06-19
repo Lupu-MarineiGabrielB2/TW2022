@@ -33,14 +33,15 @@ footer{
     margin-top: 200px;
     background-color: rgb(58, 56, 53);
     padding-top: 5px;
-    min-height: 5em;
+    min-height: 8em;
     color:rgb(185, 163, 136);
     text-align: center;
     left: 0; bottom: 0; right: 0; 
 }
 
-#link_in_footer{
+.link_in_footer{
     color:brown;
+    bottom: 50px;
 }
 
 #nav-button{

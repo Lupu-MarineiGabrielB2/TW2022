@@ -147,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <footer class="col-12">
     <p> Test zoo 2022 </p>
-    <p>All photos are copyright-free and were obtained from <a id="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
+    <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
     </footer>
 
 </body>

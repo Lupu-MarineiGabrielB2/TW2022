@@ -184,7 +184,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
 
     <footer>
         <p> Test zoo 2022 </p>
-        <p>All photos are copyright-free and were obtained from <a id="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
+        <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
+        <a class="link_in_footer" href="contact_us.php" > Contact Us</a>
       </footer>
 </body>
 

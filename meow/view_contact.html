@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="description" content="The list of animals">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pictures/favicon-16x16.ico"/>
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="styles/general_layout.css"/>
+    <link rel="stylesheet" href="styles/admin/view_contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="funct/javaScript/sort_table.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="upper-bar-text"> <a id="nav-button" href="home.php">Test Zoo</a></div>
+    </header>
+
+    <div class="title">Contact</div>
+
+    <div class="content">
+       
+        <table id="table">
+            <tr>
+                <th class="th-normal" id="date-th" onclick="sortTable(0)"> Date <i id="caret0" class="fa fa-caret-down" aria-hidden="true"></i></th>
+                <th class="th-normal" id="rating-th" onclick="sortTable(1)">Rating <i id="caret1" class="fa fa-caret-down" aria-hidden="true"></i></th>
+                <th class="th-normal" id="type-th" onclick="sortTable(2)">Type <i id="caret2" class="fa fa-caret-down" aria-hidden="true"></i></th>
+                <th class="th-normal" id="message-th">Message </th>
+                <th class="th-normal" id="user-th" onclick="sortTable(4)">User <i id="caret4" class="fa fa-caret-down" aria-hidden="true"></i></th>
+            </tr>
+            <tr>
+                <td class="td-normal">date1</td>
+                <td class="td-normal">Emil2</td>
+                <td class="td-normal">Emil1</td>
+                <td class="td-normal"><textarea disabled class="message-textarea" rowspan="5">  3456789012345678901234567890 345678901234567890123456789012345678901234567890 345678901234567890123456789012345678901234567890345678901234567890123456789012345678901234567890</textarea></td>
+                <td class="td-normal"><textarea disabled rowspan="2">789012345678901234567890</textarea></td>
+                <td class="separator"></td>
+                <td class="remove">Remove Entry</td>
+            </tr>
+            <tr>
+                <td class="td-normal">date2</td>
+                <td class="td-normal">Emil1</td>
+                <td class="td-normal">Emil2</td>
+                <td class="td-normal"><textarea disabled class="message-textarea" rowspan="5"> 123456789012345678901234567890 345678901234567890123456789012345678901234567890 345678901234567890123456789012345678901234567890345678901234567890123456789012345678901234567890</textarea></td>
+                <td class="td-normal"><textarea disabled rowspan="2">167890123456789012345678901234567890</textarea></td>
+                <td class="separator"></td>
+                <td class="remove">Remove Entry</td>
+            </tr>
+            <tr>
+                <td class="td-normal">date3</td>
+                <td class="td-normal">Emil2</td>
+                <td class="td-normal">Emil2</td>
+                <td class="td-normal"><textarea disabled class="message-textarea" rowspan="5">  567890 345678901234567890123456789012345678901234567890 345678901234567890123456789012345678901234567890345678901234567890123456789012345678901234567890</textarea></td>
+                <td class="td-normal"><textarea disabled rowspan="2">12345678901234567890123456789012345678901234567890</textarea></td>
+                <td class="separator"></td>
+                <td class="remove">Remove Entry</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer class="col-12">
+    <p> Test zoo 2022 </p>
+    </footer>
+
+</body>
+
+</html>

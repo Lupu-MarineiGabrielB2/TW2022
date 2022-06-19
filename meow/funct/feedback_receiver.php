@@ -18,5 +18,6 @@
     }
 
     mysqli_close($link);
+    header("Location:http://localhost/meow/home.php");
 ?>
 
