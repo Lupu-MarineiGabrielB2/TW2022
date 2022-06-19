@@ -5,17 +5,13 @@ function animateCaret(i){
     var id = "caret" + i;
     caret = document.getElementById(id);
     if(window.caretsState[i]==0){
-        console.log(1);
         window.caretsState[i]=1;
         caret.style.webkitTransform = "rotate(" + 180 + "deg)";
     }
     else{
-        console.log(2);
         window.caretsState[i]=0;
         caret.style.webkitTransform = "rotate(" + 360 + "deg)";
     }
-    
-    console.log(caret);
 }
 
 //source: https://www.w3schools.com/howto/howto_js_sort_table.asp

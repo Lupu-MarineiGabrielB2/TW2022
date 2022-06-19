@@ -5,7 +5,6 @@
     $rating = $_POST["rating"];
     $message = $_POST["message"];
     $user = $_SESSION["username"];
-    echo $type . "   " . $rating . "   " . $message;
     
     $dir=$_SERVER['DOCUMENT_ROOT']."/meow/config.php";
     require_once $dir;
