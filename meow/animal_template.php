@@ -45,7 +45,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
 <body>
 
     <header>
-        <div class="upper-bar-text"><a id="nav-button" href="home.php">Test Zoo</a></div>
+        <div class="upper-bar-text"><a id="nav-button" href="home.php">Zoo</a></div>
     </header>
     <?php
         $titleImg = glob("funct/data/pictures/".str_replace(" ","_",$data["name"])."/title-img.*");
@@ -183,7 +183,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
     </div>
 
     <footer>
-        <p> Test zoo 2022 </p>
+        <p> Zoo 2022 </p>
         <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
         <a class="link_in_footer" href="contact_us.php" > Contact Us</a>
       </footer>

@@ -5,6 +5,8 @@
     $rating = $_POST["rating"];
     $message = $_POST["message"];
     $user = $_SESSION["username"];
+
+    $message = str_replace("script>", "SCRIPT ATTEMPT!!!", $message); 
     
     $dir=$_SERVER['DOCUMENT_ROOT']."/meow/config.php";
     require_once $dir;

@@ -28,7 +28,7 @@ function setVisible(name){
 function removeMessage(id){
   console.log(id);
   var xmlhttp = new XMLHttpRequest();   
-  xmlhttp.open("GET", "funct/remove_message.php?id=" + id, true);
+  xmlhttp.open("GET", "funct/remove_message.php?x=" + id, true);
   xmlhttp.send();
 
   const line = document.getElementById("tr"+id);
@@ -63,3 +63,45 @@ function openTab(id){
     document.getElementById("search-bar").style.display='none';
   }
 }
+
+function removeAllMessages(name){
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", "funct/remove_message.php?x=" + name, false );
+  xmlHttp.send( null );
+}
+
+function removeUser(name, ban){
+  var xmlHttp = new XMLHttpRequest();
+  xmlHttp.open( "GET", "funct/remove_user.php?user=" + name + "&ban=" + ban, false );
+  xmlHttp.send( null );
+}
+
+function handleAccount(name, ban){
+  if(confirm("Are you sure you want to ban/unban/remove user " + name + "?")){
+    removeAllMessages(name);
+    removeUser(name, ban);
+    const div = document.getElementById(name);
+    if(ban==0){
+      div.remove();
+    }
+    else{
+      banButtons = document.getElementsByName(name);
+      if(banButtons[0].enabled==true){
+        banButtons[0].enabled=false;
+        banButtons[0].disabled=true;
+        banButtons[1].enabled=true;
+        banButtons[1].disabled=false;
+      }
+      else{
+        banButtons[1].enabled=false;
+        banButtons[1].disabled=true;
+        banButtons[0].enabled=true;
+        banButtons[0].disabled=false;
+      }
+    }
+  }
+}
+
+
+//Twinglog1
+//gabi_cars31@yahoo.com
