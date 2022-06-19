@@ -7,7 +7,6 @@ searchInput.addEventListener("input", (e) => {
         if (value && value.trim().length > 0){
             value = value.trim().toLowerCase();
             for (let i in tiles) {
-                console.log(tiles[i]);
                 var name=tiles[i].getAttribute("name");
                 if(name.toLowerCase().includes(value))
                     tiles[i].style.display='inline';

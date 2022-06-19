@@ -35,9 +35,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
 <body>
-  <script>
-    setAnimals();
-  </script>
     
     <!--upper banner-->
     <header>
@@ -56,7 +53,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     
     <div class="filters col-3">     <!-- without this, the flex(applied to .content) would expand the form(and its colourful background). Now, this div is the one that gets expanded-->
       <div class="search_bar">
-           <input type="text" class="search_term" placeholder="Search by name...">
+           <input type="text" id="search" class="search_term" placeholder="Search by name...">
            <button type="submit" class="search_button">
              <i class="fa fa-search"></i>
           </button>
@@ -231,6 +228,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   });
 </script>
 
+<script src="funct/javaScript/search_bar.js"></script>
 
 </div>    <!-- end of "content"-->
 

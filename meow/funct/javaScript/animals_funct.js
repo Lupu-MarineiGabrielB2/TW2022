@@ -21,7 +21,7 @@ function getAllTiles(){
 }
 
 function getTile(animal){
-  document.write("<div class='tile' name=", animal.name," onclick='getAnimalPage(\"",animal.name,"\");'>");
+  document.write("<div class='tile' name=", animal.name.replace(/\s+/g, "_")," onclick='getAnimalPage(\"",animal.name,"\");'>");
   document.write("<img class='animal_img' alt=", animal.name, " src='funct/data/pictures/", animal.name.replace(/ /g, "_"), "/tile-img.jpg'>");
   document.write("<p class='animal_name'>", animal.name,"</p>"); 
   document.write("<p class='scientific_name'>", animal.scientificName, "</p>");
@@ -104,7 +104,8 @@ function passAllFilters(animal){
 function filterTiles(){
   for (let i in animals) {
     var animal = JSON.parse(animals[i]);
-    element=document.getElementsByName(animal.name);
+    var n=animal.name.replace(/\s+/g, "_");
+    element=document.getElementsByName(n);
     if(!passAllFilters(animal))
       element[0].style.display='none';
     else
