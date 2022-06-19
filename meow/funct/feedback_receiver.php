@@ -1,8 +1,22 @@
 <?php
-    $type = $_POST["contact-type"];
-    $allowContact = $_POST["allow-contact"];
-    $message = $_POST["message"];
-
     session_start();
-    require_once "config.php";
+
+    $type = $_POST["contact-type"];
+    $rating = $_POST["rating"];
+    $message = $_POST["message"];
+    $user = $_SESSION["username"];
+    echo $type . "   " . $rating . "   " . $message;
+    
+    $dir=$_SERVER['DOCUMENT_ROOT']."/meow/config.php";
+    require_once $dir;
+  
+    $sql = "INSERT INTO feedback (type, rating, message, user) VALUES (?, ?, ?, ?)";
+
+    if($stmt = mysqli_prepare($link, $sql)){
+        mysqli_stmt_bind_param($stmt, "ssss", $type, $rating, $message, $user);
+        mysqli_stmt_execute($stmt);       
+    }
+
+    mysqli_close($link);
 ?>
+

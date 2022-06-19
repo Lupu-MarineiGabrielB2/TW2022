@@ -40,16 +40,28 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
 
             <p>Select Contact Type</p>
             <select name="contact-type">
-                <option value=”general-information”> General Infromation </option>
-                <option value=”animals”> Animals </option>
-                <option value=”feedback”> Feedback </option>
+                <option value="general-information"> General Infromation </option>
+                <option value="animals"> Animals </option>
+                <option value="feedback"> Feedback </option>
             </select>
             <br> <br> <br>
 
+            <!--
             <p>Would you like to be contacted about your experience?</p>
             <select name="allow-contact">
                 <option value=”yes”> Yes </option>
                 <option value=”no”> No </option>
+            </select>
+            <br> <br> <br>
+        -->
+            <p>Please rate your overall experience during your recent visit (5 = Very satisfied, 1 = Very dissatisfied)</p>
+            <select name="rating">
+                <option value="default">None selected</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
             <br> <br> <br>
 
