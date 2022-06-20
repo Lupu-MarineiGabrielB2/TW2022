@@ -19,7 +19,7 @@ function animateCaret(i){
 function sortTable(n) {
     animateCaret(n);
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("table");
+    table = document.getElementById("table tablemobile");
     switching = true;
     dir = "asc"; 
     while (switching) {
