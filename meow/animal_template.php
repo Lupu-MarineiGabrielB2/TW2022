@@ -122,7 +122,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true ){
             foreach($arrayString as $animal){
                 if(glob("funct/data/".str_replace(" ","_",$animal).".json")){
                          echo '<li> <div id="link_to_natural_enemy" onclick="getAnimalPage('.'\''.$animal.'\''.');">'.$animal.'</div> </li>';
-                    }   
+                    }
+                else{
+                    echo '<li> <div id="link_to_natural_enemy">'.$animal.'</div> </li>';
+                }   
             }  
             ?>    
             </ul>

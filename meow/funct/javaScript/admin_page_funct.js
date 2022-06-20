@@ -77,31 +77,32 @@ function removeUser(name, ban){
 }
 
 function handleAccount(name, ban){
-  if(confirm("Are you sure you want to ban/unban/remove user " + name + "?")){
-    removeAllMessages(name);
-    removeUser(name, ban);
-    const div = document.getElementById(name);
-    if(ban==0){
+  const div = document.getElementById(name);
+  if(ban==0){
+    if(confirm("Are you sure you want to remove user " + name + "?")){
+      removeAllMessages(name);
+      removeUser(name, ban);
       div.remove();
     }
+  }
+  else{
+    removeAllMessages(name);
+    removeUser(name, ban);
+    banButtons = document.getElementsByName(name);
+    if(banButtons[0].enabled==true){
+      banButtons[0].enabled=false;
+      banButtons[0].disabled=true;
+      banButtons[1].enabled=true;
+      banButtons[1].disabled=false;
+    }
     else{
-      banButtons = document.getElementsByName(name);
-      if(banButtons[0].enabled==true){
-        banButtons[0].enabled=false;
-        banButtons[0].disabled=true;
-        banButtons[1].enabled=true;
-        banButtons[1].disabled=false;
-      }
-      else{
-        banButtons[1].enabled=false;
-        banButtons[1].disabled=true;
-        banButtons[0].enabled=true;
-        banButtons[0].disabled=false;
-      }
+      banButtons[1].enabled=false;
+      banButtons[1].disabled=true;
+      banButtons[0].enabled=true;
+      banButtons[0].disabled=false;
     }
   }
 }
-
 
 //Twinglog1
 //gabi_cars31@yahoo.com

@@ -234,15 +234,15 @@ if(!($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com"
                 ?>
             </div>
             <div class="short-text-div">
-                <label for="related-animal-2">Second Related Animal (name)*</label><br>
+                <label for="related-animal-2">Second Related Animal (name)</label><br>
                 <?php
-                    echo  '<input type="text" id="related-animal-2" value="'.$data["relatedAnimal2"].'" name="relatedAnimal2" class="short-text-input" required><br>';
+                    echo  '<input type="text" id="related-animal-2" value="'.$data["relatedAnimal2"].'" name="relatedAnimal2" class="short-text-input" ><br>';
                 ?>
             </div>
             <div class="short-text-div">
-                <label for="related-animal-3">Third Related Animal (name)*</label><br>
+                <label for="related-animal-3">Third Related Animal (name)</label><br>
                 <?php
-                    echo '<input type="text" id="related-animal-3" value="'.$data["relatedAnimal3"].'" name="relatedAnimal3" class="short-text-input" required><br>';
+                    echo '<input type="text" id="related-animal-3" value="'.$data["relatedAnimal3"].'" name="relatedAnimal3" class="short-text-input"><br>';
                 ?>
             </div>
         </div>

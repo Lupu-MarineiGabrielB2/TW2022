@@ -97,10 +97,10 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
         <div class="content" >
             <div class="radio-div">
                 <p> Conservation Status*</p>
-                <input type="radio" id="least-concern" name="cons" value="LeastConcern" required>
+                <input type="radio" id="least-concern" name="cons" value="Least Concern" required>
                 <label for="least-concern">Least Concern</label><br>
 
-                <input type="radio" id="near-threatened" name="cons" value="NearThreatened">
+                <input type="radio" id="near-threatened" name="cons" value="Near Threatened">
                 <label for="near-threatened">Near Threatened</label><br>
 
                 <input type="radio" id="vulnerable" name="cons" value="Vulnerable">
@@ -109,10 +109,10 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
                 <input type="radio" id="endangered" name="cons" value="Endangered">
                 <label for="endangered">Endangered</label><br>
 
-                <input type="radio" id="critically-endangered" name="cons" value="CriticallyEndangered">
+                <input type="radio" id="critically-endangered" name="cons" value="Critically Endangered">
                 <label for="critically-endangered">Critically Endangered</label><br>
 
-                <input type="radio" id="extinct-in-the-wild" name="cons" value="ExtinctInTheWild">
+                <input type="radio" id="extinct-in-the-wild" name="cons" value="Extinct In TheWild">
                 <label for="extinct-in-the-wild">Extinct In The Wild</label><br>
             </div>
         </div>
@@ -135,10 +135,10 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
                 <input type="checkbox" id="europe" name="continent[]" value="Europe">
                 <label for="europe">Europe</label><br>
 
-                <input type="checkbox" id="north-america" name="continent[]" value="NorthAmerica">
+                <input type="checkbox" id="north-america" name="continent[]" value="North America">
                 <label for="north-america">North America</label><br>
 
-                <input type="checkbox" id="south-america" name="continent[]" value="SouthAmerica">
+                <input type="checkbox" id="south-america" name="continent[]" value="South America">
                 <label for="south-america">South America</label><br>
             </div>
         </div>
@@ -146,7 +146,7 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
         <div class="content" >
             <div class="radio-div">
                 <p>Biome*</p>
-                <input type="checkbox" id="temperate-deciduous-forest" name="biome[]" value="TemperateDeciduousForest">
+                <input type="checkbox" id="temperate-deciduous-forest" name="biome[]" value="Temperate Deciduous Forest">
                 <label for="temperate-deciduous-forest">Temperate Deciduous Forest</label><br>
 
                 <input type="checkbox" id="coniferous-forest" name="biome[]" value="Coniferous Forest">
@@ -167,10 +167,10 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
                 <input type="checkbox"id="desert" name="biome[]" value="Desert">
                 <label for="desert">Desert</label><br>
 
-                <input type="checkbox" id="tropical-savanna" name="biome[]" value="TropicalSavanna">
+                <input type="checkbox" id="tropical-savanna" name="biome[]" value="Tropical Savanna">
                 <label for="tropical-savanna">Tropical Savanna</label><br>
 
-                <input type="checkbox" id="tropical-forest" name="biome[]" value="TropicalForest">
+                <input type="checkbox" id="tropical-forest" name="biome[]" value="Tropical Forest">
                 <label for="tropical-forest">Tropical Forest</label><br>
             </div>
         </div>
@@ -221,12 +221,12 @@ if( !($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
                 <input type="text" id="related-animal-1" name="relatedAnimal1" class="short-text-input" required>
             </div>
             <div class="short-text-div">
-                <label for="related-animal-2">Second Related Animal (name)*</label><br>
-                <input type="text" id="related-animal-2" name="relatedAnimal2" class="short-text-input" required>
+                <label for="related-animal-2">Second Related Animal (name)</label><br>
+                <input type="text" id="related-animal-2" name="relatedAnimal2" class="short-text-input">
             </div>
             <div class="short-text-div">
-                <label for="related-animal-3">Third Related Animal (name)*</label><br>
-                <input type="text" id="related-animal-3" name="relatedAnimal3" class="short-text-input" required>
+                <label for="related-animal-3">Third Related Animal (name)</label><br>
+                <input type="text" id="related-animal-3" name="relatedAnimal3" class="short-text-input">
             </div>
         </div>
 

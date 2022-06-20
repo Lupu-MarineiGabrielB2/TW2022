@@ -69,6 +69,7 @@ header{
 
 
 #search-bar {
+    margin-left: 300px;
     background:  rgb(58, 56, 53);
     width: 300px;
     height:fit-content; 

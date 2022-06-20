@@ -60,6 +60,7 @@
     height: 250px;
     width: 250px;
     position:relative;
+    object-fit:cover;
 }
 
 /* For the text that appears on hover*/
