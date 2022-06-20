@@ -1,5 +1,25 @@
-.header{
+body{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header{
+    background-color: rgb(58, 56, 53);
+    position: sticky;
+    top: 0em;
+    height: 70px;
+    z-index: 255;
+    width: 100%;
     margin-bottom: 20px;
+}
+
+#animals-tab{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .title{
@@ -15,15 +35,19 @@
     position: absolute;
     transform: translate(-50%, 0%);
     left: 50%;
-    margin-top: 25px;
+    margin-top: 75px;
     margin-bottom: 55px;
     height: fit-content;
+    text-align: center;
 }
 
 .all-content{
     margin-top: 40px;
-    margin-right: 200px;
-    margin-left: 200px;
+    /* margin-right: 200px;
+    margin-left: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .content{
@@ -38,14 +62,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     column-gap: 65px;
 }
 
-#upper-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
+
 
 #search-bar {
     background:  rgb(58, 56, 53);
@@ -149,7 +170,10 @@ button, #add-button{
     height: 40px;
     background-color:gainsboro;
     margin-top: 260px;
-    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .available-tabs button{
@@ -175,4 +199,60 @@ button, #add-button{
 .banned-para{
     margin-bottom: 3px;
     transform: translate(35%, 0%);
+}
+
+#upper-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#users-tab{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}        
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}        
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}    
+    .col-12 {width: 100%;}
+
+    #upper-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .tile-set{
+        padding-top: 5px;
+        margin-bottom: 2em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 65px;
+    }
+
+        /* horizontal scrollbar for tables if mobile screen */
+        .tablemobile {
+            overflow-x: auto;
+            display: block;
+        }
 }

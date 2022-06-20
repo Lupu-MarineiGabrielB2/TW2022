@@ -41,7 +41,7 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
         <div class="upper-bar-text"> <a id="nav-button" href="home.php">Zoo</a></div>
     </header>
 
-    <div class="title">Admin page</div>
+    <div class="title" style="margin-top: 75px;">Admin page</div>
 
     <div class="available-tabs">
         <button id="animals-tablink" class="tablinks" onclick="openTab('animals-tab')">Animals</button>
@@ -102,7 +102,7 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
             mysqli_stmt_bind_result($stmt, $email, $banned);
         ?>
         <div class="content">
-            <div class="tile-set">
+            <div class="tile-set col-11">
                 <?php
                 while ($stmt->fetch()) {
                     if(strcmp($email, "admin@admin.com")!=0){
@@ -138,7 +138,7 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
             mysqli_stmt_bind_result($stmt, $id, $type, $rating, $message, $user, $date);
         ?>
         <div class="content">
-            <table id="table">
+            <table id="table tablemobile">
                 <tr>
                     <th class="th-normal" id="date-th" onclick="sortTable(0)"> Date <i id="caret0" class="fa fa-caret-down" aria-hidden="true"></i></th>
                     <th class="th-normal" id="rating-th" onclick="sortTable(1)">Rating <i id="caret1" class="fa fa-caret-down" aria-hidden="true"></i></th>
@@ -171,6 +171,37 @@ if(! ($_SESSION["loggedin"] == true && $_SESSION["username"] == "admin@admin.com
         var el=document.getElementById("animals-tablink");
         el.click();
         el.style.backgroundColor='darkgrey';
+    </script>
+
+    <script>
+        function openTab(id){
+            const availableIds = ["animals-tab", "users-tab", "contact-tab"];
+            const buttons = ["animals-tablink", "users-tablink", "contact-tablink"]
+            for(let i in availableIds){
+                var el=document.getElementById(availableIds[i]);
+                if(availableIds[i]==id){
+                document.getElementById(buttons[i]).style.backgroundColor='darkgrey';
+                el.style.display='flex';
+                }
+                else{
+                document.getElementById(buttons[i]).style.backgroundColor='gainsboro';
+                el.style.display='none';
+                }
+            }
+
+            if(id=="animals-tab"){
+                document.getElementById("search-bar").style.display='initial';
+                document.getElementById("add-button").style.display='initial';
+            }
+            if(id=="users-tab"){
+                document.getElementById("add-button").style.display='none';
+                document.getElementById("search-bar").style.display='initial';
+            }
+            if(id=="contact-tab"){
+                document.getElementById("add-button").style.display='none';
+                document.getElementById("search-bar").style.display='none';
+            }
+            }
     </script>
 
     <footer class="col-12">

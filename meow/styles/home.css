@@ -128,7 +128,7 @@ footer{
 
 @media only screen and (min-width: 768px) {
   footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: rgb(58, 56, 53);

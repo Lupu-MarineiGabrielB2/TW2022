@@ -26,7 +26,7 @@ header{
     text-align: center;
     top: 50%;
     width: fit-content;
-    left: 48%;
+    left: 49%;
 }
 
 footer{
@@ -34,9 +34,13 @@ footer{
     background-color: rgb(58, 56, 53);
     padding-top: 5px;
     min-height: 8em;
-    color:rgb(185, 163, 136);
+    color:
+    rgb(185, 163, 136);
     text-align: center;
-    left: 0; bottom: 0; right: 0; 
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
 }
 
 .link_in_footer{

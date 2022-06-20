@@ -71,7 +71,7 @@ if(! ($_SESSION["loggedin"])||isBanned()){
             <br> <br> <br>
 
             <p>Message*</p>
-            <textarea rows="8" cols="85" id="message" name="message" minlength=20 maxlength=3000 required></textarea>
+            <textarea style="resize:vertical; max-width: 700px;" rows="8" cols="85" id="message" name="message" minlength=20 maxlength=3000 required></textarea>
             <br> <br> <br>
 
             <button id="submit-button" type = "submit" value = "Submit" > Submit </button> 
@@ -80,7 +80,7 @@ if(! ($_SESSION["loggedin"])||isBanned()){
     </div>
 
 
-    <footer class="col-12">
+    <footer class="footer col-12">
     <p> Zoo 2022 </p>
     <p>All photos are copyright-free and were obtained from <a class="link_in_footer" href="https://www.pexels.com/ro-ro/">Pexels</a>. </p>
     </footer>
