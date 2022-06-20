@@ -113,7 +113,7 @@
 
                 <section>
                     <h3>1.4 Scop</h3>
-                    <p>Scopul acestui produs este de a face informatiile legate de animalele unei gradini zoologice sa fie mai usor accesibile pentru publicul larg.</p>
+                    <p>Scopul acestui produs este de a face informatiile legate de animalele unei gradini zoologice sa fie mai usor accesibile pentru publicul larg. </p>
                 </section>
 
                <!--  <section>
@@ -142,6 +142,8 @@
                     <p>Functionalitatile pe care le ofera sit-ul sunt:</p>
                     <ul>
                         <li>accesul la informatii despre animalele de la gradina zoologica si selectia lor pe baza unor criterii</li>
+                        <li>posibilitatea administratorilor de a manageria lista de animale prin actiuni de eliminare, editare si adaugare precum si utilizatorii inregistrati</li>
+                        <li>utilizatorii obisnuiti se pot inregistra pentru a oferi un feedback despre experienta utilizarii sit-ului</li>
                     </ul>
                 </section>
 
@@ -150,12 +152,22 @@
                     <p>Clasele de utilizatori care vor folosi acest sit sunt:</p>
                     <ul>
                         <li>Vizitatori -> doresc sa afle informatii despre animalele de la o gradina zoologica</li>
+                        <li>Administratori -> ei vor manageria lista de animale precum si lista de utilizatori</li>
                     </ul>
                 </section>
 
                 <section>
                     <h3>2.4 Mediu de operare</h3>
-                    <p>Acest produs poate functiona pe sistemele de operare Windows,Linux si Mac ,dar necesita un program care poate interpreta cod html,css si javascript pentru a putea functiona in mod corespunzator</p>
+                    <p>Acest produs poate functiona pe sistemele de operare Windows, Linux, MacOS, Android si iOS care dispune de un browser web, iar pentru a putea avea acces la server este necesar XAMPP cu modulul Apache si MySQL.</p>
+                    <p>Un tutorial poate fi gasit <a href="https://www.ionos.com/digitalguide/server/tools/xampp-tutorial-create-your-own-local-test-server/">aici</a>.</p>
+                </section>
+                <section>
+                    <h3>2.5 Restrictii</h3>
+                    <p>Nu se permite utilizarea de framework-uri la nivel de client (front-end) şi/sau server (back-end) Web.</p>
+                </section>
+                <section>
+                    <h3>2.6 Dependente</h3>
+                    <p>Functionarea unora dintre functionalitatile sit-ului (functia de feedback, login, sign-up, reset password) depind de baza de date. Printr-un simplu drag and drop in meniul phpMyAdmin al XAMPP, fisierul "db.sql" creeaza tabelele necesare functionarii corespunzatoare sit-ului</p>
                 </section>
 
             </section>
@@ -169,9 +181,15 @@
                     <section>
                         <h4>Header</h4>
                         <p>
-                            Pentru fiecare pagina a sit-ului ,header se afla in partea de sus a paginii.
+                            Pentru fiecare pagina a sit-ului, header se afla in partea de sus a paginii.
                             <br>
-                            Header contine 2 butoane.
+                            In pagina Home, header contine un numar de butoane in functie de utilizator:
+                            <ul>
+                                <li>2 butoane: Login si Register pentru utilizatorii neautentificati;</li>
+                                <li>2 butoane: Logout si Reset Password pentru utilizatorii autentiicati;</li>
+                                <li>3 butoane: Logout, Reset Password si Admin Page pentru administratori</li>
+                            </ul>
+                            In celelalte pagini, header contine un buton care trimite catre pagina home.
                             Odata ce un buton este apasat,acesta va incerca pagina asociata cu el.
                         </p>
                     </section>
@@ -179,34 +197,59 @@
                     <section>
                         <h4>Footer</h4>
                         <p>
-                            Pentru fiecare pagina a sit-ului,footer-ul se afla in partea de jos a fiecare pagini.
+                            Pentru fiecare pagina a sit-ului, footer-ul se afla in partea de jos a fiecarei pagini.
                             <br>
-                            Footer-ul retine un link catre un sit cu poze fara drepturi de autor.
+                            Footer-ul retine un link catre un sit cu poze fara drepturi de autor si un link catre un formular de feedback (disponibil doar pentru utilizatorii autentificati).
                         </p>
                     </section>
                     
                     <section>
                         <h4>Pagina Home</h4>
                         <p>
-                            Pagina principala Home (descrisa de documentul html home.html) consta intr-o pagina simpla cu o galerie foto de 3 poze cu diferite animale si un buton central care duce catre pagina de cautare a animalelor.
+                            Pagina principala Home (descrisa de home.php) consta intr-o pagina simpla cu o galerie foto de 3 poze cu diferite animale si un buton central care duce catre pagina de vizualizare a animalelor.
                         </p>
                     </section>
 
                     <section>
                         <h4>Pagina Animals</h4>
                         <p>
-                            Pagina Animale(descrisa de documentul animals.html) se ocupa cu prezentarea informatiilor despre animalele care fac parte din gradina zoologica(informatii cum ar fi poze cu acestea,provenienta,durata de traire,denumire populare,denumire stiintifica etc). In partea stanga se afla un meniu vertical care prezinta optiune de selecti pentru animale, ele putand fi ordonare dupa clasa de animale, origine, statut, mediu de viata, regimul alimentar(ierbivor,carnivor,omnivor) si gradul de conservare.
+                            Pagina Animale(descrisa de animals.php) se ocupa cu prezentarea informatiilor despre animalele care fac parte din gradina zoologica(informatii cum ar fi poze cu acestea, provenienta, durata de viata, denumire populare, denumire stiintifica etc). In partea stanga se afla un meniu vertical care prezinta optiune de selecti pentru animale, ele putand fi filtrate dupa clasa de animale, origine, statut, mediu de viata, regimul alimentar(ierbivor,carnivor,omnivor) si gradul de conservare.
                             <br>
                             Pentru fiecare animal care respecta criteriile selectate,informatiile despre acestea sunt puse intr-un chenar in care avem ca si titlu numele animalului urmat de denumirea stiintifica, o poza cu un animal din specia respectiva, o descriere scurta a acestora iar chenarul trimite catre o pagina unde exista mai multe informatii despre animalul respectiv.
+                            <br>
+                            Deasupra filtrelor se gaseste o bara de cautare care identifica animalele dupa denumire.
                         </p>
                     </section>
 
                     <section>
                         <h4>Pagina animalului</h4>
                         <p>
-                            Pagina animalului (descrisa de documentul animal_template.html) se ocupa cu prezentarea informatii suplimentare (legate de animalul selectat in pagina descrisa mai sus) cum ar fi: o descriere fizica, modul de reproducere, inamici naturali etc. 
+                            Pagina animalului (descrisa de animal_template.php) se ocupa cu prezentarea informatii suplimentare (legate de animalul selectat in pagina descrisa mai sus) cum ar fi: o descriere fizica, modul de reproducere, inamici naturali etc. 
                         </p>
                     </section>
+
+                    <section>
+                        <h4>Pagina Login</h4>
+                        <p>Pagina Login (descrisa de login.php) se ocupa de autentificarea utilizatorilor in formatul Email - Parola. In josul spatiului de login se gaseste si un link catre pagina de inregistrare.</p>
+                    </section>
+                    <section>
+                        <h4>Pagina Signup</h4>
+                        <p>Pagina Signup (descrisa de sign_up.php) se ocupa cu inregistrarea utilizatorilor. Acestia au nevoie de un email valid si o parola de cel putin 6 caractere. Odata efectuat procesul de inregistrare, utilizatorul este redirectionat catre pagina de login pentru a se autentifica.</p>
+                    </section>
+                    <section>
+                        <h4>Pagina Contact Us</h4>
+                        <p>Pagina Contact Us (descrisa de contact_us.php) se ocupa cu preluarea feedback-ului de la utilizatori si stocarea lui in baza de date pentru a putea fi vizualizat de administratori. </p>
+                    </section>
+                    <section>
+                        <h4>Pagina Administratorului</h4>
+                        <p>Pagina Administratorului (descrisa de admin.php, accesibila doar de catre administrator) asigura principalele utilitati de a manageria sit-ul. Aceasta ofera posibilitatea de a vizualiza toate animalele, toti utilizatorii inregistarati cat si feedback-ul primit. Pagina contine 3 butoane care comuta intre meniul pentru animale, utilizatori si feedback.<br>
+                            Meniul pentru animale contine o bara de cautare pentru a gasi mai usor un animal specific, un buton pentru a adauga un nou animal (care trimite catre un formular pentru a fi completat cu detaliile necesare). Informatiile despre fiecare animal pot fi editate sau animalul poate fi sters de pe site.<br>
+                            Meniul pentru utilizatori contine toti utilizatorii inregistrati. Acestia pot fi eliminati din baza de date si chiar interzisi.<br>
+                            Meniul pentru feedback contine un tabel cu feedback-ul primit de la utilizatori.Contine date despre feedback cum ar fi: data la care a fost scris feedback-ul, un rating de la 1 la 5, tipul feedback-ului (informatii generale, despre animale sau feedback despre experienta), un mesaj si utilizatorul care a scris feedback-ul. Administratorul poate elimina feedback-ul din tabel.
+
+                        </p>
+                    </section>
+
 
 
                 </section>
@@ -218,19 +261,35 @@
 
 
                 <section>
-                    <h3>4.1 Posibilitatea de selectia a animalelor pe baza unor criterii</h3>
+                    <h3>4.1 Posibilitatea de selectie a animalelor pe baza unor criterii</h3>
                     <p>
                         Informatiile despre animale sunt redate intr-un chenar in care se afla o poza a acestora,denumirea stintifica,o descriere scurta iar chenarul trrimite catre o pagina cu mai multe despre acest animal
                         Pagina Animale permite selectarea animalelor care indeplinesc anumite criteriii de selectie cum ar fi clasa de animale,origine,status,regim alimentar(ierbivor,carnivor,omnivor) si grad de conservare.
                         De asemenea, campul de cautare permite selectia unor animale dupa numele popular/stintific sau dupa unele caracteristici.
                     </p>
                 </section>
+                <section>
+                    <h3>4.2 Posibilitatea de cautare a animalelor dupa nume</h3>
+                    <p>
+                        Pentru cautarea dupa nume a unui animal specific se foloseste bara de cautare situata deasupra filtrelor.
+                    </p>
+                </section>
 
                 <section>
-                    <h3>4.2 Sit-ul este web responsive</h3>
+                    <h3>4.3 Sit-ul este web responsive</h3>
                     <p>
                         Sit-ul va reda continutul intr-un format corespunzator in functie de dimensiunea dispozitivului de pe care se acceseaza sit-ul.
                     </p>
+                </section>
+                <section>
+                    <h3>
+                        4.4 Cautarea si filtrarea animalelor se face in timp real fara a fi necesara reincarcarea paginii.
+                    </h3>
+                </section>
+                <section>
+                    <h3>
+                        4.5 Functionalitati destinate administratorilor pentru a manageria sit-ul. 
+                    </h3>
                 </section>
                 
             </section>
